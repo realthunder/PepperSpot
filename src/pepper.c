@@ -5156,7 +5156,21 @@ static int cb_dhcp_unauth_dnat(struct dhcp_conn_t *conn)
 
       if(appconn->authenticated && conn->peer)
       {
-        result = dnprot_accept((struct app_conn_t *) conn->peer);
+        struct app_conn_t *newconn = (struct app_conn_t*)conn->peer;
+        result = dnprot_accept(newconn);
+        if(result == 0) {
+            strncpy(newconn->user, appconn->user, REDIR_USERNAMESIZE);
+            newconn->user[REDIR_USERNAMESIZE - 1] = '\0';
+            newconn->interim_interval = appconn->interim_interval;
+            newconn->sessiontimeout = appconn->sessiontimeout;
+            newconn->idletimeout = appconn->idletimeout;
+            newconn->bandwidthmaxup = appconn->bandwidthmaxup;
+            newconn->bandwidthmaxdown = appconn->bandwidthmaxdown;
+            newconn->maxinputoctets = appconn->maxinputoctets;
+            newconn->maxoutputoctets = appconn->maxoutputoctets;
+            newconn->maxtotaloctets = appconn->maxtotaloctets;
+            newconn->sessionterminatetime = appconn->sessionterminatetime;
+        }
       }
       else
       {
