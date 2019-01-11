@@ -5161,6 +5161,9 @@ static int cb_dhcp_unauth_dnat(struct dhcp_conn_t *conn)
         if(result == 0) {
             strncpy(newconn->user, appconn->user, REDIR_USERNAMESIZE);
             newconn->user[REDIR_USERNAMESIZE - 1] = '\0';
+            newconn->userlen = appconn->userlen;
+            memcpy(newconn->classbuf, appconn->classbuf, appconn->classlen);
+            newconn->classlen = appconn->classlen;
             newconn->interim_interval = appconn->interim_interval;
             newconn->sessiontimeout = appconn->sessiontimeout;
             newconn->idletimeout = appconn->idletimeout;
