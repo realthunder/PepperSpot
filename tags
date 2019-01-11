@@ -1,0 +1,1734 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+ADDITIONAL_ERROR	src/cmdline.c	2597;"	d	file:
+APP_NUM_CONN	src/pepper.h	83;"	d
+ARPHRD_IEEE80211	src/ndisc.h	36;"	d
+BACKGROUND_COLOR	extra/hsl.php	/^define('BACKGROUND_COLOR','#FAD155');$/;"	d
+BUCKET_SIZE	src/pepper.h	98;"	d
+BUCKET_SIZE_MIN	src/pepper.h	103;"	d
+BUCKET_TIME	src/pepper.h	102;"	d
+CAS_CONFIG_ERROR	extra/hsl-msg-en.php	/^define('CAS_CONFIG_ERROR','CAS configuration error !!!');$/;"	d
+CAS_CONFIG_ERROR	extra/hsl-msg-fr.php	/^define('CAS_CONFIG_ERROR','Erreur de configuration CAS !!!');$/;"	d
+CAS_CONFIG_ERROR_MSG	extra/hsl-msg-en.php	/^define('CAS_CONFIG_ERROR_MSG',$tmp);$/;"	d
+CAS_CONFIG_ERROR_MSG1	extra/hsl-msg-en.php	/^define('CAS_CONFIG_ERROR_MSG1',$tmp);$/;"	d
+CAS_CONFIG_ERROR_MSG1	extra/hsl-msg-fr.php	/^define('CAS_CONFIG_ERROR_MSG1',$tmp);$/;"	d
+CAS_CONFIG_ERROR_MSG2	extra/hsl-msg-fr.php	/^define('CAS_CONFIG_ERROR_MSG2',$tmp);$/;"	d
+CAS_CONFIG_ERROR_TEXT	extra/hsl-msg-en.php	/^define('CAS_CONFIG_ERROR_TEXT',$tmp);$/;"	d
+CAS_CONFIG_ERROR_TEXT	extra/hsl-msg-fr.php	/^define('CAS_CONFIG_ERROR_TEXT',$tmp);$/;"	d
+CAS_FOOTER_LINK_MSG	extra/hsl-msg-en.php	/^define('CAS_FOOTER_LINK_MSG','Déconnection from CAS');$/;"	d
+CAS_FOOTER_LINK_MSG	extra/hsl-msg-fr.php	/^define('CAS_FOOTER_LINK_MSG','Déconnexion de CAS');$/;"	d
+CAS_FOOTER_LINK_TITLE	extra/hsl-msg-en.php	/^define('CAS_FOOTER_LINK_TITLE',$tmp);$/;"	d
+CAS_FOOTER_LINK_TITLE	extra/hsl-msg-fr.php	/^define('CAS_FOOTER_LINK_TITLE',$tmp);$/;"	d
+CAS_FOOTER_MSG	extra/hsl-msg-en.php	/^define('CAS_FOOTER_MSG','You are not logged !!!');$/;"	d
+CAS_FOOTER_MSG	extra/hsl-msg-fr.php	/^define('CAS_FOOTER_MSG','Vous n\\'êtes pas encore authentifié !!!');$/;"	d
+CAS_FOOTER_TITLE	extra/hsl-msg-en.php	/^define('CAS_FOOTER_TITLE','CAS user :');$/;"	d
+CAS_FOOTER_TITLE	extra/hsl-msg-fr.php	/^define('CAS_FOOTER_TITLE','Utilisateur CAS :');$/;"	d
+CAS_LIB_DIR	contrib/cas/casClient.php	/^define('CAS_LIB_DIR','CAS-1.0.1');$/;"	d
+CAS_LIB_DIR	contrib/cas/casProxy.php	/^define('CAS_LIB_DIR','CAS-1.0.1');$/;"	d
+CAS_LIB_DIR	extra/hsl.php	/^define('CAS_LIB_DIR','CAS-1.0.1');$/;"	d
+CAS_PGT_STORAGE	contrib/cas/casProxy.php	/^define('CAS_PGT_STORAGE','C:\/Tmp');$/;"	d
+CAS_PGT_STORAGE	extra/hsl.php	/^define('CAS_PGT_STORAGE','C:\/Tmp');$/;"	d
+CAS_PORT	contrib/cas/casClient.php	/^define('CAS_PORT',8443);$/;"	d
+CAS_PORT	contrib/cas/casProxy.php	/^define('CAS_PORT',8443);$/;"	d
+CAS_PORT	extra/hsl.php	/^define('CAS_PORT',8443);$/;"	d
+CAS_READONLY	extra/hsl.php	/^define('CAS_READONLY',false);$/;"	d
+CAS_READONLY_MSG	extra/hsl-msg-en.php	/^define('CAS_READONLY_MSG',''); \/\/ Text following the checkbox$/;"	d
+CAS_READONLY_MSG	extra/hsl-msg-fr.php	/^define('CAS_READONLY_MSG',''); \/\/ Text following the checkbox$/;"	d
+CAS_READONLY_TITLE	extra/hsl-msg-en.php	/^define('CAS_READONLY_TITLE','Allow updates');$/;"	d
+CAS_READONLY_TITLE	extra/hsl-msg-fr.php	/^define('CAS_READONLY_TITLE','Autoriser les modifications');$/;"	d
+CAS_SERVER	contrib/cas/casClient.php	/^define('CAS_SERVER','cas.pepperspot.info');$/;"	d
+CAS_SERVER	contrib/cas/casProxy.php	/^define('CAS_SERVER','cas.pepperspot.info');$/;"	d
+CAS_SERVER	extra/hsl.php	/^define('CAS_SERVER','cas.pepperspot.info');$/;"	d
+CAS_SERVICE	extra/hsl.php	/^define('CAS_SERVICE','cas:\/\/PepperSpot');$/;"	d
+CAS_URL	contrib/cas/casClient.php	/^define('CAS_URL','');$/;"	d
+CAS_URL	contrib/cas/casProxy.php	/^define('CAS_URL','');$/;"	d
+CAS_URL	extra/hsl.php	/^define('CAS_URL','');$/;"	d
+CHALLENGESIZE	src/pepper.h	95;"	d
+CHAP_DIGEST_MD5	src/pepper.h	108;"	d
+CHAP_MICROSOFT	src/pepper.h	109;"	d
+CHAP_MICROSOFT_V2	src/pepper.h	110;"	d
+CHECK_INTERVAL	src/pepper.h	105;"	d
+CMDLINE_H	src/cmdline.h	4;"	d
+CMDLINE_PARSER_PACKAGE	src/cmdline.c	22;"	d	file:
+CMDLINE_PARSER_VERSION	src/cmdline.c	26;"	d	file:
+COMPAT_H	src/compat.h	29;"	d
+CONFIG_FILE_LINE_BUFFER_SIZE	src/cmdline.c	2599;"	d	file:
+CONFIG_FILE_LINE_SIZE	src/cmdline.c	2595;"	d	file:
+DATA_LEN	src/pepper.h	92;"	d
+DEBUG_CONF	src/pepper.h	127;"	d
+DEBUG_DHCP	src/pepper.h	124;"	d
+DEBUG_RADIUS	src/pepper.h	125;"	d
+DEBUG_REDIR	src/pepper.c	147;"	d	file:
+DEBUG_REDIR	src/pepper.h	126;"	d
+DHCPACK	src/dhcp.h	128;"	d
+DHCPDECLINE	src/dhcp.h	127;"	d
+DHCPDISCOVER	src/dhcp.h	124;"	d
+DHCPNAK	src/dhcp.h	129;"	d
+DHCPOFFER	src/dhcp.h	125;"	d
+DHCPRELEASE	src/dhcp.h	130;"	d
+DHCPREQUEST	src/dhcp.h	126;"	d
+DHCP_ARP_REPLY	src/dhcp.h	352;"	d
+DHCP_ARP_REQUEST	src/dhcp.h	351;"	d
+DHCP_AUTH_AUTH_TOS	src/dhcp.h	445;"	d
+DHCP_AUTH_DNAT	src/dhcp.h	446;"	d
+DHCP_AUTH_DROP	src/dhcp.h	442;"	d
+DHCP_AUTH_NONE	src/dhcp.h	441;"	d
+DHCP_AUTH_PASS	src/dhcp.h	443;"	d
+DHCP_AUTH_UNAUTH_TOS	src/dhcp.h	444;"	d
+DHCP_BOOTPC	src/dhcp.h	134;"	d
+DHCP_BOOTPS	src/dhcp.h	133;"	d
+DHCP_BOOTREPLY	src/dhcp.h	121;"	d
+DHCP_BOOTREQUEST	src/dhcp.h	120;"	d
+DHCP_CHADDR_LEN	src/dhcp.h	281;"	d
+DHCP_DEBUG	src/dhcp.h	87;"	d
+DHCP_DNATV6_MAX	src/dhcp.h	452;"	d
+DHCP_DNAT_MAX	src/dhcp.h	450;"	d
+DHCP_DNS	src/dhcp.h	135;"	d
+DHCP_DNS_HLEN	src/dhcp.h	390;"	d
+DHCP_DOMAIN_LEN	src/dhcp.h	448;"	d
+DHCP_EAPOL_TAG_VLEN	src/dhcp.h	493;"	d
+DHCP_EAP_PLEN	src/dhcp.h	517;"	d
+DHCP_ETH_ALEN	src/dhcp.h	142;"	d
+DHCP_ETH_ARP	src/dhcp.h	83;"	d
+DHCP_ETH_EAPOL	src/dhcp.h	84;"	d
+DHCP_ETH_HLEN	src/dhcp.h	143;"	d
+DHCP_ETH_IP	src/dhcp.h	80;"	d
+DHCP_ETH_IPV6	src/dhcp.h	82;"	d
+DHCP_FILE_LEN	src/dhcp.h	283;"	d
+DHCP_HTTP	src/dhcp.h	138;"	d
+DHCP_HTTPS	src/dhcp.h	139;"	d
+DHCP_HTYPE_ETH	src/dhcp.h	290;"	d
+DHCP_IPV6_ICMPV6	src/dhcp.h	164;"	d
+DHCP_IPV6_PLEN	src/dhcp.h	222;"	d
+DHCP_IPV6_TCP	src/dhcp.h	166;"	d
+DHCP_IPV6_UDP	src/dhcp.h	165;"	d
+DHCP_IP_ALEN	src/dhcp.h	157;"	d
+DHCP_IP_HLEN	src/dhcp.h	158;"	d
+DHCP_IP_ICMP	src/dhcp.h	159;"	d
+DHCP_IP_PLEN	src/dhcp.h	204;"	d
+DHCP_IP_TCP	src/dhcp.h	160;"	d
+DHCP_IP_UDP	src/dhcp.h	161;"	d
+DHCP_LEN	src/dhcp.h	286;"	d
+DHCP_MIN_LEN	src/dhcp.h	285;"	d
+DHCP_MTU	src/dhcp.h	88;"	d
+DHCP_OPTIONS_LEN	src/dhcp.h	284;"	d
+DHCP_OPTION_DNS	src/dhcp.h	110;"	d
+DHCP_OPTION_DOMAIN_NAME	src/dhcp.h	111;"	d
+DHCP_OPTION_END	src/dhcp.h	117;"	d
+DHCP_OPTION_INTERFACE_MTU	src/dhcp.h	112;"	d
+DHCP_OPTION_LEASE_TIME	src/dhcp.h	114;"	d
+DHCP_OPTION_MAGIC	src/dhcp.h	104;"	d
+DHCP_OPTION_MAGIC_LEN	src/dhcp.h	105;"	d
+DHCP_OPTION_MESSAGE_TYPE	src/dhcp.h	115;"	d
+DHCP_OPTION_PAD	src/dhcp.h	107;"	d
+DHCP_OPTION_REQUESTED_IP	src/dhcp.h	113;"	d
+DHCP_OPTION_ROUTER_OPTION	src/dhcp.h	109;"	d
+DHCP_OPTION_SERVER_ID	src/dhcp.h	116;"	d
+DHCP_OPTION_SUBNET_MASK	src/dhcp.h	108;"	d
+DHCP_SNAME_LEN	src/dhcp.h	282;"	d
+DHCP_TAG_VLEN	src/dhcp.h	90;"	d
+DHCP_UDP_HLEN	src/dhcp.h	250;"	d
+DNPROT_DHCP_NONE	src/pepper.h	117;"	d
+DNPROT_EAPOL	src/pepper.h	120;"	d
+DNPROT_MAC	src/pepper.h	121;"	d
+DNPROT_UAM	src/pepper.h	118;"	d
+DNPROT_WPA	src/pepper.h	119;"	d
+EAP_LEN	src/pepper.h	84;"	d
+EAP_MESSAGE	src/pepper.h	112;"	d
+EIDRM	src/pepper.c	95;"	d	file:
+ENOMSG	src/pepper.c	98;"	d	file:
+F1	src/md5.c	185;"	d	file:
+F2	src/md5.c	186;"	d	file:
+F3	src/md5.c	187;"	d	file:
+F4	src/md5.c	188;"	d	file:
+FORM_NAME	extra/hsl.php	/^define('FORM_NAME','pepperSpotForm');$/;"	d
+HEIGHT	extra/hsl.php	/^define('HEIGHT',(HS_DEBUG)?'400px':'200px'); \/\/ Popup's height$/;"	d
+HOST_IS_IPv6	extra/hsl.php	/^$HOST_IS_IPv6=preg_match('\/^\\[[^\\[]+\\]\/',$_SERVER['HTTP_HOST']);$/;"	v
+HOST_IS_IPv6	extra/welcome.php	/^$HOST_IS_IPv6=preg_match('\/^\\[[^\\[]+\\]\/',$_SERVER['HTTP_HOST']);$/;"	v
+HS_CONNECT	extra/hsl-msg-en.php	/^define('HS_CONNECT','Connection');$/;"	d
+HS_CONNECT	extra/hsl-msg-fr.php	/^define('HS_CONNECT','Connexion');$/;"	d
+HS_DEBUG	extra/hsl.php	/^define('HS_DEBUG',false);$/;"	d
+HS_DEBUG	extra/welcome.php	/^define('HS_DEBUG',false);$/;"	d
+HS_HTTPS_TIMEOUT	extra/hsl.php	/^define('HS_HTTPS_TIMEOUT',5);$/;"	d
+HS_LANG	extra/hsl.php	/^define('HS_LANG','en');$/;"	d
+HS_LANG	extra/welcome.php	/^define('HS_LANG','en');$/;"	d
+HS_NAME	extra/hsl-msg-en.php	/^define('HS_NAME','PepperSpot'.(($HOST_IS_IPv6)?' (IPv6)':' (IPv4)'));$/;"	d
+HS_NAME	extra/hsl-msg-fr.php	/^define('HS_NAME','PepperSpot'.(($HOST_IS_IPv6)?' (IPv6)':' (IPv4)'));$/;"	d
+HS_NAME	extra/welcome-msg-en.php	/^define('HS_NAME','PepperSpot');$/;"	d
+HS_NAME	extra/welcome-msg-fr.php	/^define('HS_NAME','PepperSpot');$/;"	d
+HS_REDIR_TIMEOUT	extra/hsl.php	/^define('HS_REDIR_TIMEOUT',0);$/;"	d
+HS_UAMSECRET	extra/hsl.php	/^define('HS_UAMSECRET','testing234');$/;"	d
+HTTPS	extra/hsl.php	/^  $HTTPS=strtoupper(cbGetValue($_SERVER,"HTTPS"));$/;"	v
+IDLETIME	src/pepper.h	243;"	d
+IFNAMSIZ	src/tun.h	77;"	d
+IFNAMSIZ	src/tun6.h	59;"	d
+IN6ADDR_ALL_NODES_MC_INIT	src/util.h	51;"	d
+IN6ADDR_ALL_ROUTERS_MC_INIT	src/util.h	58;"	d
+IPPOOL_NOBROADCAST	src/ippool.h	89;"	d
+IPPOOL_NOGATEWAY	src/ippool.h	90;"	d
+IPPOOL_NONETWORK	src/ippool.h	88;"	d
+IPPOOL_STATSIZE	src/ippool.h	92;"	d
+IPV6_RECVHOPLIMIT	src/util.h	40;"	d
+IPV6_RECVPKTINFO	src/util.h	44;"	d
+LF	contrib/cas/casClient.php	/^define('LF',"\\n");$/;"	d
+LF	contrib/cas/casProxy.php	/^define('LF',"\\n");$/;"	d
+LF	extra/hsl.php	/^define('LF',"\\n");$/;"	d
+LF	extra/welcome.php	/^define('LF',"\\n");$/;"	d
+LIBTUN6_ERRBUF_SIZE	src/tun6.h	62;"	d
+LIBTUN6_TUN6_H	src/tun6.h	50;"	d
+MACOK_MAX	src/pepper.h	86;"	d
+MACSTRLEN	src/pepper.h	88;"	d
+MAX_LEN	extra/hsl.php	/^define('MAX_LEN',128); \/\/ Maximum size of username et password$/;"	d
+MD5Context	src/md5.h	/^struct MD5Context$/;"	s
+MD5Final	src/md5.c	/^void MD5Final(unsigned char digest[16], struct MD5Context *ctx)$/;"	f
+MD5Init	src/md5.c	/^void MD5Init(struct MD5Context *ctx)$/;"	f
+MD5STEP	src/md5.c	193;"	d	file:
+MD5Transform	src/md5.c	/^void MD5Transform(uint32_t buf[4], uint32_t const in[16])$/;"	f
+MD5Update	src/md5.c	/^void MD5Update(struct MD5Context *ctx, unsigned char const *buf, unsigned len)$/;"	f
+MD5_CTX	src/md5.h	/^typedef struct MD5Context MD5_CTX;$/;"	t	typeref:struct:MD5Context
+MD5_H	src/md5.h	29;"	d
+MD5_SIZE	extra/hsl.php	/^define('MD5_SIZE',16);$/;"	d
+MPPE_KEYSIZE	src/pepper.h	114;"	d
+MS2SUCCSIZE	src/pepper.h	90;"	d
+MSG_ALREADY	extra/hsl-msg-en.php	/^$MSG_ALREADY='<a href="'.$baseURL.'\/logoff" title="logout">';$/;"	v
+MSG_ALREADY	extra/hsl-msg-fr.php	/^$MSG_ALREADY='<a href="'.$baseURL.'\/logoff" title="Déconnexion">';$/;"	v
+MSG_CNX_START	extra/hsl-msg-en.php	/^$MSG_CNX_START='Please wait';$/;"	v
+MSG_CNX_START	extra/hsl-msg-fr.php	/^$MSG_CNX_START='Merci de patienter';$/;"	v
+MSG_DEFAULT	extra/hsl-msg-en.php	/^$MSG_DEFAULT='Login must be performed through '.HS_NAME.' daemon !!!';$/;"	v
+MSG_DEFAULT	extra/hsl-msg-fr.php	/^$MSG_DEFAULT='Vous devez vous identifier par l\\'intermédiaire du démon pepper';$/;"	v
+MSG_FAILED	extra/hsl-msg-en.php	/^$MSG_FAILED='Try again...';$/;"	v
+MSG_FAILED	extra/hsl-msg-fr.php	/^$MSG_FAILED='Essayez à nouveau...';$/;"	v
+MSG_LOGOFF	extra/hsl-msg-en.php	/^$MSG_LOGOFF='You\\'ve been logged out from '.HS_NAME.'.<br\/>';$/;"	v
+MSG_LOGOFF	extra/hsl-msg-fr.php	/^$MSG_LOGOFF='Vous avez bien été déconnecté de '.HS_NAME.'.<br\/>';$/;"	v
+MSG_NOTYET	extra/hsl-msg-en.php	/^$MSG_NOTYET='Enter your IDs for the connection to '.HS_NAME.'...';$/;"	v
+MSG_NOTYET	extra/hsl-msg-fr.php	/^$MSG_NOTYET='Entrez vos identifiants pour la connexion à '.HS_NAME.'...';$/;"	v
+MSG_NO_HTTPS	extra/hsl-msg-en.php	/^	$MSG_NO_HTTPS='Login must use an encrypted connection (HTTPS) !!!';$/;"	v
+MSG_NO_HTTPS	extra/hsl-msg-fr.php	/^	$MSG_NO_HTTPS='Vous devez utiliser une connexion sécurisée (HTTPS) !!!';$/;"	v
+MSG_POPUP1	extra/hsl-msg-en.php	/^$MSG_POPUP1=$MSG_CNX_START;$/;"	v
+MSG_POPUP1	extra/hsl-msg-fr.php	/^$MSG_POPUP1=$MSG_CNX_START;$/;"	v
+MSG_POPUP2	extra/hsl-msg-en.php	/^$MSG_POPUP2='<a href="javascript:opener.location=\\''.$baseURL.'\/logoff\\';';$/;"	v
+MSG_POPUP2	extra/hsl-msg-fr.php	/^$MSG_POPUP2='<a href="javascript:opener.location=\\''.$baseURL.'\/logoff\\';';$/;"	v
+MSG_POPUP3	extra/hsl-msg-en.php	/^$MSG_POPUP3='<a href="javascript:opener.location=\\''.$baseURL.'\/prelogin\\';';$/;"	v
+MSG_POPUP3	extra/hsl-msg-fr.php	/^$MSG_POPUP3='<a href="javascript:opener.location=\\''.$baseURL.'\/prelogin\\';';$/;"	v
+MSG_SUCCESS	extra/hsl-msg-en.php	/^$MSG_SUCCESS='Welcome on '.HS_NAME.'.<br\/>';$/;"	v
+MSG_SUCCESS	extra/hsl-msg-fr.php	/^$MSG_SUCCESS='Bienvenue sur '.HS_NAME.'.<br\/>';$/;"	v
+NT_KEYSIZE	src/pepper.h	115;"	d
+PACKET_MAX	src/tun.h	80;"	d
+PACKET_MAX	src/tun6.c	157;"	d	file:
+PAP_PASSWORD	src/pepper.h	111;"	d
+PHP_SELF	extra/hsl.php	/^  $PHP_SELF=$_SERVER['PHP_SELF'];$/;"	v
+RADIUS_ACCTPORT	src/radius.h	85;"	d
+RADIUS_ATTR_ACCT_AUTHENTIC	src/radius.h	153;"	d
+RADIUS_ATTR_ACCT_DELAY_TIME	src/radius.h	149;"	d
+RADIUS_ATTR_ACCT_INPUT_GIGAWORDS	src/radius.h	160;"	d
+RADIUS_ATTR_ACCT_INPUT_OCTETS	src/radius.h	150;"	d
+RADIUS_ATTR_ACCT_INPUT_PACKETS	src/radius.h	155;"	d
+RADIUS_ATTR_ACCT_INTERIM_INTERVAL	src/radius.h	180;"	d
+RADIUS_ATTR_ACCT_LINK_COUNT	src/radius.h	159;"	d
+RADIUS_ATTR_ACCT_MULTI_SESSION_ID	src/radius.h	158;"	d
+RADIUS_ATTR_ACCT_OUTPUT_GIGAWORDS	src/radius.h	161;"	d
+RADIUS_ATTR_ACCT_OUTPUT_OCTETS	src/radius.h	151;"	d
+RADIUS_ATTR_ACCT_OUTPUT_PACKETS	src/radius.h	156;"	d
+RADIUS_ATTR_ACCT_SESSION_ID	src/radius.h	152;"	d
+RADIUS_ATTR_ACCT_SESSION_TIME	src/radius.h	154;"	d
+RADIUS_ATTR_ACCT_STATUS_TYPE	src/radius.h	148;"	d
+RADIUS_ATTR_ACCT_TERMINATE_CAUSE	src/radius.h	157;"	d
+RADIUS_ATTR_ACCT_TUNNEL_CONNECTION	src/radius.h	167;"	d
+RADIUS_ATTR_ARAP_CHALLENGE_RESPONSE	src/radius.h	179;"	d
+RADIUS_ATTR_ARAP_FEATURES	src/radius.h	169;"	d
+RADIUS_ATTR_ARAP_PASSWORD	src/radius.h	168;"	d
+RADIUS_ATTR_ARAP_SECURITY	src/radius.h	171;"	d
+RADIUS_ATTR_ARAP_SECURITY_DATA	src/radius.h	172;"	d
+RADIUS_ATTR_ARAP_ZONE_ACCESS	src/radius.h	170;"	d
+RADIUS_ATTR_CALLBACK_ID	src/radius.h	129;"	d
+RADIUS_ATTR_CALLBACK_NUMBER	src/radius.h	128;"	d
+RADIUS_ATTR_CALLED_STATION_ID	src/radius.h	138;"	d
+RADIUS_ATTR_CALLING_STATION_ID	src/radius.h	139;"	d
+RADIUS_ATTR_CHAP_CHALLENGE	src/radius.h	163;"	d
+RADIUS_ATTR_CHAP_PASSWORD	src/radius.h	113;"	d
+RADIUS_ATTR_CLASS	src/radius.h	133;"	d
+RADIUS_ATTR_CONFIGURATION_TOKEN	src/radius.h	176;"	d
+RADIUS_ATTR_CONNECT_INFO	src/radius.h	175;"	d
+RADIUS_ATTR_DIGEST_ATTRIBUTES	src/radius.h	190;"	d
+RADIUS_ATTR_DIGEST_RESPONSE	src/radius.h	189;"	d
+RADIUS_ATTR_EAP_MESSAGE	src/radius.h	177;"	d
+RADIUS_ATTR_EVENT_TIMESTAMP	src/radius.h	162;"	d
+RADIUS_ATTR_FILTER_ID	src/radius.h	121;"	d
+RADIUS_ATTR_FRAMED_APPLETALK_LINK	src/radius.h	145;"	d
+RADIUS_ATTR_FRAMED_APPLETALK_NETWORK	src/radius.h	146;"	d
+RADIUS_ATTR_FRAMED_APPLETALK_ZONE	src/radius.h	147;"	d
+RADIUS_ATTR_FRAMED_COMPRESSION	src/radius.h	123;"	d
+RADIUS_ATTR_FRAMED_INTERFACE_ID	src/radius.h	184;"	d
+RADIUS_ATTR_FRAMED_IPV6_POOL	src/radius.h	188;"	d
+RADIUS_ATTR_FRAMED_IPV6_PREFIX	src/radius.h	185;"	d
+RADIUS_ATTR_FRAMED_IPV6_ROUTE	src/radius.h	187;"	d
+RADIUS_ATTR_FRAMED_IPX_NETWORK	src/radius.h	131;"	d
+RADIUS_ATTR_FRAMED_IP_ADDRESS	src/radius.h	118;"	d
+RADIUS_ATTR_FRAMED_IP_NETMASK	src/radius.h	119;"	d
+RADIUS_ATTR_FRAMED_MTU	src/radius.h	122;"	d
+RADIUS_ATTR_FRAMED_POOL	src/radius.h	182;"	d
+RADIUS_ATTR_FRAMED_PROTOCOL	src/radius.h	117;"	d
+RADIUS_ATTR_FRAMED_ROUTE	src/radius.h	130;"	d
+RADIUS_ATTR_FRAMED_ROUTING	src/radius.h	120;"	d
+RADIUS_ATTR_IDLE_TIMEOUT	src/radius.h	136;"	d
+RADIUS_ATTR_LOGIN_IPV6_HOST	src/radius.h	186;"	d
+RADIUS_ATTR_LOGIN_IP_HOST	src/radius.h	124;"	d
+RADIUS_ATTR_LOGIN_LAT_GROUP	src/radius.h	144;"	d
+RADIUS_ATTR_LOGIN_LAT_NODE	src/radius.h	143;"	d
+RADIUS_ATTR_LOGIN_LAT_PORT	src/radius.h	166;"	d
+RADIUS_ATTR_LOGIN_LAT_SERVICE	src/radius.h	142;"	d
+RADIUS_ATTR_LOGIN_SERVICE	src/radius.h	125;"	d
+RADIUS_ATTR_LOGIN_TCP_PORT	src/radius.h	126;"	d
+RADIUS_ATTR_MESSAGE_AUTHENTICATOR	src/radius.h	178;"	d
+RADIUS_ATTR_MS_CHAP2_RESPONSE	src/radius.h	200;"	d
+RADIUS_ATTR_MS_CHAP2_SUCCESS	src/radius.h	201;"	d
+RADIUS_ATTR_MS_CHAP_CHALLENGE	src/radius.h	196;"	d
+RADIUS_ATTR_MS_CHAP_MPPE_KEYS	src/radius.h	197;"	d
+RADIUS_ATTR_MS_CHAP_RESPONSE	src/radius.h	193;"	d
+RADIUS_ATTR_MS_MPPE_ENCRYPTION_POLICY	src/radius.h	194;"	d
+RADIUS_ATTR_MS_MPPE_ENCRYPTION_TYPES	src/radius.h	195;"	d
+RADIUS_ATTR_MS_MPPE_RECV_KEY	src/radius.h	199;"	d
+RADIUS_ATTR_MS_MPPE_SEND_KEY	src/radius.h	198;"	d
+RADIUS_ATTR_NAS_IDENTIFIER	src/radius.h	140;"	d
+RADIUS_ATTR_NAS_IPV6_ADDRESS	src/radius.h	183;"	d
+RADIUS_ATTR_NAS_IP_ADDRESS	src/radius.h	114;"	d
+RADIUS_ATTR_NAS_PORT	src/radius.h	115;"	d
+RADIUS_ATTR_NAS_PORT_ID	src/radius.h	181;"	d
+RADIUS_ATTR_NAS_PORT_TYPE	src/radius.h	164;"	d
+RADIUS_ATTR_PASSWORD_RETRY	src/radius.h	173;"	d
+RADIUS_ATTR_PEPPERSPOT_BANDWIDTH_MAX_DOWN	src/radius_pepperspot.h	80;"	d
+RADIUS_ATTR_PEPPERSPOT_BANDWIDTH_MAX_UP	src/radius_pepperspot.h	79;"	d
+RADIUS_ATTR_PEPPERSPOT_INTERVAL	src/radius_pepperspot.h	84;"	d
+RADIUS_ATTR_PEPPERSPOT_MAC_ALLOWED	src/radius_pepperspot.h	83;"	d
+RADIUS_ATTR_PEPPERSPOT_MAX_INPUT_OCTETS	src/radius_pepperspot.h	76;"	d
+RADIUS_ATTR_PEPPERSPOT_MAX_OUTPUT_OCTETS	src/radius_pepperspot.h	77;"	d
+RADIUS_ATTR_PEPPERSPOT_MAX_TOTAL_OCTETS	src/radius_pepperspot.h	78;"	d
+RADIUS_ATTR_PEPPERSPOT_UAM_ALLOWED	src/radius_pepperspot.h	82;"	d
+RADIUS_ATTR_PORT_LIMIT	src/radius.h	165;"	d
+RADIUS_ATTR_PROMPT	src/radius.h	174;"	d
+RADIUS_ATTR_PROXY_STATE	src/radius.h	141;"	d
+RADIUS_ATTR_REPLY_MESSAGE	src/radius.h	127;"	d
+RADIUS_ATTR_SERVICE_TYPE	src/radius.h	116;"	d
+RADIUS_ATTR_SESSION_TIMEOUT	src/radius.h	135;"	d
+RADIUS_ATTR_STATE	src/radius.h	132;"	d
+RADIUS_ATTR_TERMINATION_ACTION	src/radius.h	137;"	d
+RADIUS_ATTR_USER_NAME	src/radius.h	111;"	d
+RADIUS_ATTR_USER_PASSWORD	src/radius.h	112;"	d
+RADIUS_ATTR_VENDOR_SPECIFIC	src/radius.h	134;"	d
+RADIUS_ATTR_VLEN	src/radius.h	83;"	d
+RADIUS_ATTR_WISPR_BANDWIDTH_MAX_DOWN	src/radius_wispr.h	83;"	d
+RADIUS_ATTR_WISPR_BANDWIDTH_MAX_UP	src/radius_wispr.h	82;"	d
+RADIUS_ATTR_WISPR_BANDWIDTH_MIN_DOWN	src/radius_wispr.h	81;"	d
+RADIUS_ATTR_WISPR_BANDWIDTH_MIN_UP	src/radius_wispr.h	80;"	d
+RADIUS_ATTR_WISPR_BILLING_CLASS_OF_SERVICE	src/radius_wispr.h	86;"	d
+RADIUS_ATTR_WISPR_LOCATION_ID	src/radius_wispr.h	76;"	d
+RADIUS_ATTR_WISPR_LOCATION_NAME	src/radius_wispr.h	77;"	d
+RADIUS_ATTR_WISPR_LOGOFF_URL	src/radius_wispr.h	78;"	d
+RADIUS_ATTR_WISPR_REDIRECTION_URL	src/radius_wispr.h	79;"	d
+RADIUS_ATTR_WISPR_SESSION_TERMINATE_END_OF_DAY	src/radius_wispr.h	85;"	d
+RADIUS_ATTR_WISPR_SESSION_TERMINATE_TIME	src/radius_wispr.h	84;"	d
+RADIUS_AUTHLEN	src/radius.h	76;"	d
+RADIUS_AUTHPORT	src/radius.h	84;"	d
+RADIUS_CODE_ACCESS_ACCEPT	src/radius.h	93;"	d
+RADIUS_CODE_ACCESS_CHALLENGE	src/radius.h	97;"	d
+RADIUS_CODE_ACCESS_REJECT	src/radius.h	94;"	d
+RADIUS_CODE_ACCESS_REQUEST	src/radius.h	92;"	d
+RADIUS_CODE_ACCOUNTING_REQUEST	src/radius.h	95;"	d
+RADIUS_CODE_ACCOUNTING_RESPONSE	src/radius.h	96;"	d
+RADIUS_CODE_COA_ACK	src/radius.h	104;"	d
+RADIUS_CODE_COA_NAK	src/radius.h	105;"	d
+RADIUS_CODE_COA_REQUEST	src/radius.h	103;"	d
+RADIUS_CODE_DISCONNECT_ACK	src/radius.h	101;"	d
+RADIUS_CODE_DISCONNECT_NAK	src/radius.h	102;"	d
+RADIUS_CODE_DISCONNECT_REQUEST	src/radius.h	100;"	d
+RADIUS_CODE_STATUS_ACCEPT	src/radius.h	107;"	d
+RADIUS_CODE_STATUS_CLIENT	src/radius.h	99;"	d
+RADIUS_CODE_STATUS_REJECT	src/radius.h	108;"	d
+RADIUS_CODE_STATUS_REQUEST	src/radius.h	106;"	d
+RADIUS_CODE_STATUS_SERVER	src/radius.h	98;"	d
+RADIUS_HDRSIZE	src/radius.h	87;"	d
+RADIUS_MD5LEN	src/radius.h	75;"	d
+RADIUS_MPPEKEYSSIZE	src/radius.h	89;"	d
+RADIUS_NAS_PORT_TYPE_VIRTUAL	src/radius.h	209;"	d
+RADIUS_NAS_PORT_TYPE_WIRELESS_802_11	src/radius.h	210;"	d
+RADIUS_NAS_PORT_TYPE_WIRELESS_UMTS	src/radius.h	211;"	d
+RADIUS_PACKSIZE	src/radius.h	86;"	d
+RADIUS_PASSWORD_LEN	src/radius.h	88;"	d
+RADIUS_PWSIZE	src/radius.h	77;"	d
+RADIUS_QUEUESIZE	src/radius.h	78;"	d
+RADIUS_RETRY1	src/radius.h	80;"	d
+RADIUS_RETRY2	src/radius.h	81;"	d
+RADIUS_SECRETSIZE	src/radius.h	74;"	d
+RADIUS_SERVICE_TYPE_LOGIN	src/radius.h	203;"	d
+RADIUS_SERVICE_TYPE_PEPPERSPOT_AUTHORIZE_ONLY	src/radius_pepperspot.h	86;"	d
+RADIUS_STATUS_TYPE_INTERIM_UPDATE	src/radius.h	207;"	d
+RADIUS_STATUS_TYPE_START	src/radius.h	205;"	d
+RADIUS_STATUS_TYPE_STOP	src/radius.h	206;"	d
+RADIUS_TERMINATE_CAUSE_ADMIN_REBOOT	src/radius.h	220;"	d
+RADIUS_TERMINATE_CAUSE_ADMIN_RESET	src/radius.h	219;"	d
+RADIUS_TERMINATE_CAUSE_CALLBACK	src/radius.h	229;"	d
+RADIUS_TERMINATE_CAUSE_HOST_REQUEST	src/radius.h	231;"	d
+RADIUS_TERMINATE_CAUSE_IDLE_TIMEOUT	src/radius.h	217;"	d
+RADIUS_TERMINATE_CAUSE_LOST_CARRIER	src/radius.h	215;"	d
+RADIUS_TERMINATE_CAUSE_LOST_SERVICE	src/radius.h	216;"	d
+RADIUS_TERMINATE_CAUSE_NAS_ERROR	src/radius.h	222;"	d
+RADIUS_TERMINATE_CAUSE_NAS_REBOOT	src/radius.h	224;"	d
+RADIUS_TERMINATE_CAUSE_NAS_REQUEST	src/radius.h	223;"	d
+RADIUS_TERMINATE_CAUSE_PORT_ERROR	src/radius.h	221;"	d
+RADIUS_TERMINATE_CAUSE_PORT_PREEMPTED	src/radius.h	226;"	d
+RADIUS_TERMINATE_CAUSE_PORT_SUSPEND	src/radius.h	227;"	d
+RADIUS_TERMINATE_CAUSE_PORT_UNNEEDED	src/radius.h	225;"	d
+RADIUS_TERMINATE_CAUSE_SERVICE_UNAVAILABLE	src/radius.h	228;"	d
+RADIUS_TERMINATE_CAUSE_SESSION_TIMEOUT	src/radius.h	218;"	d
+RADIUS_TERMINATE_CAUSE_USER_ERROR	src/radius.h	230;"	d
+RADIUS_TERMINATE_CAUSE_USER_REQUEST	src/radius.h	214;"	d
+RADIUS_TIMEOUT	src/radius.h	79;"	d
+RADIUS_VENDOR_MS	src/radius.h	192;"	d
+RADIUS_VENDOR_PEPPERSPOT	src/radius_pepperspot.h	74;"	d
+RADIUS_VENDOR_WISPR	src/radius_wispr.h	74;"	d
+REDIR_ABORT	src/redir.h	83;"	d
+REDIR_ABORT_ACK	src/redir.h	95;"	d
+REDIR_ABORT_NAK	src/redir.h	96;"	d
+REDIR_ABOUT	src/redir.h	84;"	d
+REDIR_ALREADY	src/redir.h	89;"	d
+REDIR_CHALLEN	src/redir.h	59;"	d
+REDIR_CHALLENGE	src/redir.h	82;"	d
+REDIR_CHALLENGETIMEOUT1	src/redir.h	72;"	d
+REDIR_CHALLENGETIMEOUT2	src/redir.h	73;"	d
+REDIR_ETH_ALEN	src/redir.h	98;"	d
+REDIR_FAILED_OTHER	src/redir.h	91;"	d
+REDIR_FAILED_REJECT	src/redir.h	90;"	d
+REDIR_HTTP_MAX_TIME	src/redir.h	46;"	d
+REDIR_HTTP_SELECT_TIME	src/redir.h	47;"	d
+REDIR_LOGIN	src/redir.h	79;"	d
+REDIR_LOGOFF	src/redir.h	93;"	d
+REDIR_LOGOUT	src/redir.h	81;"	d
+REDIR_MACSTRLEN	src/redir.h	62;"	d
+REDIR_MAXBUFFER	src/redir.h	67;"	d
+REDIR_MAXCHAR	src/redir.h	65;"	d
+REDIR_MAXLISTEN	src/redir.h	42;"	d
+REDIR_MAXTIME	src/redir.h	44;"	d
+REDIR_MD5LEN	src/redir.h	60;"	d
+REDIR_MSDOWNLOAD	src/redir.h	86;"	d
+REDIR_NOTYET	src/redir.h	94;"	d
+REDIR_PRELOGIN	src/redir.h	80;"	d
+REDIR_RADIUS_MAX_TIME	src/redir.h	49;"	d
+REDIR_RADIUS_SELECT_TIME	src/redir.h	50;"	d
+REDIR_SESSIONID_LEN	src/redir.h	75;"	d
+REDIR_STATUS	src/redir.h	85;"	d
+REDIR_SUCCESS	src/redir.h	92;"	d
+REDIR_TERM_GETREQ	src/redir.h	53;"	d
+REDIR_TERM_GETSTATE	src/redir.h	54;"	d
+REDIR_TERM_INIT	src/redir.h	52;"	d
+REDIR_TERM_PROCESS	src/redir.h	55;"	d
+REDIR_TERM_RADIUS	src/redir.h	56;"	d
+REDIR_TERM_REPLY	src/redir.h	57;"	d
+REDIR_URL_LEN	src/redir.h	77;"	d
+REDIR_USERNAMESIZE	src/redir.h	69;"	d
+REDIR_USERURLSIZE	src/redir.h	70;"	d
+REFRESH_NO_HTTPS	extra/hsl.php	/^    $REFRESH_NO_HTTPS=HS_HTTPS_TIMEOUT.';url='.$secureURL;$/;"	v
+SIZE	extra/hsl.php	/^define('SIZE',40);     \/\/ Size of username and password fields in auth-form$/;"	d
+SYSERR_MSGSIZE	src/syserr.h	74;"	d
+TABLE_STYLE	extra/hsl.php	/^define('TABLE_STYLE',$tmp);$/;"	d
+TD_STYLE	extra/hsl.php	/^define('TD_STYLE','text-align:right;padding:1px;');$/;"	d
+TITLE_ALREADY	extra/hsl-msg-en.php	/^$TITLE_ALREADY='You\\'re already logged in to '.HS_NAME;$/;"	v
+TITLE_ALREADY	extra/hsl-msg-fr.php	/^$TITLE_ALREADY='Vous êtes déjà connecté sur '.HS_NAME;$/;"	v
+TITLE_CNX_START	extra/hsl-msg-en.php	/^$TITLE_CNX_START='Logging in to '.HS_NAME;$/;"	v
+TITLE_CNX_START	extra/hsl-msg-fr.php	/^$TITLE_CNX_START='Connexion en cours sur '.HS_NAME;$/;"	v
+TITLE_DEFAULT	extra/hsl-msg-en.php	/^$TITLE_DEFAULT=HS_NAME.' Login Failed !!!';$/;"	v
+TITLE_DEFAULT	extra/hsl-msg-fr.php	/^$TITLE_DEFAULT='Identification incorrecte !!!';$/;"	v
+TITLE_FAILED	extra/hsl-msg-en.php	/^$TITLE_FAILED='Wrong identification for '.HS_NAME.' !!!';$/;"	v
+TITLE_FAILED	extra/hsl-msg-fr.php	/^$TITLE_FAILED='Identification incorrecte sur '.HS_NAME.' !!!';$/;"	v
+TITLE_LOGOFF	extra/hsl-msg-en.php	/^$TITLE_LOGOFF='Logged out from '.HS_NAME;$/;"	v
+TITLE_LOGOFF	extra/hsl-msg-fr.php	/^$TITLE_LOGOFF='Déconnexion de '.HS_NAME;$/;"	v
+TITLE_NOTYET	extra/hsl-msg-en.php	/^$TITLE_NOTYET='Logging in to '.HS_NAME;$/;"	v
+TITLE_NOTYET	extra/hsl-msg-fr.php	/^$TITLE_NOTYET='Connexion sur '.HS_NAME;$/;"	v
+TITLE_NO_HTTPS	extra/hsl-msg-en.php	/^	$TITLE_NO_HTTPS=HS_NAME.' Login Failed !!!';$/;"	v
+TITLE_NO_HTTPS	extra/hsl-msg-fr.php	/^	$TITLE_NO_HTTPS='Connexion incorrecte sur '.HS_NAME.' !!!';$/;"	v
+TITLE_POPUP1	extra/hsl-msg-en.php	/^$TITLE_POPUP1='Trying to log in to '.HS_NAME;$/;"	v
+TITLE_POPUP1	extra/hsl-msg-fr.php	/^$TITLE_POPUP1='Connexion en cours sur '.HS_NAME;$/;"	v
+TITLE_POPUP2	extra/hsl-msg-en.php	/^$TITLE_POPUP2='Logged in to '.HS_NAME;$/;"	v
+TITLE_POPUP2	extra/hsl-msg-fr.php	/^$TITLE_POPUP2='Vous êtes connecté sur '.HS_NAME;$/;"	v
+TITLE_POPUP3	extra/hsl-msg-en.php	/^$TITLE_POPUP3='You\\'ve been logged out from '.HS_NAME;$/;"	v
+TITLE_POPUP3	extra/hsl-msg-fr.php	/^$TITLE_POPUP3='Vous avez été déconnecté de '.HS_NAME;$/;"	v
+TITLE_SUCCESS	extra/hsl-msg-en.php	/^$TITLE_SUCCESS='Logged in to '.HS_NAME;$/;"	v
+TITLE_SUCCESS	extra/hsl-msg-fr.php	/^$TITLE_SUCCESS='Vous êtes connecté sur '.HS_NAME;$/;"	v
+TUNSIFHEAD	src/tun6.c	126;"	d	file:
+TUN_ADDRSIZE	src/tun.h	81;"	d
+TUN_HEAD_IPV6_INITIALIZER	src/tun6.c	105;"	d	file:
+TUN_HEAD_IPV6_INITIALIZER	src/tun6.c	142;"	d	file:
+TUN_NLBUFSIZE	src/tun.h	84;"	d
+UAM6_HOST	extra/welcome.php	/^define('UAM6_HOST','[2001:db8:1::1234]');$/;"	d
+UAMOKIP_MAX	src/pepper.h	245;"	d
+UAMOKNET_MAX	src/pepper.h	246;"	d
+UAMSERVER_MAX	src/pepper.h	248;"	d
+UAM_HOST	extra/welcome.php	/^define('UAM_HOST','192.168.182.1');$/;"	d
+UAM_PORT	extra/welcome.php	/^define('UAM_PORT','3990');$/;"	d
+URL	extra/welcome-msg-en.php	/^$URL='http:\/\/'.UAM6_HOST.':'.UAM_PORT.'\/logout';$/;"	v
+URL	extra/welcome-msg-en.php	/^$URL='http:\/\/'.UAM6_HOST.':'.UAM_PORT.'\/prelogin';$/;"	v
+URL	extra/welcome-msg-en.php	/^$URL='http:\/\/'.UAM_HOST.':'.UAM_PORT.'\/logout';$/;"	v
+URL	extra/welcome-msg-en.php	/^$URL='http:\/\/'.UAM_HOST.':'.UAM_PORT.'\/prelogin';$/;"	v
+URL	extra/welcome-msg-fr.php	/^$URL='http:\/\/'.UAM6_HOST.':'.UAM_PORT.'\/logout';$/;"	v
+URL	extra/welcome-msg-fr.php	/^$URL='http:\/\/'.UAM6_HOST.':'.UAM_PORT.'\/prelogin';$/;"	v
+URL	extra/welcome-msg-fr.php	/^$URL='http:\/\/'.UAM_HOST.':'.UAM_PORT.'\/logout';$/;"	v
+URL	extra/welcome-msg-fr.php	/^$URL='http:\/\/'.UAM_HOST.':'.UAM_PORT.'\/prelogin';$/;"	v
+USERNAMESIZE	src/pepper.h	94;"	d
+USERURLSIZE	src/pepper.h	96;"	d
+USE_BSD	src/tun6.c	118;"	d	file:
+USE_CAS	extra/hsl.php	/^define('USE_CAS',false);$/;"	d
+USE_LINUX	src/tun6.c	80;"	d	file:
+WELCOME_HDR	extra/welcome-msg-en.php	/^$WELCOME_HDR=HS_NAME.'\\'s captive portal';$/;"	v
+WELCOME_HDR	extra/welcome-msg-fr.php	/^$WELCOME_HDR='Portail captif '.HS_NAME;$/;"	v
+WELCOME_MSG	extra/welcome-msg-en.php	/^$WELCOME_MSG='You need to login before';$/;"	v
+WELCOME_MSG	extra/welcome-msg-fr.php	/^$WELCOME_MSG='Vous devez vous identifier';$/;"	v
+WELCOME_TITLE	extra/welcome-msg-en.php	/^$WELCOME_TITLE='Welcome on '.HS_NAME;$/;"	v
+WELCOME_TITLE	extra/welcome-msg-fr.php	/^$WELCOME_TITLE='Bienvenue sur '.HS_NAME;$/;"	v
+WIDTH	extra/hsl.php	/^define('WIDTH',(HS_DEBUG)?'600px':'400px');  \/\/ Popup's width$/;"	d
+_DHCP_H	src/dhcp.h	75;"	d
+_IPHASH_H	src/iphash.h	72;"	d
+_IPPOOL_H	src/ippool.h	72;"	d
+_LOOKUP_H	src/lookup.h	72;"	d
+_PEPPER_H	src/pepper.h	75;"	d
+_RADIUS_H	src/radius.h	72;"	d
+_RADIUS_PEPPERSPOT_H	src/radius_pepperspot.h	72;"	d
+_RADIUS_WISPR_H	src/radius_wispr.h	72;"	d
+_REDIR_H	src/redir.h	40;"	d
+_SYSERR_H	src/syserr.h	72;"	d
+_TUN_H	src/tun.h	72;"	d
+__ICMP6_H__	src/icmp6.h	31;"	d
+__NDISC_H__	src/ndisc.h	31;"	d
+__UTIL_H__	src/util.h	31;"	d
+_iface_addr	src/tun6.c	/^static int _iface_addr(int reqfd, int id, int add,$/;"	f	file:
+ac_fn_c_check_func	configure	/^ac_fn_c_check_func ()$/;"	f
+ac_fn_c_check_header_compile	configure	/^ac_fn_c_check_header_compile ()$/;"	f
+ac_fn_c_check_header_mongrel	configure	/^ac_fn_c_check_header_mongrel ()$/;"	f
+ac_fn_c_check_member	configure	/^ac_fn_c_check_member ()$/;"	f
+ac_fn_c_check_type	configure	/^ac_fn_c_check_type ()$/;"	f
+ac_fn_c_try_compile	configure	/^ac_fn_c_try_compile ()$/;"	f
+ac_fn_c_try_cpp	configure	/^ac_fn_c_try_cpp ()$/;"	f
+ac_fn_c_try_link	configure	/^ac_fn_c_try_link ()$/;"	f
+ac_fn_c_try_run	configure	/^ac_fn_c_try_run ()$/;"	f
+access_request	src/pepper.c	/^int access_request(struct radius_packet_t *pack,$/;"	f
+accounting_request	src/pepper.c	/^int accounting_request(struct radius_packet_t *pack,$/;"	f
+acct_req	src/pepper.c	/^static int acct_req(struct app_conn_t *conn, int status_type)$/;"	f	file:
+acctport	src/radius.h	/^  uint16_t acctport;         \/**< His port for accounting *\/$/;"	m	struct:radius_t
+ack	src/dhcp.h	/^  uint32_t ack; \/**< Acknowledgement number. *\/$/;"	m	struct:dhcp_tcphdr_t
+action	extra/hsl.php	/^$action=cbGetValue($_REQUEST,'action');$/;"	v
+addr	src/ippool.h	/^  struct in_addr addr;           \/**< IP address of this member *\/$/;"	m	struct:ippoolm_t	typeref:struct:ippoolm_t::in_addr
+addr	src/radius.h	/^  struct in_addr addr;           \/**< IP address of this member *\/$/;"	m	struct:radiusm_t	typeref:struct:radiusm_t::in_addr
+addr	src/redir.h	/^  struct in_addr addr; \/**< Client IPv4 address *\/$/;"	m	struct:redir_msg_t	typeref:struct:redir_msg_t::in_addr
+addr	src/redir.h	/^  struct in_addr addr; \/**< Listen IPv4 address *\/$/;"	m	struct:redir_t	typeref:struct:redir_t::in_addr
+addr	src/tun.h	/^  struct in_addr addr;   \/**< Main IPv4 address *\/$/;"	m	struct:tun_t	typeref:struct:tun_t::in_addr
+addrs	src/tun.h	/^  int addrs;             \/**< Number of allocated IP addresses *\/$/;"	m	struct:tun_t
+addrsv6	src/tun6.h	/^  int addrsv6; \/**< Number of allocated IP addresses *\/$/;"	m	struct:tun6_t
+addrv6	src/ippool.h	/^  struct in6_addr addrv6;        \/**< IPv6 address of this member *\/$/;"	m	struct:ippoolm_t	typeref:struct:ippoolm_t::in6_addr
+addrv6	src/radius.h	/^  struct in6_addr addrv6;        \/**< IPv6 address of this member *\/$/;"	m	struct:radiusm_t	typeref:struct:radiusm_t::in6_addr
+addrv6	src/redir.h	/^  struct in6_addr addrv6; \/**< Client IPv6 address *\/$/;"	m	struct:redir_msg_t	typeref:struct:redir_msg_t::in6_addr
+addrv6	src/redir.h	/^  struct in6_addr addrv6; \/**< IPv6 address *\/$/;"	m	struct:redir_t	typeref:struct:redir_t::in6_addr
+addrv6	src/tun6.h	/^  struct in6_addr addrv6; \/**< Our IPv6 address *\/$/;"	m	struct:tun6_t	typeref:struct:tun6_t::in6_addr
+allowdyn	src/dhcp.h	/^  int allowdyn;         \/**< Allow allocation of IP address on DHCP request *\/$/;"	m	struct:dhcp_t
+allowdyn	src/ippool.h	/^  int allowdyn;                  \/**< Allow dynamic IP address allocation *\/$/;"	m	struct:ippool_t
+allowdyn	src/pepper.h	/^  int allowdyn;                  \/**< Allow dynamic address allocation *\/$/;"	m	struct:options_t
+allowstat	src/ippool.h	/^  int allowstat;                 \/**< Allow static IP address allocation *\/$/;"	m	struct:ippool_t
+allowstat	src/pepper.h	/^  int allowstat;                 \/**< Allow static address allocation *\/$/;"	m	struct:options_t
+ancount	src/dhcp.h	/^  uint16_t ancount; \/**< 16 bit: Number of answer records *\/$/;"	m	struct:dhcp_dns_packet_t
+anydns	src/dhcp.h	/^  int anydns;           \/**< Allow client to use any DNS *\/$/;"	m	struct:dhcp_t
+app_conn_t	src/pepper.h	/^struct app_conn_t$/;"	s
+arcount	src/dhcp.h	/^  uint16_t arcount; \/**< 16 bit: Number of additional records *\/$/;"	m	struct:dhcp_dns_packet_t
+args_info	src/pepper.c	/^struct gengetopt_args_info args_info;$/;"	v	typeref:struct:gengetopt_args_info
+arp	src/dhcp.h	/^  struct dhcp_arp_packet_t arp; \/**< ARP packet *\/$/;"	m	struct:dhcp_arp_fullpacket_t	typeref:struct:dhcp_arp_fullpacket_t::dhcp_arp_packet_t
+arp_fd	src/dhcp.h	/^  int arp_fd;           \/**< File descriptor to network interface *\/$/;"	m	struct:dhcp_t
+arp_hwaddr	src/dhcp.h	/^  unsigned char arp_hwaddr[DHCP_ETH_ALEN]; \/**< Hardware address of interface *\/$/;"	m	struct:dhcp_t
+arp_ifindex	src/dhcp.h	/^  int arp_ifindex;      \/**< ARP-related l2 interface index *\/$/;"	m	struct:dhcp_t
+as_fn_append	configure	/^  as_fn_append ()$/;"	f
+as_fn_arith	configure	/^  as_fn_arith ()$/;"	f
+as_fn_error	configure	/^as_fn_error ()$/;"	f
+as_fn_exit	configure	/^as_fn_exit ()$/;"	f
+as_fn_failure	configure	/^as_fn_failure () { as_fn_return 1; }$/;"	f
+as_fn_mkdir_p	configure	/^as_fn_mkdir_p ()$/;"	f
+as_fn_ret_failure	configure	/^as_fn_ret_failure () { return 1; }$/;"	f
+as_fn_ret_success	configure	/^as_fn_ret_success () { return 0; }$/;"	f
+as_fn_set_status	configure	/^as_fn_set_status ()$/;"	f
+as_fn_success	configure	/^as_fn_success () { as_fn_return 0; }$/;"	f
+as_fn_unset	configure	/^as_fn_unset ()$/;"	f
+auth_cp	src/dhcp.h	/^  uint8_t auth_cp;             \/**< Authenticated codepoint *\/$/;"	m	struct:dhcp_conn_t
+authenticated	src/pepper.h	/^  int authenticated;           \/**< 1 if user was authenticated *\/$/;"	m	struct:app_conn_t
+authenticated	src/redir.h	/^  int authenticated; \/**< 1 if user was authenticated *\/$/;"	m	struct:redir_conn_t
+authenticator	src/pepper.h	/^  uint8_t authenticator[RADIUS_AUTHLEN]; \/**< Radius authenticator *\/$/;"	m	struct:app_conn_t
+authenticator	src/radius.h	/^  uint8_t authenticator[RADIUS_AUTHLEN]; \/**< authenticator *\/$/;"	m	struct:radius_packet_t
+authip	src/dhcp.h	/^  struct in_addr *authip; \/**< IP address of authentication server *\/$/;"	m	struct:dhcp_t	typeref:struct:dhcp_t::in_addr
+authip6	src/dhcp.h	/^  struct in6_addr *authip6; \/**< IPv6 address of authentification server *\/$/;"	m	struct:dhcp_t	typeref:struct:dhcp_t::in6_addr
+authiplen	src/dhcp.h	/^  int authiplen;        \/**< Number of authentication server IP addresses *\/$/;"	m	struct:dhcp_t
+authiplen6	src/dhcp.h	/^  int authiplen6;        \/**< Number of authentication server IPv6 addresses *\/$/;"	m	struct:dhcp_t
+authport	src/radius.h	/^  uint16_t authport;         \/**< His port for authentication *\/$/;"	m	struct:radius_t
+authstate	src/dhcp.h	/^  int authstate;               \/**< 0: Unauthenticated, 1: Authenticated *\/$/;"	m	struct:dhcp_conn_t
+authtype	src/pepper.h	/^  int authtype; \/**< Authentication method used (CHAP-MD5, MS-CHAPv2, ... *\/$/;"	m	struct:app_conn_t
+bandwidthmaxdown	src/pepper.h	/^  int bandwidthmaxdown; \/**< Maximum download bandwidth *\/$/;"	m	struct:app_conn_t
+bandwidthmaxdown	src/redir.h	/^  int bandwidthmaxdown; \/**< Maximum download bandwidth *\/$/;"	m	struct:redir_msg_t
+bandwidthmaxdown	src/redir.h	/^  int bandwidthmaxdown; \/**< Maximum download bandwith *\/$/;"	m	struct:redir_conn_t
+bandwidthmaxup	src/pepper.h	/^  int bandwidthmaxup; \/**< Maximum upload bandwith *\/$/;"	m	struct:app_conn_t
+bandwidthmaxup	src/redir.h	/^  int bandwidthmaxup; \/**< Maximum upload bandwidth *\/$/;"	m	struct:redir_msg_t
+bandwidthmaxup	src/redir.h	/^  int bandwidthmaxup; \/**< Maximum upload bandwith *\/$/;"	m	struct:redir_conn_t
+baseURL	extra/hsl.php	/^$baseURL=($uamip!=''&&$uamport!='')?'http:\/\/'.$uamip.':'.$uamport:'';$/;"	v
+bits	src/md5.h	/^  uint32_t bits[2]; \/**< number of bits, modulo 2^64 (lsb first) *\/$/;"	m	struct:MD5Context
+bucketdown	src/pepper.h	/^  uint32_t bucketdown; \/**< Current leaky bucket download size *\/$/;"	m	struct:app_conn_t
+bucketdownsize	src/pepper.h	/^  uint32_t bucketdownsize; \/**< Leaky bucket maximum download size *\/$/;"	m	struct:app_conn_t
+bucketup	src/pepper.h	/^  uint32_t bucketup; \/**< Current leaky bucket upload size *\/$/;"	m	struct:app_conn_t
+bucketupsize	src/pepper.h	/^  uint32_t bucketupsize; \/**< Leaky bucket maximum upload size *\/$/;"	m	struct:app_conn_t
+buf	src/md5.h	/^  uint32_t buf[4]; \/**< state (ABCD) *\/$/;"	m	struct:MD5Context
+byteReverse	src/md5.c	/^static void byteReverse(unsigned char *buf, unsigned longs)$/;"	f	file:
+calcValues	extra/hsl.php	/^function calcValues()$/;"	f
+casHref	extra/hsl.php	/^          $casHref='javascript:opener.location=\\''.$casHref.'\\';self.close();';$/;"	v
+casHref	extra/hsl.php	/^        $casHref=$_SERVER['PHP_SELF'].'?action=logout';$/;"	v
+cbGetValue	extra/hsl.php	/^function cbGetValue($array,$name)$/;"	f
+cb_acct_conf	src/radius.h	/^  int (*cb_acct_conf) (struct radius_t *radius, struct radius_packet_t *pack,$/;"	m	struct:radius_t
+cb_auth_conf	src/radius.h	/^  int (*cb_auth_conf) (struct radius_t *radius, struct radius_packet_t *pack,$/;"	m	struct:radius_t
+cb_coa_ind	src/radius.h	/^  int (*cb_coa_ind)   (struct radius_t *radius, struct radius_packet_t *pack,$/;"	m	struct:radius_t
+cb_connect	src/dhcp.h	/^  int (*cb_connect) (struct dhcp_conn_t *conn);$/;"	m	struct:dhcp_t
+cb_connectv6	src/dhcp.h	/^  int (*cb_connectv6) (struct dhcp_conn_t *conn);$/;"	m	struct:dhcp_t
+cb_data_ind	src/dhcp.h	/^  int (*cb_data_ind) (struct dhcp_conn_t *conn, void *pack, unsigned len);$/;"	m	struct:dhcp_t
+cb_dhcp_connect	src/pepper.c	/^static int cb_dhcp_connect(struct dhcp_conn_t *conn)$/;"	f	file:
+cb_dhcp_connectv6	src/pepper.c	/^static int cb_dhcp_connectv6(struct dhcp_conn_t *conn)$/;"	f	file:
+cb_dhcp_data_ind	src/pepper.c	/^static int cb_dhcp_data_ind(struct dhcp_conn_t *conn, void *pack, unsigned len)$/;"	f	file:
+cb_dhcp_disconnect	src/pepper.c	/^static int cb_dhcp_disconnect(struct dhcp_conn_t *conn)$/;"	f	file:
+cb_dhcp_disconnectv6	src/pepper.c	/^static int cb_dhcp_disconnectv6(struct dhcp_conn_t *conn)$/;"	f	file:
+cb_dhcp_eap_ind	src/pepper.c	/^static int cb_dhcp_eap_ind(struct dhcp_conn_t *conn, void *pack, unsigned int len)$/;"	f	file:
+cb_dhcp_ipv6_ind	src/pepper.c	/^static int cb_dhcp_ipv6_ind(struct dhcp_conn_t* conn, void* pack, unsigned int len)$/;"	f	file:
+cb_dhcp_request	src/pepper.c	/^static int cb_dhcp_request(struct dhcp_conn_t *conn, struct in_addr *addr)$/;"	f	file:
+cb_dhcp_requestv6	src/pepper.c	/^static int cb_dhcp_requestv6(struct dhcp_conn_t *conn, struct in6_addr *addr)$/;"	f	file:
+cb_dhcp_unauth_dnat	src/pepper.c	/^static int cb_dhcp_unauth_dnat(struct dhcp_conn_t *conn)$/;"	f	file:
+cb_disconnect	src/dhcp.h	/^  int (*cb_disconnect) (struct dhcp_conn_t *conn);$/;"	m	struct:dhcp_t
+cb_disconnectv6	src/dhcp.h	/^  int (*cb_disconnectv6) (struct dhcp_conn_t *conn); \/**< Callback after *\/$/;"	m	struct:dhcp_t
+cb_eap_ind	src/dhcp.h	/^  int (*cb_eap_ind)  (struct dhcp_conn_t *conn, void *pack, unsigned len);$/;"	m	struct:dhcp_t
+cb_getstate	src/redir.h	/^  int (*cb_getstate) (struct redir_t *redir, struct in_addr *addr,$/;"	m	struct:redir_t
+cb_getstatev6	src/redir.h	/^  int (*cb_getstatev6) (struct redir_t *redir, struct in6_addr *addr, struct redir_conn_t *conn);$/;"	m	struct:redir_t
+cb_ind	src/radius.h	/^  int (*cb_ind)  (struct radius_t *radius, struct radius_packet_t *pack,$/;"	m	struct:radius_t
+cb_ind	src/tun.h	/^  int (*cb_ind) (struct tun_t *tun, void *pack, unsigned len); \/**< Callback when receiving packet *\/$/;"	m	struct:tun_t
+cb_indv6	src/tun6.h	/^  int (*cb_indv6)(struct tun6_t* tun, void* pack, unsigned len); \/**< Callback when receiving IPv6 packet *\/$/;"	m	struct:tun6_t
+cb_ipv6_ind	src/dhcp.h	/^  int (*cb_ipv6_ind) (struct dhcp_conn_t *conn, void *pack, unsigned len);$/;"	m	struct:dhcp_t
+cb_radius_auth_conf	src/pepper.c	/^int cb_radius_auth_conf(struct radius_t *radius_obj,$/;"	f
+cb_radius_coa_ind	src/pepper.c	/^int cb_radius_coa_ind(struct radius_t *radius_obj, struct radius_packet_t *pack,$/;"	f
+cb_radius_ind	src/pepper.c	/^int cb_radius_ind(struct radius_t *rp, struct radius_packet_t *pack,$/;"	f
+cb_redir_getstate	src/pepper.c	/^static int cb_redir_getstate(struct redir_t *redir_obj, struct in_addr *addr,$/;"	f	file:
+cb_redir_getstatev6	src/pepper.c	/^static int cb_redir_getstatev6(struct redir_t* redir_obj, struct in6_addr* addr, struct redir_conn_t* conn)$/;"	f	file:
+cb_request	src/dhcp.h	/^  int (*cb_request) (struct dhcp_conn_t *conn, struct in_addr *addr);$/;"	m	struct:dhcp_t
+cb_requestv6	src/dhcp.h	/^  int (*cb_requestv6)(struct dhcp_conn_t *conn, struct in6_addr *addr);$/;"	m	struct:dhcp_t
+cb_tun6_ind	src/pepper.c	/^static int cb_tun6_ind(struct tun6_t* tun_obj, void* pack, unsigned len)$/;"	f	file:
+cb_tun_ind	src/pepper.c	/^int cb_tun_ind(struct tun_t *tun_obj, void *pack, unsigned len)$/;"	f
+cb_unauth_dnat	src/dhcp.h	/^  int (*cb_unauth_dnat) (struct dhcp_conn_t *conn);$/;"	m	struct:dhcp_t
+cbp	src/radius.h	/^  void *cbp;                 \/**< Pointer used for callbacks *\/$/;"	m	struct:radius_queue_t
+chaddr	src/dhcp.h	/^  uint8_t  chaddr[DHCP_CHADDR_LEN]; \/**< 16 Client hardware address.*\/$/;"	m	struct:dhcp_packet_t
+chal	src/pepper.h	/^  uint8_t chal[EAP_LEN];      \/**< EAP challenge *\/$/;"	m	struct:app_conn_t
+challen	src/pepper.h	/^  int challen;                \/**< Length of EAP challenge *\/$/;"	m	struct:app_conn_t
+challenge	extra/hsl.php	/^  $challenge=$GLOBALS['challenge'];$/;"	v
+challenge	extra/hsl.php	/^$challenge=cbGetValue($_REQUEST,'challenge');$/;"	v
+chap	src/redir.h	/^  int chap; \/**< 0 if using normal password; 1 if using CHAP *\/$/;"	m	struct:redir_conn_t
+chappassword	src/redir.h	/^  uint8_t chappassword[REDIR_MD5LEN]; \/**< CHAP password *\/$/;"	m	struct:redir_conn_t
+check	src/dhcp.h	/^  uint16_t check; \/**< Checksum *\/$/;"	m	struct:dhcp_iphdr_t
+check	src/dhcp.h	/^  uint16_t check; \/**< Checksum. *\/$/;"	m	struct:dhcp_tcphdr_t
+check	src/dhcp.h	/^  uint16_t check; \/**< Checksum. *\/$/;"	m	struct:dhcp_udphdr_t
+check	src/tun.h	/^  unsigned int check:16; \/**< Checksum *\/$/;"	m	struct:tun_packet_t
+checkconn	src/pepper.c	/^static int checkconn(void)$/;"	f	file:
+checksum	src/dhcp.h	/^  uint16_t checksum; \/**< Checksum *\/$/;"	m	struct:dhcp_icmpv6packet_t
+checktime	src/pepper.c	/^static struct timeval checktime; \/**< Last time of connection checks *\/$/;"	v	typeref:struct:timeval	file:
+ciaddr	src/dhcp.h	/^  uint32_t ciaddr; \/**< 4 Client IP address; only filled in if$/;"	m	struct:dhcp_packet_t
+classbuf	src/pepper.h	/^  uint8_t classbuf[RADIUS_ATTR_VLEN + 1]; \/**< Class attribute received from radius server and used in Accounting-Request packet *\/$/;"	m	struct:app_conn_t
+classbuf	src/redir.h	/^  uint8_t classbuf[RADIUS_ATTR_VLEN + 1]; \/**< Class attribute received from radius server and used in Accounting-Request packet *\/$/;"	m	struct:redir_conn_t
+classbuf	src/redir.h	/^  uint8_t classbuf[RADIUS_ATTR_VLEN + 1]; \/**< Class attribute received from radius server and used in Accounting-Request packet *\/$/;"	m	struct:redir_msg_t
+classlen	src/pepper.h	/^  int classlen; \/**< Length of classbuf *\/$/;"	m	struct:app_conn_t
+classlen	src/redir.h	/^  int classlen; \/**< Length of classbuf *\/$/;"	m	struct:redir_conn_t
+classlen	src/redir.h	/^  int classlen; \/**< Length of classbuf *\/$/;"	m	struct:redir_msg_t
+clear_args	src/cmdline.c	/^void clear_args (struct gengetopt_args_info *args_info)$/;"	f	file:
+clear_given	src/cmdline.c	/^void clear_given (struct gengetopt_args_info *args_info)$/;"	f	file:
+clearenv	src/compat.c	/^int clearenv (void)$/;"	f
+cmd_line_list	src/cmdline.c	/^struct line_list *cmd_line_list = 0;$/;"	v	typeref:struct:line_list
+cmd_line_list_tmp	src/cmdline.c	/^struct line_list *cmd_line_list_tmp = 0;$/;"	v	typeref:struct:line_list
+cmdline_parser	src/cmdline.c	/^cmdline_parser (int argc, char * const *argv, struct gengetopt_args_info *args_info)$/;"	f
+cmdline_parser2	src/cmdline.c	/^cmdline_parser2 (int argc, char * const *argv, struct gengetopt_args_info *args_info, int override, int initialize, int check_required)$/;"	f
+cmdline_parser_configfile	src/cmdline.c	/^cmdline_parser_configfile (char * const filename, struct gengetopt_args_info *args_info, int override, int initialize, int check_required)$/;"	f
+cmdline_parser_file_save	src/cmdline.c	/^cmdline_parser_file_save(const char *filename, struct gengetopt_args_info *args_info)$/;"	f
+cmdline_parser_free	src/cmdline.c	/^cmdline_parser_free (struct gengetopt_args_info *args_info)$/;"	f
+cmdline_parser_init	src/cmdline.c	/^cmdline_parser_init (struct gengetopt_args_info *args_info)$/;"	f
+cmdline_parser_internal	src/cmdline.c	/^cmdline_parser_internal (int argc, char * const *argv, struct gengetopt_args_info *args_info, int override, int initialize, int check_required, const char *additional_error)$/;"	f
+cmdline_parser_print_help	src/cmdline.c	/^cmdline_parser_print_help (void)$/;"	f
+cmdline_parser_print_version	src/cmdline.c	/^cmdline_parser_print_version (void)$/;"	f
+cmdline_parser_release	src/cmdline.c	/^cmdline_parser_release (struct gengetopt_args_info *args_info)$/;"	f	file:
+coanocheck	src/radius.h	/^  int coanocheck;            \/**< Accept coa from all IP addresses *\/$/;"	m	struct:radius_t
+coanoipcheck	src/pepper.h	/^  int coanoipcheck;              \/**< Allow disconnect from any IP *\/$/;"	m	struct:options_t
+coanoipcheck_flag	src/cmdline.h	/^  int coanoipcheck_flag;  \/**< Allow radius disconnect from any IP (default=off).  *\/$/;"	m	struct:gengetopt_args_info
+coanoipcheck_given	src/cmdline.h	/^  int coanoipcheck_given ;  \/**< Whether coanoipcheck was given.  *\/$/;"	m	struct:gengetopt_args_info
+coaport	src/pepper.h	/^  uint16_t coaport;              \/**< UDP port to listen to *\/$/;"	m	struct:options_t
+coaport_arg	src/cmdline.h	/^  int coaport_arg;  \/**< Radius disconnect port to listen to (default='0').  *\/$/;"	m	struct:gengetopt_args_info
+coaport_given	src/cmdline.h	/^  int coaport_given ;  \/**< Whether coaport was given.  *\/$/;"	m	struct:gengetopt_args_info
+coaport_orig	src/cmdline.h	/^  char * coaport_orig;  \/**< Radius disconnect port to listen to original value given at command line.  *\/$/;"	m	struct:gengetopt_args_info
+code	src/dhcp.h	/^  uint8_t  code; \/**< EAP code *\/$/;"	m	struct:dhcp_eap_t
+code	src/dhcp.h	/^  uint8_t code; \/**< Code of message. *\/$/;"	m	struct:dhcp_icmpv6packet_t
+code	src/radius.h	/^  uint8_t code; \/**< Code *\/$/;"	m	struct:radius_packet_t
+condown	src/pepper.h	/^  char* condown;                 \/**< Script to run after user logoff *\/$/;"	m	struct:options_t
+condown_arg	src/cmdline.h	/^  char * condown_arg;  \/**< Script to run after user logoff.  *\/$/;"	m	struct:gengetopt_args_info
+condown_given	src/cmdline.h	/^  int condown_given ;  \/**< Whether condown was given.  *\/$/;"	m	struct:gengetopt_args_info
+condown_orig	src/cmdline.h	/^  char * condown_orig;  \/**< Script to run after user logoff original value given at command line.  *\/$/;"	m	struct:gengetopt_args_info
+conf_arg	src/cmdline.h	/^  char * conf_arg;  \/**< Read configuration file (default='\/etc\/pepper.conf').  *\/$/;"	m	struct:gengetopt_args_info
+conf_given	src/cmdline.h	/^  int conf_given ;  \/**< Whether conf was given.  *\/$/;"	m	struct:gengetopt_args_info
+conf_orig	src/cmdline.h	/^  char * conf_orig;  \/**< Read configuration file original value given at command line.  *\/$/;"	m	struct:gengetopt_args_info
+config_radius	src/pepper.c	/^static int config_radius()$/;"	f	file:
+confpassword	src/pepper.h	/^  char* confpassword;            \/**< Password for remote config *\/$/;"	m	struct:options_t
+confpassword_arg	src/cmdline.h	/^  char * confpassword_arg;  \/**< Password for remote config.  *\/$/;"	m	struct:gengetopt_args_info
+confpassword_given	src/cmdline.h	/^  int confpassword_given ;  \/**< Whether confpassword was given.  *\/$/;"	m	struct:gengetopt_args_info
+confpassword_orig	src/cmdline.h	/^  char * confpassword_orig;  \/**< Password for remote config original value given at command line.  *\/$/;"	m	struct:gengetopt_args_info
+confusername	src/pepper.h	/^  char* confusername;            \/**< Username for remote config *\/$/;"	m	struct:options_t
+confusername_arg	src/cmdline.h	/^  char * confusername_arg;  \/**< Username for remote config.  *\/$/;"	m	struct:gengetopt_args_info
+confusername_given	src/cmdline.h	/^  int confusername_given ;  \/**< Whether confusername was given.  *\/$/;"	m	struct:gengetopt_args_info
+confusername_orig	src/cmdline.h	/^  char * confusername_orig;  \/**< Username for remote config original value given at command line.  *\/$/;"	m	struct:gengetopt_args_info
+conn	src/dhcp.h	/^  struct dhcp_conn_t *conn; \/**< Linked list of IPv4 addresses *\/$/;"	m	struct:dhcp_t	typeref:struct:dhcp_t::dhcp_conn_t
+connv6	src/dhcp.h	/^  struct dhcp_conn_t* connv6; \/**< Linked list of IPv6 addresses *\/$/;"	m	struct:dhcp_t	typeref:struct:dhcp_t::dhcp_conn_t
+contentType	extra/welcome.php	/^$contentType='text\/html;charset=ISO-8859-1';$/;"	v
+conup	src/pepper.h	/^  char* conup;                   \/**< Script to run after user logon *\/$/;"	m	struct:options_t
+conup_arg	src/cmdline.h	/^  char * conup_arg;  \/**< Script to run after user logon.  *\/$/;"	m	struct:gengetopt_args_info
+conup_given	src/cmdline.h	/^  int conup_given ;  \/**< Whether conup was given.  *\/$/;"	m	struct:gengetopt_args_info
+conup_orig	src/cmdline.h	/^  char * conup_orig;  \/**< Script to run after user logon original value given at command line.  *\/$/;"	m	struct:gengetopt_args_info
+credits	src/redir.c	/^char credits[] =$/;"	v
+daddr	src/dhcp.h	/^  uint32_t daddr; \/**< Destination IPv4 address *\/$/;"	m	struct:dhcp_iphdr_t
+daemon	src/compat.c	/^int daemon(int nochdir, int noclose)$/;"	f
+debug	src/dhcp.h	/^  int debug;            \/**< Set to print debug messages *\/$/;"	m	struct:dhcp_t
+debug	src/pepper.h	/^  int debug;                     \/**< If debug message is enabled *\/$/;"	m	struct:options_t
+debug	src/radius.h	/^  int debug;                 \/**< Print debug messages *\/$/;"	m	struct:radius_t
+debug	src/redir.h	/^  int debug; \/**< Print debug information or not *\/$/;"	m	struct:redir_t
+debug_flag	src/cmdline.h	/^  int debug_flag;  \/**< Run in debug mode (default=off).  *\/$/;"	m	struct:gengetopt_args_info
+debug_given	src/cmdline.h	/^  int debug_given ;  \/**< Whether debug was given.  *\/$/;"	m	struct:gengetopt_args_info
+debugfacility_arg	src/cmdline.h	/^  int debugfacility_arg;  \/**< Which modules to print debug messages for (default='1').  *\/$/;"	m	struct:gengetopt_args_info
+debugfacility_given	src/cmdline.h	/^  int debugfacility_given ;  \/**< Whether debugfacility was given.  *\/$/;"	m	struct:gengetopt_args_info
+debugfacility_orig	src/cmdline.h	/^  char * debugfacility_orig;  \/**< Which modules to print debug messages for original value given at command line.  *\/$/;"	m	struct:gengetopt_args_info
+devflags	src/dhcp.h	/^  int devflags;         \/**< Original flags of network interface *\/$/;"	m	struct:dhcp_t
+device	src/tun6.h	/^  struct tun6* device; \/**< The tun6 device *\/$/;"	m	struct:tun6_t	typeref:struct:tun6_t::tun6
+devname	src/dhcp.h	/^  char devname[IFNAMSIZ];\/**< Name of the network interface *\/$/;"	m	struct:dhcp_t
+devname	src/tun.h	/^  char devname[IFNAMSIZ];\/**< Name of the tun device *\/$/;"	m	struct:tun_t
+devnamev6	src/tun6.h	/^  char devnamev6[IFNAMSIZ]; \/**< Name of the IPv6 tun device *\/$/;"	m	struct:tun6_t
+dhcp	src/dhcp.h	/^  struct dhcp_packet_t dhcp; \/**< DHCP packet *\/$/;"	m	struct:dhcp_fullpacket_t	typeref:struct:dhcp_fullpacket_t::dhcp_packet_t
+dhcp	src/pepper.c	/^static struct dhcp_t *dhcp = NULL;      \/**< DHCP instance *\/$/;"	v	typeref:struct:dhcp_t	file:
+dhcp_arp_fullpacket_t	src/dhcp.h	/^struct dhcp_arp_fullpacket_t$/;"	s
+dhcp_arp_ind	src/dhcp.c	/^int dhcp_arp_ind(struct dhcp_t *this)  \/* ARP Indication *\/$/;"	f
+dhcp_arp_packet_t	src/dhcp.h	/^struct dhcp_arp_packet_t   \/* From RFC 826 *\/$/;"	s
+dhcp_checkDNS	src/dhcp.c	/^static int dhcp_checkDNS(struct dhcp_conn_t *conn,$/;"	f	file:
+dhcp_checkconn	src/dhcp.c	/^static int dhcp_checkconn(struct dhcp_t *this)$/;"	f	file:
+dhcp_checkconnv6	src/dhcp.c	/^static int dhcp_checkconnv6(struct dhcp_t *this)$/;"	f	file:
+dhcp_conn_t	src/dhcp.h	/^struct dhcp_conn_t$/;"	s
+dhcp_data_req	src/dhcp.c	/^int dhcp_data_req(struct dhcp_conn_t *conn, void *pack, unsigned len)$/;"	f
+dhcp_decaps	src/dhcp.c	/^int dhcp_decaps(struct dhcp_t *this)  \/* DHCP Indication *\/$/;"	f
+dhcp_dns_fullpacket6_t	src/dhcp.h	/^struct dhcp_dns_fullpacket6_t$/;"	s
+dhcp_dns_fullpacket_t	src/dhcp.h	/^struct dhcp_dns_fullpacket_t$/;"	s
+dhcp_dns_packet_t	src/dhcp.h	/^struct dhcp_dns_packet_t   \/* From RFC 1035 *\/$/;"	s
+dhcp_doDNAT	src/dhcp.c	/^static int dhcp_doDNAT(struct dhcp_conn_t *conn,$/;"	f	file:
+dhcp_doDNATv6	src/dhcp.c	/^static int dhcp_doDNATv6(struct dhcp_conn_t* conn, struct dhcp_ipv6packet_t* pack, int len)$/;"	f	file:
+dhcp_dot1xhdr_t	src/dhcp.h	/^struct dhcp_dot1xhdr_t$/;"	s
+dhcp_dot1xpacket_t	src/dhcp.h	/^struct dhcp_dot1xpacket_t$/;"	s
+dhcp_eap_t	src/dhcp.h	/^struct dhcp_eap_t$/;"	s
+dhcp_eapol_ind	src/dhcp.c	/^int dhcp_eapol_ind(struct dhcp_t *this)  \/* EAPOL Indication *\/$/;"	f
+dhcp_eapol_tag_t	src/dhcp.h	/^struct dhcp_eapol_tag_t$/;"	s
+dhcp_ethhdr_t	src/dhcp.h	/^struct dhcp_ethhdr_t$/;"	s
+dhcp_free	src/dhcp.c	/^int dhcp_free(struct dhcp_t *dhcp)$/;"	f
+dhcp_freeconn	src/dhcp.c	/^int dhcp_freeconn(struct dhcp_conn_t *conn)$/;"	f
+dhcp_freeconnv6	src/dhcp.c	/^int dhcp_freeconnv6(struct dhcp_conn_t *conn)$/;"	f
+dhcp_fullpacket_t	src/dhcp.h	/^struct dhcp_fullpacket_t$/;"	s
+dhcp_getdefault	src/dhcp.c	/^static int dhcp_getdefault(struct dhcp_fullpacket_t *pack)$/;"	f	file:
+dhcp_getmac	src/dhcp.c	/^int dhcp_getmac(const char *ifname, unsigned char *macaddr)$/;"	f
+dhcp_getreq	src/dhcp.c	/^static int dhcp_getreq(struct dhcp_t *this,$/;"	f	file:
+dhcp_gettag	src/dhcp.c	/^static int dhcp_gettag(struct dhcp_packet_t *pack, int length,$/;"	f	file:
+dhcp_gifflags	src/dhcp.c	/^static int dhcp_gifflags(char const *devname, int *flags)$/;"	f	file:
+dhcp_hash	src/dhcp.c	/^static unsigned long int dhcp_hash(uint8_t *hwaddr)$/;"	f	file:
+dhcp_hashadd	src/dhcp.c	/^static int dhcp_hashadd(struct dhcp_t *this, struct dhcp_conn_t *conn)$/;"	f	file:
+dhcp_hashaddv6	src/dhcp.c	/^static int dhcp_hashaddv6(struct dhcp_t *this, struct dhcp_conn_t *conn)$/;"	f	file:
+dhcp_hashdel	src/dhcp.c	/^static int dhcp_hashdel(struct dhcp_t *this, struct dhcp_conn_t *conn)$/;"	f	file:
+dhcp_hashdelv6	src/dhcp.c	/^static int dhcp_hashdelv6(struct dhcp_t *this, struct dhcp_conn_t *conn)$/;"	f	file:
+dhcp_hashget	src/dhcp.c	/^int dhcp_hashget(struct dhcp_t *this, struct dhcp_conn_t **conn,$/;"	f
+dhcp_hashgetv6	src/dhcp.c	/^int dhcp_hashgetv6(struct dhcp_t *this, struct dhcp_conn_t **conn,$/;"	f
+dhcp_hashinit	src/dhcp.c	/^static int dhcp_hashinit(struct dhcp_t *this, int listsize)$/;"	f	file:
+dhcp_icmpv6packet_t	src/dhcp.h	/^struct dhcp_icmpv6packet_t$/;"	s
+dhcp_initconn	src/dhcp.c	/^static int dhcp_initconn(struct dhcp_t *this)$/;"	f	file:
+dhcp_initconnv6	src/dhcp.c	/^static int dhcp_initconnv6(struct dhcp_t *this)$/;"	f	file:
+dhcp_ip_check	src/dhcp.c	/^static int dhcp_ip_check(struct dhcp_ippacket_t *pack)$/;"	f	file:
+dhcp_iphdr_t	src/dhcp.h	/^struct dhcp_iphdr_t$/;"	s
+dhcp_ippacket_t	src/dhcp.h	/^struct dhcp_ippacket_t$/;"	s
+dhcp_ipv6_ind	src/dhcp.c	/^int dhcp_ipv6_ind(struct dhcp_t* this)$/;"	f
+dhcp_ipv6_req	src/dhcp.c	/^int dhcp_ipv6_req(struct dhcp_conn_t* conn, void* pack, unsigned len)$/;"	f
+dhcp_ipv6hdr_t	src/dhcp.h	/^struct dhcp_ipv6hdr_t$/;"	s
+dhcp_ipv6packet_t	src/dhcp.h	/^struct dhcp_ipv6packet_t$/;"	s
+dhcp_new	src/dhcp.c	/^int dhcp_new(struct dhcp_t **dhcp, int numconn, char *interface,$/;"	f
+dhcp_newconn	src/dhcp.c	/^int dhcp_newconn(struct dhcp_t *this, struct dhcp_conn_t **conn,$/;"	f
+dhcp_newconn6	src/dhcp.c	/^int dhcp_newconn6(struct dhcp_t* this, struct dhcp_conn_t** conn, uint8_t* hwaddr)$/;"	f
+dhcp_open_eth	src/dhcp.c	/^static int dhcp_open_eth(char const *ifname, uint16_t protocol, int promisc,$/;"	f	file:
+dhcp_packet_t	src/dhcp.h	/^struct dhcp_packet_t   \/* From RFC 2131 *\/$/;"	s
+dhcp_receive	src/dhcp.c	/^int dhcp_receive(struct dhcp_t *this)$/;"	f
+dhcp_receive_arp	src/dhcp.c	/^static int dhcp_receive_arp(struct dhcp_t *this,$/;"	f	file:
+dhcp_receive_ip	src/dhcp.c	/^static int dhcp_receive_ip(struct dhcp_t *this, struct dhcp_ippacket_t *pack,$/;"	f	file:
+dhcp_receive_ipv6	src/dhcp.c	/^static int dhcp_receive_ipv6(struct dhcp_t* this, struct dhcp_ipv6packet_t* pack, int len)$/;"	f	file:
+dhcp_send	src/dhcp.c	/^static int dhcp_send(struct dhcp_t *this,$/;"	f	file:
+dhcp_sendACK	src/dhcp.c	/^static int dhcp_sendACK(struct dhcp_conn_t *conn,$/;"	f	file:
+dhcp_sendARP	src/dhcp.c	/^static int dhcp_sendARP(struct dhcp_conn_t *conn,$/;"	f	file:
+dhcp_sendEAP	src/dhcp.c	/^int dhcp_sendEAP(struct dhcp_conn_t *conn, void *pack, int len)$/;"	f
+dhcp_sendEAPreject	src/dhcp.c	/^int dhcp_sendEAPreject(struct dhcp_conn_t *conn, void *pack, int len)$/;"	f
+dhcp_sendNAK	src/dhcp.c	/^static int dhcp_sendNAK(struct dhcp_conn_t *conn,$/;"	f	file:
+dhcp_sendOFFER	src/dhcp.c	/^static int dhcp_sendOFFER(struct dhcp_conn_t *conn,$/;"	f	file:
+dhcp_senddot1x	src/dhcp.c	/^static int dhcp_senddot1x(struct dhcp_conn_t *conn,$/;"	f	file:
+dhcp_set	src/dhcp.c	/^int dhcp_set(struct dhcp_t *dhcp, int debug,$/;"	f
+dhcp_set_addrs	src/dhcp.c	/^int dhcp_set_addrs(struct dhcp_conn_t *conn,$/;"	f
+dhcp_set_addrsv6	src/dhcp.c	/^int dhcp_set_addrsv6(struct dhcp_conn_t *conn,$/;"	f
+dhcp_set_cb_connect	src/dhcp.c	/^int dhcp_set_cb_connect(struct dhcp_t *this,$/;"	f
+dhcp_set_cb_connectv6	src/dhcp.c	/^int dhcp_set_cb_connectv6(struct dhcp_t *this,  int (*cb_connect) (struct dhcp_conn_t *conn))$/;"	f
+dhcp_set_cb_data_ind	src/dhcp.c	/^int dhcp_set_cb_data_ind(struct dhcp_t *this,$/;"	f
+dhcp_set_cb_disconnect	src/dhcp.c	/^int dhcp_set_cb_disconnect(struct dhcp_t *this,$/;"	f
+dhcp_set_cb_disconnectv6	src/dhcp.c	/^int dhcp_set_cb_disconnectv6(struct dhcp_t *this,  int (*cb_disconnect) (struct dhcp_conn_t *conn))$/;"	f
+dhcp_set_cb_eap_ind	src/dhcp.c	/^int dhcp_set_cb_eap_ind(struct dhcp_t *this,$/;"	f
+dhcp_set_cb_ipv6_ind	src/dhcp.c	/^int dhcp_set_cb_ipv6_ind(struct dhcp_t *this, int (*cb_ind) (struct dhcp_conn_t *conn, void *pack, unsigned len))$/;"	f
+dhcp_set_cb_request	src/dhcp.c	/^int dhcp_set_cb_request(struct dhcp_t *this,$/;"	f
+dhcp_set_cb_requestv6	src/dhcp.c	/^int dhcp_set_cb_requestv6(struct dhcp_t *this,  int (*cb_request) (struct dhcp_conn_t *conn, struct in6_addr *addr))$/;"	f
+dhcp_set_cb_unauth_dnat	src/dhcp.c	/^int dhcp_set_cb_unauth_dnat(struct dhcp_t *this,$/;"	f
+dhcp_setaddr	src/dhcp.c	/^static int dhcp_setaddr(char const *devname,$/;"	f	file:
+dhcp_setv6	src/dhcp.c	/^int dhcp_setv6(struct dhcp_t *dhcp, int debug,$/;"	f
+dhcp_sifflags	src/dhcp.c	/^static int dhcp_sifflags(char const *devname, int flags)$/;"	f	file:
+dhcp_t	src/dhcp.h	/^struct dhcp_t$/;"	s
+dhcp_tag_t	src/dhcp.h	/^struct dhcp_tag_t$/;"	s
+dhcp_tcp_check	src/dhcp.c	/^static int dhcp_tcp_check(struct dhcp_ippacket_t *pack, int length)$/;"	f	file:
+dhcp_tcp_checkv6	src/dhcp.c	/^static int dhcp_tcp_checkv6(struct dhcp_ipv6packet_t *pack, int length)$/;"	f	file:
+dhcp_tcphdr_t	src/dhcp.h	/^struct dhcp_tcphdr_t$/;"	s
+dhcp_timeleft	src/dhcp.c	/^struct timeval* dhcp_timeleft(struct dhcp_t *this, struct timeval *tvp)$/;"	f
+dhcp_timeout	src/dhcp.c	/^int dhcp_timeout(struct dhcp_t *this)$/;"	f
+dhcp_udp_check	src/dhcp.c	/^static int dhcp_udp_check(struct dhcp_fullpacket_t *pack)$/;"	f	file:
+dhcp_udphdr_t	src/dhcp.h	/^struct dhcp_udphdr_t$/;"	s
+dhcp_undoDNAT	src/dhcp.c	/^static int dhcp_undoDNAT(struct dhcp_conn_t *conn,$/;"	f	file:
+dhcp_undoDNATv6	src/dhcp.c	/^static int dhcp_undoDNATv6(struct dhcp_conn_t *conn, struct dhcp_ipv6packet_t *pack, int len)$/;"	f	file:
+dhcp_validate	src/dhcp.c	/^int dhcp_validate(struct dhcp_t *this)$/;"	f
+dhcp_validatev6	src/dhcp.c	/^static int dhcp_validatev6(struct dhcp_t *this)$/;"	f	file:
+dhcp_version	src/dhcp.c	/^const char* dhcp_version()$/;"	f
+dhcpif	src/pepper.h	/^  char* dhcpif;                  \/**< Interface: eth0 *\/$/;"	m	struct:options_t
+dhcpif_arg	src/cmdline.h	/^  char * dhcpif_arg;  \/**< Local Ethernet interface.  *\/$/;"	m	struct:gengetopt_args_info
+dhcpif_given	src/cmdline.h	/^  int dhcpif_given ;  \/**< Whether dhcpif was given.  *\/$/;"	m	struct:gengetopt_args_info
+dhcpif_orig	src/cmdline.h	/^  char * dhcpif_orig;  \/**< Local Ethernet interface original value given at command line.  *\/$/;"	m	struct:gengetopt_args_info
+dhcplisten	src/pepper.h	/^  struct in_addr dhcplisten;     \/**< IP address to listen to *\/$/;"	m	struct:options_t	typeref:struct:options_t::in_addr
+dhcplisten_arg	src/cmdline.h	/^  char * dhcplisten_arg;  \/**< IP address for listenning.  *\/$/;"	m	struct:gengetopt_args_info
+dhcplisten_given	src/cmdline.h	/^  int dhcplisten_given ;  \/**< Whether dhcplisten was given.  *\/$/;"	m	struct:gengetopt_args_info
+dhcplisten_orig	src/cmdline.h	/^  char * dhcplisten_orig;  \/**< IP address original value given at command line.  *\/$/;"	m	struct:gengetopt_args_info
+dhcpmac	src/pepper.h	/^  unsigned char dhcpmac[DHCP_ETH_ALEN]; \/**< Interface MAC address *\/$/;"	m	struct:options_t
+dhcpmac_arg	src/cmdline.h	/^  char * dhcpmac_arg;  \/**< Interface MAC address.  *\/$/;"	m	struct:gengetopt_args_info
+dhcpmac_given	src/cmdline.h	/^  int dhcpmac_given ;  \/**< Whether dhcpmac was given.  *\/$/;"	m	struct:gengetopt_args_info
+dhcpmac_orig	src/cmdline.h	/^  char * dhcpmac_orig;  \/**< Interface MAC address original value given at command line.  *\/$/;"	m	struct:gengetopt_args_info
+dhcpusemac	src/pepper.h	/^  int dhcpusemac;                \/**< Use given MAC or interface default *\/$/;"	m	struct:options_t
+dnatip	src/dhcp.h	/^  uint32_t dnatip[DHCP_DNAT_MAX]; \/**< Destination NAT destination IP address *\/$/;"	m	struct:dhcp_conn_t
+dnatipv6	src/dhcp.h	/^  struct in6_addr dnatipv6[DHCP_DNATV6_MAX]; \/**< Destination NAT destination IPv6 address *\/$/;"	m	struct:dhcp_conn_t	typeref:struct:dhcp_conn_t::in6_addr
+dnatport	src/dhcp.h	/^  uint16_t dnatport[DHCP_DNAT_MAX]; \/**< Destination NAT source port *\/$/;"	m	struct:dhcp_conn_t
+dnatportv6	src/dhcp.h	/^  uint16_t dnatportv6[DHCP_DNATV6_MAX]; \/**< Destination NAT source port *\/$/;"	m	struct:dhcp_conn_t
+dnlink	src/pepper.h	/^  void *dnlink;             \/**< Downlink network interface (Wireless) *\/$/;"	m	struct:app_conn_t
+dnprot	src/pepper.h	/^  int dnprot;               \/**< Downlink protocol *\/$/;"	m	struct:app_conn_t
+dnprot_accept	src/pepper.c	/^static int dnprot_accept(struct app_conn_t *appconn)$/;"	f	file:
+dnprot_challenge	src/pepper.c	/^static int dnprot_challenge(struct app_conn_t *appconn)$/;"	f	file:
+dnprot_reject	src/pepper.c	/^static int dnprot_reject(struct app_conn_t *appconn)$/;"	f	file:
+dnprot_terminate	src/pepper.c	/^static int dnprot_terminate(struct app_conn_t *appconn)$/;"	f	file:
+dns	src/dhcp.h	/^  struct dhcp_dns_packet_t dns; \/**< DNS packet *\/$/;"	m	struct:dhcp_dns_fullpacket6_t	typeref:struct:dhcp_dns_fullpacket6_t::dhcp_dns_packet_t
+dns	src/dhcp.h	/^  struct dhcp_dns_packet_t dns; \/**< DNS packet *\/$/;"	m	struct:dhcp_dns_fullpacket_t	typeref:struct:dhcp_dns_fullpacket_t::dhcp_dns_packet_t
+dns1	src/dhcp.h	/^  struct in_addr dns1;         \/**< Client DNS address *\/$/;"	m	struct:dhcp_conn_t	typeref:struct:dhcp_conn_t::in_addr
+dns1	src/pepper.h	/^  struct in_addr dns1;           \/**< Primary DNS server IP address *\/$/;"	m	struct:options_t	typeref:struct:options_t::in_addr
+dns1	src/pepper.h	/^  struct in_addr dns1; \/**< Primary DNS address *\/$/;"	m	struct:app_conn_t	typeref:struct:app_conn_t::in_addr
+dns1_arg	src/cmdline.h	/^  char * dns1_arg;  \/**< Primary DNS server IP address.  *\/$/;"	m	struct:gengetopt_args_info
+dns1_given	src/cmdline.h	/^  int dns1_given ;  \/**< Whether dns1 was given.  *\/$/;"	m	struct:gengetopt_args_info
+dns1_orig	src/cmdline.h	/^  char * dns1_orig;  \/**< Primary DNS server IP address original value given at command line.  *\/$/;"	m	struct:gengetopt_args_info
+dns1ip6	src/pepper.h	/^  struct in6_addr dns1ip6;       \/**< Primary DNS server IPv6 address *\/$/;"	m	struct:options_t	typeref:struct:options_t::in6_addr
+dns2	src/dhcp.h	/^  struct in_addr dns2;         \/**< Client DNS address *\/$/;"	m	struct:dhcp_conn_t	typeref:struct:dhcp_conn_t::in_addr
+dns2	src/pepper.h	/^  struct in_addr dns2;           \/**< Secondary DNS server IP address *\/$/;"	m	struct:options_t	typeref:struct:options_t::in_addr
+dns2	src/pepper.h	/^  struct in_addr dns2; \/**< Secondary DNS address *\/$/;"	m	struct:app_conn_t	typeref:struct:app_conn_t::in_addr
+dns2_arg	src/cmdline.h	/^  char * dns2_arg;  \/**< Secondary DNS server IP address.  *\/$/;"	m	struct:gengetopt_args_info
+dns2_given	src/cmdline.h	/^  int dns2_given ;  \/**< Whether dns2 was given.  *\/$/;"	m	struct:gengetopt_args_info
+dns2_orig	src/cmdline.h	/^  char * dns2_orig;  \/**< Secondary DNS server IP address original value given at command line.  *\/$/;"	m	struct:gengetopt_args_info
+dns2ip6	src/pepper.h	/^  struct in6_addr dns2ip6;       \/**< Secondary DNS server IPv6 address *\/$/;"	m	struct:options_t	typeref:struct:options_t::in6_addr
+domain	src/dhcp.h	/^  char domain[DHCP_DOMAIN_LEN];\/**< Domain name to use for DNS lookups *\/$/;"	m	struct:dhcp_conn_t
+domain	src/pepper.h	/^  char *domain;                  \/**< Domain to use for DNS lookups *\/$/;"	m	struct:options_t
+domain_arg	src/cmdline.h	/^  char * domain_arg;  \/**< Domain to use for DNS lookups (default='key.pepperspot.info').  *\/$/;"	m	struct:gengetopt_args_info
+domain_given	src/cmdline.h	/^  int domain_given ;  \/**< Whether domain was given.  *\/$/;"	m	struct:gengetopt_args_info
+domain_orig	src/cmdline.h	/^  char * domain_orig;  \/**< Domain to use for DNS lookups original value given at command line.  *\/$/;"	m	struct:gengetopt_args_info
+dot1x	src/dhcp.h	/^  struct dhcp_dot1xhdr_t dot1x; \/**< 802.1X header *\/$/;"	m	struct:dhcp_dot1xpacket_t	typeref:struct:dhcp_dot1xpacket_t::dhcp_dot1xhdr_t
+dscp	src/tun.h	/^  unsigned int dscp:6; \/**< DSCP field *\/$/;"	m	struct:tun_packet_t
+dst	src/dhcp.h	/^  uint16_t dst; \/**< Destination port. *\/$/;"	m	struct:dhcp_tcphdr_t
+dst	src/dhcp.h	/^  uint16_t dst; \/**< Destination port. *\/$/;"	m	struct:dhcp_udphdr_t
+dst	src/dhcp.h	/^  uint8_t  dst[DHCP_ETH_ALEN]; \/**< Destination address. *\/$/;"	m	struct:dhcp_ethhdr_t
+dst	src/tun.h	/^  unsigned int dst:32; \/**< IPv4 destination address *\/$/;"	m	struct:tun_packet_t
+dst_addr	src/dhcp.h	/^  uint8_t dst_addr[16]; \/**< IPv6 destination address *\/$/;"	m	struct:dhcp_ipv6hdr_t
+dst_addr	src/tun6.h	/^  uint8_t dst_addr[16]; \/**< IPv6 destination source address. *\/$/;"	m	struct:tun6_packet_t
+dstaddr	src/tun.h	/^  struct in_addr dstaddr; \/**< Destination address *\/$/;"	m	struct:tun_t	typeref:struct:tun_t::in_addr
+dynip	src/pepper.h	/^  char *dynip;                   \/**< Dynamic IP address pool *\/$/;"	m	struct:options_t
+dynip_arg	src/cmdline.h	/^  char * dynip_arg;  \/**< Dynamic IP address pool.  *\/$/;"	m	struct:gengetopt_args_info
+dynip_given	src/cmdline.h	/^  int dynip_given ;  \/**< Whether dynip was given.  *\/$/;"	m	struct:gengetopt_args_info
+dynip_orig	src/cmdline.h	/^  char * dynip_orig;  \/**< Dynamic IP address pool original value given at command line.  *\/$/;"	m	struct:gengetopt_args_info
+eap	src/dhcp.h	/^  struct dhcp_eap_t eap; \/**< EAPOL header *\/$/;"	m	struct:dhcp_dot1xpacket_t	typeref:struct:dhcp_dot1xpacket_t::dhcp_eap_t
+eapol_fd	src/dhcp.h	/^  int eapol_fd;         \/**< File descriptor to network interface *\/$/;"	m	struct:dhcp_t
+eapol_hwaddr	src/dhcp.h	/^  unsigned char eapol_hwaddr[DHCP_ETH_ALEN]; \/**< Hardware address of interface *\/$/;"	m	struct:dhcp_t
+eapol_ifindex	src/dhcp.h	/^  int eapol_ifindex;    \/**< EAP-related interface index *\/$/;"	m	struct:dhcp_t
+eapolenable	src/pepper.h	/^  int eapolenable;               \/**< Use eapol *\/$/;"	m	struct:options_t
+eapolenable_flag	src/cmdline.h	/^  int eapolenable_flag;  \/**< Enable IEEE 802.1x authentication (default=off).  *\/$/;"	m	struct:gengetopt_args_info
+eapolenable_given	src/cmdline.h	/^  int eapolenable_given ;  \/**< Whether eapolenable was given.  *\/$/;"	m	struct:gengetopt_args_info
+echoData	extra/hsl.php	/^function echoData($msg,$val)$/;"	f
+echoFooter	extra/hsl.php	/^function echoFooter($responseCode='',$message='')$/;"	f
+echoForm	extra/hsl.php	/^function echoForm()$/;"	f
+echoHeader	extra/hsl.php	/^function echoHeader($title,$bodyText,$withJavascript=true,$refresh='')$/;"	f
+echoJavascript	extra/hsl.php	/^function echoJavascript()$/;"	f
+echoValues	extra/hsl.php	/^function echoValues()$/;"	f
+ecn	src/tun.h	/^  unsigned int ecn:2; \/**< ECN field *\/$/;"	m	struct:tun_packet_t
+environ	src/compat.c	50;"	d	file:
+ethh	src/dhcp.h	/^  struct dhcp_ethhdr_t ethh; \/**< Ethernet header *\/$/;"	m	struct:dhcp_arp_fullpacket_t	typeref:struct:dhcp_arp_fullpacket_t::dhcp_ethhdr_t
+ethh	src/dhcp.h	/^  struct dhcp_ethhdr_t ethh; \/**< Ethernet header *\/$/;"	m	struct:dhcp_dns_fullpacket6_t	typeref:struct:dhcp_dns_fullpacket6_t::dhcp_ethhdr_t
+ethh	src/dhcp.h	/^  struct dhcp_ethhdr_t ethh; \/**< Ethernet header *\/$/;"	m	struct:dhcp_dns_fullpacket_t	typeref:struct:dhcp_dns_fullpacket_t::dhcp_ethhdr_t
+ethh	src/dhcp.h	/^  struct dhcp_ethhdr_t ethh; \/**< Ethernet header *\/$/;"	m	struct:dhcp_dot1xpacket_t	typeref:struct:dhcp_dot1xpacket_t::dhcp_ethhdr_t
+ethh	src/dhcp.h	/^  struct dhcp_ethhdr_t ethh; \/**< Ethernet header *\/$/;"	m	struct:dhcp_fullpacket_t	typeref:struct:dhcp_fullpacket_t::dhcp_ethhdr_t
+ethh	src/dhcp.h	/^  struct dhcp_ethhdr_t ethh; \/**< Ethernet header *\/$/;"	m	struct:dhcp_ippacket_t	typeref:struct:dhcp_ippacket_t::dhcp_ethhdr_t
+ethh	src/dhcp.h	/^  struct dhcp_ethhdr_t ethh; \/**< Ethernet header. *\/$/;"	m	struct:dhcp_ipv6packet_t	typeref:struct:dhcp_ipv6packet_t::dhcp_ethhdr_t
+fd	src/dhcp.h	/^  int fd;               \/**< File descriptor to network interface *\/$/;"	m	struct:dhcp_t
+fd	src/icmp6.h	/^  int fd; \/**< Socket descriptor *\/$/;"	m	struct:icmpv6_socket
+fd	src/radius.h	/^  int fd;                    \/**< Socket file descriptor *\/$/;"	m	struct:radius_t
+fd	src/redir.h	/^  int fd; \/**< File descriptor *\/$/;"	m	struct:redir_t
+fd	src/tun.h	/^  int fd;                \/**< File descriptor to tun interface *\/$/;"	m	struct:tun_t
+fd	src/tun6.c	/^  int fd; \/**< File descriptor to tun interface *\/$/;"	m	struct:tun6	file:
+fdv6	src/redir.h	/^  int fdv6; \/**< File descriptor for IPv6 *\/$/;"	m	struct:redir_t
+fdv6	src/tun6.h	/^  int fdv6; \/**< File descriptor to IPv6 tun interface *\/$/;"	m	struct:tun6_t
+fg_flag	src/cmdline.h	/^  int fg_flag;  \/**< Run in foreground (default=off).  *\/$/;"	m	struct:gengetopt_args_info
+fg_given	src/cmdline.h	/^  int fg_given ;  \/**< Whether fg was given.  *\/$/;"	m	struct:gengetopt_args_info
+file	src/dhcp.h	/^  uint8_t file[DHCP_FILE_LEN]; \/**< 128 Boot file name, null terminated$/;"	m	struct:dhcp_packet_t
+filterid	src/redir.h	/^  char *filterid; \/**< Radius filter ID *\/$/;"	m	struct:redir_conn_t
+filteridbuf	src/pepper.h	/^  char filteridbuf[RADIUS_ATTR_VLEN + 1]; \/**< Filter ID *\/$/;"	m	struct:app_conn_t
+filteridbuf	src/redir.h	/^  char filteridbuf[RADIUS_ATTR_VLEN + 1]; \/**< Filter ID *\/$/;"	m	struct:redir_conn_t
+filteridbuf	src/redir.h	/^  char filteridbuf[RADIUS_ATTR_VLEN + 1]; \/**< Filter ID *\/$/;"	m	struct:redir_msg_t
+filteridlen	src/pepper.h	/^  int filteridlen; \/**< Length of filter ID *\/$/;"	m	struct:app_conn_t
+filteridlen	src/redir.h	/^  int filteridlen; \/**< Length of filter ID *\/$/;"	m	struct:redir_conn_t
+filteridlen	src/redir.h	/^  int filteridlen; \/**< Length of filter ID *\/$/;"	m	struct:redir_msg_t
+first	src/radius.h	/^  int first;                 \/**< First packet in queue (oldest timeout) *\/$/;"	m	struct:radius_t
+firstdyn	src/ippool.h	/^  struct ippoolm_t *firstdyn;    \/**< Pointer to first free dynamic member *\/$/;"	m	struct:ippool_t	typeref:struct:ippool_t::ippoolm_t
+firstfreeconn	src/dhcp.h	/^  struct dhcp_conn_t *firstfreeconn; \/**< First free in linked list *\/$/;"	m	struct:dhcp_t	typeref:struct:dhcp_t::dhcp_conn_t
+firstfreeconnv6	src/dhcp.h	/^  struct dhcp_conn_t* firstfreeconnv6; \/**< First free in IPv6 linked list *\/$/;"	m	struct:dhcp_t	typeref:struct:dhcp_t::dhcp_conn_t
+firstipv6	src/ippool.h	/^  struct ippoolm_t *firstipv6;   \/**< Pointer to the first IPv6 member *\/$/;"	m	struct:ippool_t	typeref:struct:ippool_t::ippoolm_t
+firststat	src/ippool.h	/^  struct ippoolm_t *firststat;   \/**< Pointer to first free static member *\/$/;"	m	struct:ippool_t	typeref:struct:ippool_t::ippoolm_t
+firstusedconn	src/dhcp.h	/^  struct dhcp_conn_t *firstusedconn; \/**< First used in linked list *\/$/;"	m	struct:dhcp_t	typeref:struct:dhcp_t::dhcp_conn_t
+firstusedconnv6	src/dhcp.h	/^  struct dhcp_conn_t* firstusedconnv6; \/**< First used in IPv6 linked list *\/$/;"	m	struct:dhcp_t	typeref:struct:dhcp_t::dhcp_conn_t
+flags	src/dhcp.h	/^  uint16_t flags;   \/**< 16 bit: Flags *\/$/;"	m	struct:dhcp_dns_packet_t
+flags	src/dhcp.h	/^  uint16_t flags;  \/**< 2  Flags (see figure 2).*\/$/;"	m	struct:dhcp_packet_t
+flags	src/dhcp.h	/^  uint8_t flags; \/**< TCP flags (SYN, ACK, ...). *\/$/;"	m	struct:dhcp_tcphdr_t
+flags	src/tun.h	/^  unsigned int flags:3; \/**< IP flags *\/$/;"	m	struct:tun_packet_t
+flags	src/tun6.c	/^  uint16_t flags;$/;"	m	struct:__anon1	file:
+flow_label	src/dhcp.h	/^  uint32_t flow_label:20; \/**< Flow label field *\/$/;"	m	struct:dhcp_ipv6hdr_t
+flow_label	src/tun6.h	/^  uint32_t flow_label:20; \/**< Flow label for QoS. *\/$/;"	m	struct:tun6_packet_t
+frag_off	src/dhcp.h	/^  uint16_t frag_off; \/**< Fragmentation offset *\/$/;"	m	struct:dhcp_iphdr_t
+fragment	src/tun.h	/^  unsigned int fragment:13; \/**< Fragmentation offset *\/$/;"	m	struct:tun_packet_t
+free_iov_data	src/util.h	/^static inline void free_iov_data(struct iovec *iov, int count)$/;"	f
+free_options	src/pepper.c	/^static void free_options(void)$/;"	f	file:
+freeconn	src/pepper.c	/^static int freeconn(struct app_conn_t *conn)$/;"	f	file:
+g_connection	src/pepper.c	/^struct app_conn_t g_connection[APP_NUM_CONN * 2];$/;"	v	typeref:struct:app_conn_t
+g_do_sighup	src/pepper.c	/^static volatile sig_atomic_t g_do_sighup = 0;$/;"	v	file:
+g_do_timeouts	src/pepper.c	/^static volatile sig_atomic_t g_do_timeouts = 1;$/;"	v	file:
+g_firstfreeconn	src/pepper.c	/^struct app_conn_t *g_firstfreeconn = NULL; \/* First free in linked list *\/$/;"	v	typeref:struct:app_conn_t
+g_firstusedconn	src/pepper.c	/^struct app_conn_t *g_firstusedconn = NULL; \/* First used in linked list *\/$/;"	v	typeref:struct:app_conn_t
+g_keep_going	src/pepper.c	/^static volatile sig_atomic_t g_keep_going = 1;$/;"	v	file:
+g_lastfreeconn	src/pepper.c	/^struct app_conn_t *g_lastfreeconn = NULL;  \/* Last free in linked list *\/$/;"	v	typeref:struct:app_conn_t
+g_lastusedconn	src/pepper.c	/^struct app_conn_t *g_lastusedconn = NULL;  \/* Last used in linked list *\/$/;"	v	typeref:struct:app_conn_t
+gengetopt_args_info	src/cmdline.h	/^struct gengetopt_args_info$/;"	s
+gengetopt_strdup	src/cmdline.c	/^gengetopt_strdup (const char *s)$/;"	f
+get_multiple_arg_token	src/cmdline.c	/^get_multiple_arg_token(const char *arg)$/;"	f	file:
+get_multiple_arg_token_next	src/cmdline.c	/^get_multiple_arg_token_next(const char *arg)$/;"	f	file:
+get_namepart	src/pepper.c	/^static int get_namepart(char *src, char *host, int hostsize, int *port)$/;"	f	file:
+get_namepart6	src/pepper.c	/^static int get_namepart6(char *src, char *host, int *port)$/;"	f	file:
+getconn	src/pepper.c	/^static int getconn(struct app_conn_t **conn, struct sockaddr_storage nasip, uint32_t nasport)$/;"	f	file:
+getconn_username	src/pepper.c	/^static int getconn_username(struct app_conn_t **conn, char *username,$/;"	f	file:
+giaddr	src/dhcp.h	/^  uint32_t giaddr; \/**< 4 Relay agent IP address, used in$/;"	m	struct:dhcp_packet_t
+hash	src/dhcp.h	/^  struct dhcp_conn_t **hash;    \/**< Hashsize array of pointer to member *\/$/;"	m	struct:dhcp_t	typeref:struct:dhcp_t::dhcp_conn_t
+hash	src/ippool.h	/^  struct ippoolm_t **hash;       \/**< Hashsize array of pointer to member *\/$/;"	m	struct:ippool_t	typeref:struct:ippool_t::ippoolm_t
+hashlog	src/dhcp.h	/^  int hashlog;                  \/**< Log2 size of hash table *\/$/;"	m	struct:dhcp_t
+hashlog	src/ippool.h	/^  int hashlog;                   \/**< Log2 size of hash table *\/$/;"	m	struct:ippool_t
+hashlog	src/radius.h	/^  int hashlog;               \/**< Log2 size of hash table *\/$/;"	m	struct:radius_t
+hashmask	src/dhcp.h	/^  int hashmask;                 \/**< Bitmask for calculating hash *\/$/;"	m	struct:dhcp_t
+hashmask	src/ippool.h	/^  int hashmask;                  \/**< Bitmask for calculating hash *\/$/;"	m	struct:ippool_t
+hashmask	src/radius.h	/^  int hashmask;              \/**< Bitmask for calculating hash *\/$/;"	m	struct:radius_t
+hashsize	src/dhcp.h	/^  int hashsize;                 \/**< Size of hash table *\/$/;"	m	struct:dhcp_t
+hashsize	src/ippool.h	/^  int hashsize;                  \/**< Size of hash table *\/$/;"	m	struct:ippool_t
+hashsize	src/radius.h	/^  int hashsize;              \/**< Size of hash table *\/$/;"	m	struct:radius_t
+hashv6	src/dhcp.h	/^  struct dhcp_conn_t** hashv6; \/**< Hashsize array of pointer to IPv6 member *\/$/;"	m	struct:dhcp_t	typeref:struct:dhcp_t::dhcp_conn_t
+help_given	src/cmdline.h	/^  int help_given ;  \/**< Whether help was given.  *\/$/;"	m	struct:gengetopt_args_info
+hisaddr0	src/radius.h	/^  struct sockaddr_storage hisaddr0; \/**< Server address *\/$/;"	m	struct:radius_t	typeref:struct:radius_t::sockaddr_storage
+hisaddr1	src/radius.h	/^  struct sockaddr_storage hisaddr1; \/**< Server address *\/$/;"	m	struct:radius_t	typeref:struct:radius_t::sockaddr_storage
+hisip	src/dhcp.h	/^  struct in_addr hisip;        \/**< Client IP address *\/$/;"	m	struct:dhcp_conn_t	typeref:struct:dhcp_conn_t::in_addr
+hisip	src/pepper.h	/^  struct in_addr hisip;    \/**< Client IP address *\/$/;"	m	struct:app_conn_t	typeref:struct:app_conn_t::in_addr
+hisip	src/redir.h	/^  struct in_addr hisip; \/**< Client IP address *\/$/;"	m	struct:redir_conn_t	typeref:struct:redir_conn_t::in_addr
+hisipv6	src/dhcp.h	/^  struct in6_addr hisipv6;     \/**< client IPv6 address *\/$/;"	m	struct:dhcp_conn_t	typeref:struct:dhcp_conn_t::in6_addr
+hisipv6	src/pepper.h	/^  struct in6_addr hisipv6; \/**< Client IPv6 address *\/$/;"	m	struct:app_conn_t	typeref:struct:app_conn_t::in6_addr
+hisipv6	src/redir.h	/^  struct in6_addr hisipv6; \/**< Client IPv6 address *\/$/;"	m	struct:redir_conn_t	typeref:struct:redir_conn_t::in6_addr
+hismac	src/dhcp.h	/^  uint8_t hismac[DHCP_ETH_ALEN];    \/**< Peer's MAC address *\/$/;"	m	struct:dhcp_conn_t
+hismac	src/pepper.h	/^  uint8_t hismac[DHCP_ETH_ALEN]; \/**< His MAC address *\/$/;"	m	struct:app_conn_t
+hismac	src/redir.h	/^  uint8_t hismac[REDIR_ETH_ALEN]; \/**< His MAC address *\/$/;"	m	struct:redir_conn_t
+hismask	src/dhcp.h	/^  struct in_addr hismask;      \/**< Client Network Mask *\/$/;"	m	struct:dhcp_conn_t	typeref:struct:dhcp_conn_t::in_addr
+hlen	src/dhcp.h	/^  uint8_t hlen;     \/**< 1 Hardware address length (e.g.  '6' for$/;"	m	struct:dhcp_packet_t
+hln	src/dhcp.h	/^  uint8_t hln;  \/**< 8.bit: (ar$hln) byte length of each hardware address *\/$/;"	m	struct:dhcp_arp_packet_t
+homepage	src/redir.h	/^  char *homepage; \/**< URL of homepage *\/$/;"	m	struct:redir_t
+hop_limit	src/dhcp.h	/^  uint8_t hop_limit; \/**< Hop limit (i.e TTL) *\/$/;"	m	struct:dhcp_ipv6hdr_t
+hop_limit	src/tun6.h	/^  uint8_t hop_limit; \/**< Hop limit (i.e. TTL). *\/$/;"	m	struct:tun6_packet_t
+hops	src/dhcp.h	/^  uint8_t hops;     \/**< 1 Client sets to zero, optionally used$/;"	m	struct:dhcp_packet_t
+hrd	src/dhcp.h	/^  uint16_t hrd; \/**< 16.bit: (ar$hrd) Hardware address space (e.g.,$/;"	m	struct:dhcp_arp_packet_t
+htype	src/dhcp.h	/^  uint8_t htype;    \/**< 1 Hardware address type, see ARP section$/;"	m	struct:dhcp_packet_t
+hwaddr	src/dhcp.h	/^  unsigned char hwaddr[DHCP_ETH_ALEN]; \/**< Hardware address of interface *\/$/;"	m	struct:dhcp_t
+i	src/radius.h	/^        struct in6_addr i;$/;"	m	union:radius_attrv6_t::__anon5::__anon6::__anon7	typeref:struct:radius_attrv6_t::__anon5::__anon6::__anon7::in6_addr
+i	src/radius.h	/^        uint32_t i;$/;"	m	union:radius_attr_t::__anon2::__anon3::__anon4
+i	src/radius.h	/^      uint32_t i;$/;"	m	struct:radius_attr_t::__anon2::__anon3
+i	src/radius.h	/^      uint32_t i;$/;"	m	struct:radius_attrv6_t::__anon5::__anon6
+i	src/radius.h	/^    uint32_t i;$/;"	m	union:radius_attr_t::__anon2
+i	src/radius.h	/^    uint32_t i;$/;"	m	union:radius_attrv6_t::__anon5
+icmp6_cleanup	src/icmp6.c	/^void icmp6_cleanup(void)$/;"	f
+icmp6_create	src/icmp6.c	/^void *icmp6_create(struct iovec *iov, uint8_t type, uint8_t code)$/;"	f
+icmp6_init	src/icmp6.c	/^int icmp6_init(void)$/;"	f
+icmp6_send	src/icmp6.c	/^int icmp6_send(int oif, uint8_t hoplimit,$/;"	f
+icmp6_sock	src/icmp6.c	/^struct icmpv6_socket icmp6_sock;$/;"	v	typeref:struct:icmpv6_socket
+icmpv6_socket	src/icmp6.h	/^struct icmpv6_socket$/;"	s
+id	src/dhcp.h	/^  uint16_t id;      \/**< 16 bit: Generated by requester. Copied in reply *\/$/;"	m	struct:dhcp_dns_packet_t
+id	src/dhcp.h	/^  uint16_t id; \/**< ID number *\/$/;"	m	struct:dhcp_iphdr_t
+id	src/dhcp.h	/^  uint8_t  id; \/**< EAP ID *\/$/;"	m	struct:dhcp_eap_t
+id	src/radius.h	/^  uint8_t id; \/**< Packet ID *\/$/;"	m	struct:radius_packet_t
+id	src/tun.h	/^  unsigned int id:16; \/**< ID number *\/$/;"	m	struct:tun_packet_t
+id	src/tun6.c	/^  int id; \/**< Interface index *\/$/;"	m	struct:tun6	file:
+idletimeout	src/pepper.h	/^  long int idletimeout; \/**< RADIUS idle timeout *\/$/;"	m	struct:app_conn_t
+idletimeout	src/redir.h	/^  long int idletimeout; \/**< Idle timeout *\/$/;"	m	struct:redir_conn_t
+idletimeout	src/redir.h	/^  long int idletimeout; \/**< Idle timeuot *\/$/;"	m	struct:redir_msg_t
+if_mc_group	src/icmp6.c	/^int if_mc_group(int sock, int ifindex, const struct in6_addr *mc_addr, int cmd)$/;"	f
+ifindex	src/dhcp.h	/^  int ifindex;  \/**< Interface index for l2 socket *\/$/;"	m	struct:dhcp_t
+ifindex	src/tun6.h	/^  int ifindex; \/**< Interface index *\/$/;"	m	struct:tun6_t
+ifr6_addr	src/tun6.c	/^  struct in6_addr ifr6_addr; \/**< IPv6 address *\/$/;"	m	struct:in6_ifreq	typeref:struct:in6_ifreq::in6_addr	file:
+ifr6_ifindex	src/tun6.c	/^  int ifr6_ifindex; \/**< Interface index *\/$/;"	m	struct:in6_ifreq	file:
+ifr6_prefixlen	src/tun6.c	/^  uint32_t ifr6_prefixlen; \/**< Prefix length *\/$/;"	m	struct:in6_ifreq	file:
+ihl	src/dhcp.h	/^  uint32_t  ihl : 4; \/**< Internet header length (number of 32 bits words in header) *\/$/;"	m	struct:dhcp_iphdr_t
+ihl	src/tun.h	/^  unsigned int ihl:4; \/**< Internet header length *\/$/;"	m	struct:tun_packet_t
+in	src/md5.h	/^  unsigned char in[64]; \/**< Input buffer *\/$/;"	m	struct:MD5Context
+in6_ifreq	src/tun6.c	/^struct in6_ifreq$/;"	s	file:
+in6addr_all_nodes_mc	src/ndisc.c	/^static const struct in6_addr in6addr_all_nodes_mc = IN6ADDR_ALL_NODES_MC_INIT;$/;"	v	typeref:struct:in6_addr	file:
+in6addr_all_routers_mc	src/ndisc.c	/^static const struct in6_addr in6addr_all_routers_mc = IN6ADDR_ALL_ROUTERS_MC_INIT;$/;"	v	typeref:struct:in6_addr	file:
+initconn	src/pepper.c	/^static int initconn(void)$/;"	f	file:
+inline	src/tun6.h	66;"	d
+input_octets	src/pepper.h	/^  uint64_t input_octets; \/**< Bytes received *\/$/;"	m	struct:app_conn_t
+input_octets	src/redir.h	/^  uint64_t input_octets;     \/**< Transferred in callback *\/$/;"	m	struct:redir_conn_t
+input_packets	src/pepper.h	/^  uint32_t input_packets; \/**< Packets received *\/$/;"	m	struct:app_conn_t
+interim_interval	src/pepper.h	/^  long int interim_interval;   \/**< Seconds. 0 = No interim accounting *\/$/;"	m	struct:app_conn_t
+interim_interval	src/redir.h	/^  long int interim_interval;  \/**< Interim accounting *\/$/;"	m	struct:redir_conn_t
+interim_interval	src/redir.h	/^  long int interim_interval; \/**< Interval *\/$/;"	m	struct:redir_msg_t
+interim_time	src/pepper.h	/^  struct timeval interim_time; \/**< interim accounting time *\/$/;"	m	struct:app_conn_t	typeref:struct:app_conn_t::timeval
+interval	src/pepper.h	/^  int interval;                  \/**< Time between checking connections *\/$/;"	m	struct:options_t
+interval_arg	src/cmdline.h	/^  int interval_arg;  \/**< Re-read configuration file at this interval (default='3600').  *\/$/;"	m	struct:gengetopt_args_info
+interval_given	src/cmdline.h	/^  int interval_given ;  \/**< Whether interval was given.  *\/$/;"	m	struct:gengetopt_args_info
+interval_orig	src/cmdline.h	/^  char * interval_orig;  \/**< Re-read configuration file at this interval original value given at command line.  *\/$/;"	m	struct:gengetopt_args_info
+inuse	src/dhcp.h	/^  int inuse;                  \/**< Free = 0; Inuse = 1 *\/$/;"	m	struct:dhcp_conn_t
+inuse	src/ippool.h	/^  int inuse;                     \/**< 0=available; 1= dynamic; 2 = static *\/$/;"	m	struct:ippoolm_t
+inuse	src/pepper.h	/^  int inuse; \/**< If the connection is in use *\/$/;"	m	struct:app_conn_t
+inuse	src/radius.h	/^  int inuse;                     \/**< 0=available; 1= inuse *\/$/;"	m	struct:radiusm_t
+ip6h	src/dhcp.h	/^  struct dhcp_ipv6hdr_t ip6h; \/**< IPv6 header. *\/$/;"	m	struct:dhcp_ipv6packet_t	typeref:struct:dhcp_ipv6packet_t::dhcp_ipv6hdr_t
+ip6listen	src/pepper.h	/^  struct in6_addr ip6listen;     \/**< IPv6 address to listen to *\/$/;"	m	struct:options_t	typeref:struct:options_t::in6_addr
+ipdown	src/pepper.h	/^  char* ipdown;                  \/**< Script to run after link-down *\/$/;"	m	struct:options_t
+ipdown_arg	src/cmdline.h	/^  char * ipdown_arg;  \/**< Script to run after link-down.  *\/$/;"	m	struct:gengetopt_args_info
+ipdown_given	src/cmdline.h	/^  int ipdown_given ;  \/**< Whether ipdown was given.  *\/$/;"	m	struct:gengetopt_args_info
+ipdown_orig	src/cmdline.h	/^  char * ipdown_orig;  \/**< Script to run after link-down original value given at command line.  *\/$/;"	m	struct:gengetopt_args_info
+iph	src/dhcp.h	/^  struct dhcp_iphdr_t iph; \/**< IPv4 header *\/$/;"	m	struct:dhcp_dns_fullpacket_t	typeref:struct:dhcp_dns_fullpacket_t::dhcp_iphdr_t
+iph	src/dhcp.h	/^  struct dhcp_iphdr_t iph; \/**< IPv4 header *\/$/;"	m	struct:dhcp_fullpacket_t	typeref:struct:dhcp_fullpacket_t::dhcp_iphdr_t
+iph	src/dhcp.h	/^  struct dhcp_iphdr_t iph; \/**< IPv4 header *\/$/;"	m	struct:dhcp_ippacket_t	typeref:struct:dhcp_ippacket_t::dhcp_iphdr_t
+iph	src/dhcp.h	/^  struct dhcp_ipv6hdr_t iph; \/**< IPv4 header *\/$/;"	m	struct:dhcp_dns_fullpacket6_t	typeref:struct:dhcp_dns_fullpacket6_t::dhcp_ipv6hdr_t
+iphash	src/dhcp.h	/^  struct ippool_t *iphash; \/**< Hash table for uamallowed *\/$/;"	m	struct:dhcp_t	typeref:struct:dhcp_t::ippool_t
+iphash6	src/dhcp.h	/^  struct ippool_t *iphash6; \/**< Hash table for IPv6 uamallowed *\/$/;"	m	struct:dhcp_t	typeref:struct:dhcp_t::ippool_t
+iphash_free	src/iphash.c	/^int iphash_free(struct ippool_t *this)$/;"	f
+iphash_new	src/iphash.c	/^int iphash_new(struct ippool_t **this, struct ippoolm_t *list, int listsize)$/;"	f
+iphash_new6	src/iphash.c	/^int iphash_new6(struct ippool_t **this, struct ippoolm_t *list, int listsize)$/;"	f
+iphashm	src/dhcp.h	/^  struct ippoolm_t *iphashm; \/**< Hash table members for uamallowed *\/$/;"	m	struct:dhcp_t	typeref:struct:dhcp_t::ippoolm_t
+iphashm6	src/dhcp.h	/^  struct ippoolm_t *iphashm6; \/**< Hash table members for IPv6 uamallowed *\/$/;"	m	struct:dhcp_t	typeref:struct:dhcp_t::ippoolm_t
+ippool	src/pepper.c	/^static struct ippool_t *ippool = NULL;  \/**< Pool of IP addresses *\/$/;"	v	typeref:struct:ippool_t	file:
+ippool_aton	src/ippool.c	/^int ippool_aton(struct in_addr *addr, struct in_addr *mask,$/;"	f
+ippool_atonv6	src/ippool.c	/^int ippool_atonv6(struct in6_addr *prefix, int *prefixlen,  int *mask,$/;"	f
+ippool_free	src/ippool.c	/^int ippool_free(struct ippool_t *this)$/;"	f
+ippool_freeip	src/ippool.c	/^int ippool_freeip(struct ippool_t *this, struct ippoolm_t *member)$/;"	f
+ippool_getip	src/ippool.c	/^int ippool_getip(struct ippool_t *this, struct ippoolm_t **member,$/;"	f
+ippool_getip6	src/ippool.c	/^int ippool_getip6(struct ippool_t *this, struct ippoolm_t **member, struct in6_addr *addr)$/;"	f
+ippool_getv6suffix	src/ippool.c	/^void ippool_getv6suffix(struct in6_addr *suffix, struct in6_addr *addr, int mask)$/;"	f
+ippool_hash4	src/ippool.c	/^unsigned long int ippool_hash4(struct in_addr *addr)$/;"	f
+ippool_hash6	src/ippool.c	/^unsigned long int ippool_hash6(struct in6_addr *addr)$/;"	f
+ippool_hashadd	src/ippool.c	/^int ippool_hashadd(struct ippool_t *this, struct ippoolm_t *member)$/;"	f
+ippool_hashadd6	src/ippool.c	/^int ippool_hashadd6(struct ippool_t *this, struct ippoolm_t *member)$/;"	f
+ippool_hashdel	src/ippool.c	/^int ippool_hashdel(struct ippool_t *this, struct ippoolm_t *member)$/;"	f
+ippool_hashdel6	src/ippool.c	/^int ippool_hashdel6(struct ippool_t *this, struct ippoolm_t *member)$/;"	f
+ippool_new	src/ippool.c	/^int ippool_new(struct ippool_t **this, char *dyn,  char *stat,$/;"	f
+ippool_newip	src/ippool.c	/^int ippool_newip(struct ippool_t *this, struct ippoolm_t **member,$/;"	f
+ippool_newip6	src/ippool.c	/^int ippool_newip6(struct ippool_t* this, struct ippoolm_t** member, struct in6_addr* addr)$/;"	f
+ippool_printaddr	src/ippool.c	/^static int ippool_printaddr(struct ippool_t *this)$/;"	f	file:
+ippool_t	src/ippool.h	/^struct ippool_t$/;"	s
+ippoolm_t	src/ippool.h	/^struct ippoolm_t$/;"	s
+ipup	src/pepper.h	/^  char* ipup;                    \/**< Script to run after link-up *\/$/;"	m	struct:options_t
+ipup_arg	src/cmdline.h	/^  char * ipup_arg;  \/**< Script to run after link-up.  *\/$/;"	m	struct:gengetopt_args_info
+ipup_given	src/cmdline.h	/^  int ipup_given ;  \/**< Whether ipup was given.  *\/$/;"	m	struct:gengetopt_args_info
+ipup_orig	src/cmdline.h	/^  char * ipup_orig;  \/**< Script to run after link-up original value given at command line.  *\/$/;"	m	struct:gengetopt_args_info
+ipv6	src/dhcp.h	/^  int ipv6;                    \/**< use IPv6 = 1; use IPv4 only = 0 *\/$/;"	m	struct:dhcp_conn_t
+ipv6	src/pepper.h	/^  int ipv6; \/**< If IPv6 is used *\/$/;"	m	struct:app_conn_t
+ipv6	src/redir.h	/^  int ipv6; \/**< If connection is IPv6 *\/$/;"	m	struct:redir_conn_t
+ipv6	src/redir.h	/^  int ipv6; \/**< If connection use IPv6 *\/$/;"	m	struct:redir_msg_t
+ipv6_addr_llocal	src/util.h	/^static inline void ipv6_addr_llocal(const struct in6_addr *addr,$/;"	f
+ipv6_addr_set	src/util.h	/^static inline void ipv6_addr_set(struct in6_addr *addr,$/;"	f
+ipv6_addr_solict_mult	src/util.h	/^static inline void ipv6_addr_solict_mult(const struct in6_addr *addr,$/;"	f
+ipv6_fd	src/dhcp.h	/^  int ipv6_fd; \/**< File descriptor to network interface *\/$/;"	m	struct:dhcp_t
+ipv6_hwaddr	src/dhcp.h	/^  unsigned char ipv6_hwaddr[DHCP_ETH_ALEN]; \/**< Hardware address of interface *\/$/;"	m	struct:dhcp_t
+ipv6_ifindex	src/dhcp.h	/^  int ipv6_ifindex; \/**< IPv6-related interface index *\/$/;"	m	struct:dhcp_t
+ipv6mask	src/pepper.h	/^  int ipv6mask;                  \/**< IPv6 mask *\/$/;"	m	struct:options_t
+ipv6prefix_arg	src/cmdline.h	/^  char * ipv6prefix_arg;  \/**< IPv6 prefix (default='2001:db8::\/64'). *\/$/;"	m	struct:gengetopt_args_info
+ipv6prefix_given	src/cmdline.h	/^  int ipv6prefix_given;  \/**< Whether ipv6prefix was given.  *\/$/;"	m	struct:gengetopt_args_info
+ipv6prefix_orig	src/cmdline.h	/^  char * ipv6prefix_orig;  \/**< IPv6 prefix original value given at command line.  *\/$/;"	m	struct:gengetopt_args_info
+ipversion	src/pepper.h	/^  char *ipversion;               \/**< IP version used ("ipv4", "ipv6" or "dual") *\/$/;"	m	struct:options_t
+ipversion_arg	src/cmdline.h	/^  char * ipversion_arg; \/**< Allowed version of IP (default='6') *\/$/;"	m	struct:gengetopt_args_info
+ipversion_given	src/cmdline.h	/^  int ipversion_given; \/**< Wheter ipversino was given.  *\/$/;"	m	struct:gengetopt_args_info
+ipversion_orig	src/cmdline.h	/^  char * ipversion_orig; \/**< Allowed version of IP (default='6') value given at command line. *\/$/;"	m	struct:gengetopt_args_info
+irix_6_4_bug	configure	/^irix_6_4_bug ()$/;"	f
+keep_going	src/redir.c	/^static int keep_going = 1;   \/**< OK as global variable for child process *\/$/;"	v	file:
+killconn	src/pepper.c	/^static int killconn(void)$/;"	f	file:
+l	src/dhcp.h	/^  uint8_t l; \/**< Length *\/$/;"	m	struct:dhcp_tag_t
+l	src/dhcp.h	/^  uint8_t l; \/**< Length of attribute *\/$/;"	m	struct:dhcp_eapol_tag_t
+l	src/radius.h	/^      uint8_t l;$/;"	m	struct:radius_attr_t::__anon2::__anon3
+l	src/radius.h	/^      uint8_t l;$/;"	m	struct:radius_attrv6_t::__anon5::__anon6
+l	src/radius.h	/^  int l;                     \/**< Length of the packet *\/$/;"	m	struct:radius_queue_t
+l	src/radius.h	/^  uint8_t l; \/**< Length *\/$/;"	m	struct:radius_attr_t
+l	src/radius.h	/^  uint8_t l; \/**< Length *\/$/;"	m	struct:radius_attrv6_t
+last	src/radius.h	/^  int last;                  \/**< Last packet in queue (youngest timeout) *\/$/;"	m	struct:radius_t
+last_time	src/pepper.h	/^  struct timeval last_time; \/**< Last time a packet was received or sent *\/$/;"	m	struct:app_conn_t	typeref:struct:app_conn_t::timeval
+lastdyn	src/ippool.h	/^  struct ippoolm_t *lastdyn;     \/**< Pointer to last free dynamic member *\/$/;"	m	struct:ippool_t	typeref:struct:ippool_t::ippoolm_t
+lastfreeconn	src/dhcp.h	/^  struct dhcp_conn_t *lastfreeconn;  \/**< Last free in linked list *\/$/;"	m	struct:dhcp_t	typeref:struct:dhcp_t::dhcp_conn_t
+lastfreeconnv6	src/dhcp.h	/^  struct dhcp_conn_t* lastfreeconnv6; \/**< Last free in IPv6 linked list *\/$/;"	m	struct:dhcp_t	typeref:struct:dhcp_t::dhcp_conn_t
+lastipv6	src/ippool.h	/^  struct ippoolm_t *lastipv6;    \/**< Pointer to the first IPv6 member *\/$/;"	m	struct:ippool_t	typeref:struct:ippool_t::ippoolm_t
+lastreply	src/radius.h	/^  int lastreply;             \/**< 0 or 1 indicates last server reply *\/$/;"	m	struct:radius_t
+lastsent	src/radius.h	/^  int lastsent;              \/**< 0 or 1 indicates last server used *\/$/;"	m	struct:radius_queue_t
+laststat	src/ippool.h	/^  struct ippoolm_t *laststat;    \/**< Pointer to last free static member *\/$/;"	m	struct:ippool_t	typeref:struct:ippool_t::ippoolm_t
+lasttime	src/dhcp.h	/^  struct timeval lasttime;      \/**< Last time we heard anything from client *\/$/;"	m	struct:dhcp_conn_t	typeref:struct:dhcp_conn_t::timeval
+lastusedconn	src/dhcp.h	/^  struct dhcp_conn_t *lastusedconn;  \/**< Last used in linked list *\/$/;"	m	struct:dhcp_t	typeref:struct:dhcp_t::dhcp_conn_t
+lastusedconnv6	src/dhcp.h	/^  struct dhcp_conn_t* lastusedconnv6; \/**< Last used in IPv6 linked list *\/$/;"	m	struct:dhcp_t	typeref:struct:dhcp_t::dhcp_conn_t
+leaky_bucket	src/pepper.c	/^static int leaky_bucket(struct app_conn_t *conn, int octetsup, int octetsdown)$/;"	f	file:
+lease	src/dhcp.h	/^  uint32_t lease;       \/**< Seconds before reneval *\/$/;"	m	struct:dhcp_t
+lease	src/pepper.h	/^  int lease;                     \/**< DHCP lease time *\/$/;"	m	struct:options_t
+lease_arg	src/cmdline.h	/^  int lease_arg;  \/**< Lease time to allocate to clients (default='600').  *\/$/;"	m	struct:gengetopt_args_info
+lease_given	src/cmdline.h	/^  int lease_given ;  \/**< Whether lease was given.  *\/$/;"	m	struct:gengetopt_args_info
+lease_orig	src/cmdline.h	/^  char * lease_orig;  \/**< Lease time to allocate to clients original value given at command line.  *\/$/;"	m	struct:gengetopt_args_info
+len	src/dhcp.h	/^  uint16_t len; \/**< Length *\/$/;"	m	struct:dhcp_dot1xhdr_t
+len	src/dhcp.h	/^  uint16_t len; \/**< Length. *\/$/;"	m	struct:dhcp_udphdr_t
+length	src/dhcp.h	/^  uint16_t length; \/**< Length *\/$/;"	m	struct:dhcp_eap_t
+length	src/radius.h	/^  uint16_t length; \/**< Length *\/$/;"	m	struct:radius_packet_t
+length	src/tun.h	/^  unsigned int length:16; \/**< Total length *\/$/;"	m	struct:tun_packet_t
+line_list	src/cmdline.c	/^struct line_list$/;"	s	file:
+listsize	src/ippool.h	/^  int listsize;                  \/**< Total number of addresses *\/$/;"	m	struct:ippool_t
+listsize	src/radius.h	/^  int listsize;              \/**< Total number of addresses *\/$/;"	m	struct:radius_t
+lmntkeys	src/pepper.h	/^  uint8_t lmntkeys[RADIUS_MPPEKEYSSIZE]; \/**< LMNT key *\/$/;"	m	struct:app_conn_t
+lmntlen	src/pepper.h	/^  int lmntlen; \/**< Length of LMNT key *\/$/;"	m	struct:app_conn_t
+log_pid	src/pepper.c	/^static void log_pid(char *pidfile)$/;"	f	file:
+lookup	src/lookup.c	/^unsigned long int lookup(register unsigned char* k, register unsigned long int length, register unsigned long int level)$/;"	f
+macallowed_arg	src/cmdline.c	/^  char * macallowed_arg;$/;"	m	struct:macallowed_list	file:
+macallowed_arg	src/cmdline.h	/^  char ** macallowed_arg;  \/**< List of allowed MAC addresses.  *\/$/;"	m	struct:gengetopt_args_info
+macallowed_given	src/cmdline.h	/^  unsigned int macallowed_given ;  \/**< Whether macallowed was given.  *\/$/;"	m	struct:gengetopt_args_info
+macallowed_list	src/cmdline.c	/^struct macallowed_list$/;"	s	file:
+macallowed_orig	src/cmdline.c	/^  char *macallowed_orig;$/;"	m	struct:macallowed_list	file:
+macallowed_orig	src/cmdline.h	/^  char ** macallowed_orig;  \/**< List of allowed MAC addresses original value given at command line.  *\/$/;"	m	struct:gengetopt_args_info
+macauth	src/pepper.h	/^  int macauth;                   \/**< Use MAC authentication *\/$/;"	m	struct:options_t
+macauth_flag	src/cmdline.h	/^  int macauth_flag;  \/**< Authenticate based on MAC address (default=off).  *\/$/;"	m	struct:gengetopt_args_info
+macauth_given	src/cmdline.h	/^  int macauth_given ;  \/**< Whether macauth was given.  *\/$/;"	m	struct:gengetopt_args_info
+macauth_radius	src/pepper.c	/^static int macauth_radius(struct app_conn_t *appconn)$/;"	f	file:
+maccmp	src/pepper.c	/^static int maccmp(unsigned char *mac)$/;"	f	file:
+macok	src/pepper.h	/^  unsigned char macok[MACOK_MAX][DHCP_ETH_ALEN]; \/**< Allowed MACs *\/$/;"	m	struct:options_t
+macoklen	src/pepper.h	/^  int macoklen;                  \/**< Number of MAC addresses *\/$/;"	m	struct:options_t
+macpasswd	src/pepper.h	/^  char* macpasswd;               \/**< Password to use for MAC authentication *\/$/;"	m	struct:options_t
+macpasswd_arg	src/cmdline.h	/^  char * macpasswd_arg;  \/**< Password used when performing MAC authentication (default='password').  *\/$/;"	m	struct:gengetopt_args_info
+macpasswd_given	src/cmdline.h	/^  int macpasswd_given ;  \/**< Whether macpasswd was given.  *\/$/;"	m	struct:gengetopt_args_info
+macpasswd_orig	src/cmdline.h	/^  char * macpasswd_orig;  \/**< Password used when performing MAC authentication original value given at command line.  *\/$/;"	m	struct:gengetopt_args_info
+macsuffix	src/pepper.h	/^  char* macsuffix;               \/**< Suffix to add to MAC address *\/$/;"	m	struct:options_t
+macsuffix_arg	src/cmdline.h	/^  char * macsuffix_arg;  \/**< Suffix to add to the MAC address.  *\/$/;"	m	struct:gengetopt_args_info
+macsuffix_given	src/cmdline.h	/^  int macsuffix_given ;  \/**< Whether macsuffix was given.  *\/$/;"	m	struct:gengetopt_args_info
+macsuffix_orig	src/cmdline.h	/^  char * macsuffix_orig;  \/**< Suffix to add to the MAC address original value given at command line.  *\/$/;"	m	struct:gengetopt_args_info
+main	src/pepper.c	/^int main(int argc, char **argv)$/;"	f
+mask	src/pepper.h	/^  struct in_addr mask;           \/**< Network mask *\/$/;"	m	struct:options_t	typeref:struct:options_t::in_addr
+mask	src/pepper.h	/^  struct in_addr mask; \/**< IPv4 mask *\/$/;"	m	struct:app_conn_t	typeref:struct:app_conn_t::in_addr
+maxinputoctets	src/pepper.h	/^  uint64_t maxinputoctets; \/**< Maximum input bytes *\/$/;"	m	struct:app_conn_t
+maxinputoctets	src/redir.h	/^  int maxinputoctets;  \/**< Maximum output bytes that can be received *\/$/;"	m	struct:redir_conn_t
+maxinputoctets	src/redir.h	/^  int maxinputoctets; \/**< Maximum bytes that can be received *\/$/;"	m	struct:redir_msg_t
+maxoutputoctets	src/pepper.h	/^  uint64_t maxoutputoctets; \/**< Maximum output bytes *\/$/;"	m	struct:app_conn_t
+maxoutputoctets	src/redir.h	/^  int maxoutputoctets; \/**< Maximum bytes that can be sent *\/$/;"	m	struct:redir_msg_t
+maxoutputoctets	src/redir.h	/^  int maxoutputoctets; \/**< Maximum output bytes that can be sent *\/$/;"	m	struct:redir_conn_t
+maxtotaloctets	src/pepper.h	/^  uint64_t maxtotaloctets; \/**< Maximum bytes allowed *\/$/;"	m	struct:app_conn_t
+maxtotaloctets	src/redir.h	/^  int maxtotaloctets; \/**< Maximum bytes allowed *\/$/;"	m	struct:redir_conn_t
+maxtotaloctets	src/redir.h	/^  int maxtotaloctets; \/**< Maximum bytes allowed *\/$/;"	m	struct:redir_msg_t
+member	src/ippool.h	/^  struct ippoolm_t *member;      \/**< Listsize array of members *\/$/;"	m	struct:ippool_t	typeref:struct:ippool_t::ippoolm_t
+mix	src/lookup.c	80;"	d	file:
+ms2succ	src/pepper.h	/^  uint8_t ms2succ[MS2SUCCSIZE]; \/**< MS-CHAPv2 SUCCESS attribute *\/$/;"	m	struct:app_conn_t
+msg	extra/hsl.php	/^    $msg='<ReplyMessage>Login must use encrypted connection<\/ReplyMessage>';$/;"	v
+msgid	src/redir.h	/^  int msgid; \/**< Message Queue ID *\/$/;"	m	struct:redir_t
+mtu	src/dhcp.h	/^  int mtu;              \/**< Maximum transfer unit *\/$/;"	m	struct:dhcp_t
+mtu	src/pepper.h	/^  uint16_t mtu;            \/**< MTU of the link *\/$/;"	m	struct:app_conn_t
+my_argv	src/cmdline.c	/^char my_argv[CONFIG_FILE_LINE_BUFFER_SIZE+1];$/;"	v
+nasip	src/pepper.h	/^  struct sockaddr_storage nasip; \/**< Set by access request *\/$/;"	m	struct:app_conn_t	typeref:struct:app_conn_t::sockaddr_storage
+nasip	src/redir.h	/^  struct sockaddr_storage nasip; \/**< Address of NAS *\/$/;"	m	struct:redir_conn_t	typeref:struct:redir_conn_t::sockaddr_storage
+nasport	src/pepper.h	/^  uint32_t nasport;            \/**< Set by access request *\/$/;"	m	struct:app_conn_t
+nasport	src/redir.h	/^  uint32_t nasport; \/**< Port of NAS *\/$/;"	m	struct:redir_conn_t
+nd_get_l2addr	src/ndisc.c	/^static int nd_get_l2addr(int ifindex, uint8_t *addr)$/;"	f	file:
+nd_get_l2addr_len	src/ndisc.h	/^static inline short nd_get_l2addr_len(unsigned short iface_type)$/;"	f
+nd_opt_create	src/ndisc.c	/^static struct nd_opt_hdr *nd_opt_create(struct iovec *iov, uint8_t type,$/;"	f	file:
+ndisc_send_na	src/ndisc.c	/^int ndisc_send_na(int ifindex, const struct in6_addr *src,$/;"	f
+net	src/pepper.h	/^  struct in_addr net;            \/**< Network IP address *\/$/;"	m	struct:options_t	typeref:struct:options_t::in_addr
+net	src/pepper.h	/^  struct in_addr net; \/**< IPv4 network address *\/$/;"	m	struct:app_conn_t	typeref:struct:app_conn_t::in_addr
+net_arg	src/cmdline.h	/^  char * net_arg;  \/**< Network (default='192.168.182.0\/24').  *\/$/;"	m	struct:gengetopt_args_info
+net_given	src/cmdline.h	/^  int net_given ;  \/**< Whether net was given.  *\/$/;"	m	struct:gengetopt_args_info
+net_orig	src/cmdline.h	/^  char * net_orig;  \/**< Network original value given at the command line. *\/$/;"	m	struct:gengetopt_args_info
+netmask	src/tun.h	/^  struct in_addr netmask; \/**< IPv4 Netmask *\/$/;"	m	struct:tun_t	typeref:struct:tun_t::in_addr
+newconn	src/pepper.c	/^static int newconn(struct app_conn_t **conn)$/;"	f	file:
+next	src/cmdline.c	/^  struct line_list * next;$/;"	m	struct:line_list	typeref:struct:line_list::line_list	file:
+next	src/cmdline.c	/^  struct macallowed_list * next;$/;"	m	struct:macallowed_list	typeref:struct:macallowed_list::macallowed_list	file:
+next	src/cmdline.c	/^  struct uamallowed_list * next;$/;"	m	struct:uamallowed_list	typeref:struct:uamallowed_list::uamallowed_list	file:
+next	src/dhcp.h	/^  struct dhcp_conn_t *next;    \/**< Next in linked list. 0: Last *\/$/;"	m	struct:dhcp_conn_t	typeref:struct:dhcp_conn_t::dhcp_conn_t
+next	src/ippool.h	/^  struct ippoolm_t *next;        \/**< Next member from linked list of free dynamic or static *\/$/;"	m	struct:ippoolm_t	typeref:struct:ippoolm_t::ippoolm_t
+next	src/pepper.h	/^  struct app_conn_t *next; \/**< Next in linked list. 0: Last *\/$/;"	m	struct:app_conn_t	typeref:struct:app_conn_t::app_conn_t
+next	src/radius.h	/^  int next;                  \/**< Pointer to the next in queue. -1: Last *\/$/;"	m	struct:radius_queue_t
+next	src/radius.h	/^  struct RADIUSm_t *next;        \/**< Next member (for double linked list of available members) *\/$/;"	m	struct:radiusm_t	typeref:struct:radiusm_t::RADIUSm_t
+next	src/radius.h	/^  uint8_t next;              \/**< Next location in queue to use *\/$/;"	m	struct:radius_t
+next_header	src/dhcp.h	/^  uint8_t next_header; \/**< Next header number (protocol or IPv6 extension) *\/$/;"	m	struct:dhcp_ipv6hdr_t
+next_header	src/tun6.h	/^  uint8_t next_header; \/**< Next header (protocol or header extension). *\/$/;"	m	struct:tun6_packet_t
+nextdnat	src/dhcp.h	/^  int nextdnat;                \/**< Next location to use for DNAT *\/$/;"	m	struct:dhcp_conn_t
+nextdnatv6	src/dhcp.h	/^  int nextdnatv6;                   \/**< Next location to use for DNATv6 *\/$/;"	m	struct:dhcp_conn_t
+nexthash	src/dhcp.h	/^  struct dhcp_conn_t *nexthash; \/**< Linked list part of hash table *\/$/;"	m	struct:dhcp_conn_t	typeref:struct:dhcp_conn_t::dhcp_conn_t
+nexthash	src/ippool.h	/^  struct ippoolm_t *nexthash;    \/**< Linked list part of hash table *\/$/;"	m	struct:ippoolm_t	typeref:struct:ippoolm_t::ippoolm_t
+nexthash	src/radius.h	/^  struct RADIUSm_t *nexthash;    \/**< Linked list part of hash table *\/$/;"	m	struct:radiusm_t	typeref:struct:radiusm_t::RADIUSm_t
+nodhcp	src/pepper.h	/^  int nodhcp;                    \/**< Do not use DHCP *\/$/;"	m	struct:options_t
+nscount	src/dhcp.h	/^  uint16_t nscount; \/**< 16 bit: Number of name servers *\/$/;"	m	struct:dhcp_dns_packet_t
+numconn	src/dhcp.h	/^  int numconn;          \/**< Maximum number of connections for IPv4 *\/$/;"	m	struct:dhcp_t
+numconnv6	src/dhcp.h	/^  int numconnv6; \/**< Maximum number of connections for IPv6 *\/$/;"	m	struct:dhcp_t
+op	src/dhcp.h	/^  uint16_t op;  \/**< 16.bit: (ar$op)  opcode (ares_op$REQUEST | ares_op$REPLY) *\/$/;"	m	struct:dhcp_arp_packet_t
+op	src/dhcp.h	/^  uint8_t op;       \/**< 1 Message op code \/ message type.  1 =$/;"	m	struct:dhcp_packet_t
+options	src/dhcp.h	/^  uint8_t options[1]; \/**< TCP Options (TODO). *\/$/;"	m	struct:dhcp_tcphdr_t
+options	src/dhcp.h	/^  uint8_t options[DHCP_OPTIONS_LEN]; \/**< var Optional parameters$/;"	m	struct:dhcp_packet_t
+options	src/pepper.c	/^struct options_t options;$/;"	v	typeref:struct:options_t
+options_t	src/pepper.h	/^struct options_t$/;"	s
+optionsdebug	src/redir.c	/^static int optionsdebug = 1; \/**< Print debug information while running *\/$/;"	v	file:
+orig_name	src/tun6.c	/^  char orig_name[IFNAMSIZ]; \/**< Name of interface *\/$/;"	m	struct:tun6	file:
+os_driver	src/tun6.c	/^const char os_driver[] = "BSD";$/;"	v
+os_driver	src/tun6.c	/^const char os_driver[] = "Generic";$/;"	v
+os_driver	src/tun6.c	/^const char os_driver[] = "Linux";$/;"	v
+ouraddr	src/radius.h	/^  struct sockaddr_storage ouraddr; \/**< Address to listen to *\/$/;"	m	struct:radius_t	typeref:struct:radius_t::sockaddr_storage
+ourip	src/dhcp.h	/^  struct in_addr ourip;        \/**< IP address to listen to *\/$/;"	m	struct:dhcp_conn_t	typeref:struct:dhcp_conn_t::in_addr
+ourip	src/dhcp.h	/^  struct in_addr ourip; \/**< IPv4 address to listen to *\/$/;"	m	struct:dhcp_t	typeref:struct:dhcp_t::in_addr
+ourip	src/pepper.h	/^  struct in_addr ourip;    \/**< IP address to listen to *\/$/;"	m	struct:app_conn_t	typeref:struct:app_conn_t::in_addr
+ourip	src/redir.h	/^  struct in_addr ourip; \/**< IP address to listen to *\/$/;"	m	struct:redir_conn_t	typeref:struct:redir_conn_t::in_addr
+ouripv6	src/dhcp.h	/^  struct in6_addr ouripv6;     \/**< IPv6 address to listen to *\/$/;"	m	struct:dhcp_conn_t	typeref:struct:dhcp_conn_t::in6_addr
+ouripv6	src/dhcp.h	/^  struct in6_addr ouripv6; \/**< IPv6 address to listen to *\/$/;"	m	struct:dhcp_t	typeref:struct:dhcp_t::in6_addr
+ouripv6	src/pepper.h	/^  struct in6_addr ouripv6; \/**< IPv6 address to listen to *\/$/;"	m	struct:app_conn_t	typeref:struct:app_conn_t::in6_addr
+ouripv6	src/redir.h	/^  struct in6_addr ouripv6; \/**< IPv6 address to listen to *\/$/;"	m	struct:redir_conn_t	typeref:struct:redir_conn_t::in6_addr
+ourmac	src/dhcp.h	/^  uint8_t ourmac[DHCP_ETH_ALEN];    \/**< Our MAC address *\/$/;"	m	struct:dhcp_conn_t
+ourmac	src/pepper.h	/^  uint8_t ourmac[DHCP_ETH_ALEN]; \/**< Our MAC address *\/$/;"	m	struct:app_conn_t
+ourmac	src/redir.h	/^  uint8_t ourmac[REDIR_ETH_ALEN]; \/**< Our MAC address *\/$/;"	m	struct:redir_conn_t
+ourport	src/radius.h	/^  uint16_t ourport;          \/**< Port to listen to *\/$/;"	m	struct:radius_t
+output_octets	src/pepper.h	/^  uint64_t output_octets; \/**< Bytes sent *\/$/;"	m	struct:app_conn_t
+output_octets	src/redir.h	/^  uint64_t output_octets;    \/**< Transferred in callback *\/$/;"	m	struct:redir_conn_t
+output_packets	src/pepper.h	/^  uint32_t output_packets; \/**< Packets sent *\/$/;"	m	struct:app_conn_t
+p	src/radius.h	/^  struct radius_packet_t p;  \/**< The packet stored *\/$/;"	m	struct:radius_queue_t	typeref:struct:radius_queue_t::radius_packet_t
+paranoid	src/dhcp.c	/^const static int paranoid = 0; \/**< Trust that the program has no bugs *\/$/;"	v	file:
+paranoid	src/dhcp.c	/^static const int paranoid = 1; \/**< Check for errors which cannot happen *\/$/;"	v	file:
+parent	src/dhcp.h	/^  struct dhcp_t *parent;       \/**< Parent of all connections *\/$/;"	m	struct:dhcp_conn_t	typeref:struct:dhcp_conn_t::dhcp_t
+parent	src/radius.h	/^  struct RADIUS_t *parent;       \/**< Pointer to parent *\/$/;"	m	struct:radiusm_t	typeref:struct:radiusm_t::RADIUS_t
+password	extra/hsl.php	/^  $password=$GLOBALS['password'];$/;"	v
+password	extra/hsl.php	/^$password=cbGetValue($_REQUEST,'password'); \/\/ For debug$/;"	v
+password	src/redir.h	/^  uint8_t password[REDIR_MAXCHAR]; \/**< Client password *\/$/;"	m	struct:redir_conn_t
+passwordlen	src/redir.h	/^  int passwordlen; \/**< Client password length *\/$/;"	m	struct:redir_conn_t
+payload	src/dhcp.h	/^  uint8_t payload[DHCP_EAP_PLEN]; \/**< Data *\/$/;"	m	struct:dhcp_eap_t
+payload	src/dhcp.h	/^  uint8_t payload[DHCP_IPV6_PLEN]; \/**< Data. *\/$/;"	m	struct:dhcp_ipv6packet_t
+payload	src/dhcp.h	/^  uint8_t payload[DHCP_IP_PLEN]; \/**< Data *\/$/;"	m	struct:dhcp_ippacket_t
+payload	src/radius.h	/^  uint8_t payload[RADIUS_PACKSIZE-RADIUS_HDRSIZE]; \/**< The payload *\/$/;"	m	struct:radius_packet_t
+payload_length	src/dhcp.h	/^  uint16_t payload_length; \/**< Payload length *\/$/;"	m	struct:dhcp_ipv6hdr_t
+payload_length	src/tun6.h	/^  uint16_t payload_length; \/**< Payload length. *\/$/;"	m	struct:tun6_packet_t
+peer	src/dhcp.h	/^  void *peer;                  \/**< Peer protocol handler *\/$/;"	m	struct:dhcp_conn_t
+peer	src/ippool.h	/^  void *peer;                    \/**< Pointer to peer protocol handler *\/$/;"	m	struct:ippoolm_t
+peer	src/radius.h	/^  struct sockaddr_storage peer; \/**< Address packet was sent to \/ received from *\/$/;"	m	struct:radius_queue_t	typeref:struct:radius_queue_t::sockaddr_storage
+peer	src/radius.h	/^  void *peer;                    \/**< Pointer to peer protocol handler *\/$/;"	m	struct:radiusm_t
+phpCAS	extra/hsl.php	/^      $phpCAS=cbGetValue($_SESSION,'phpCAS');$/;"	v
+pidfile	src/pepper.h	/^  char* pidfile;                 \/**< Process ID file *\/$/;"	m	struct:options_t
+pidfile_arg	src/cmdline.h	/^  char * pidfile_arg;  \/**< Filename of process id file (default='\/var\/run\/pepper.pid').  *\/$/;"	m	struct:gengetopt_args_info
+pidfile_given	src/cmdline.h	/^  int pidfile_given ;  \/**< Whether pidfile was given.  *\/$/;"	m	struct:gengetopt_args_info
+pidfile_orig	src/cmdline.h	/^  char * pidfile_orig;  \/**< Filename of process id file original value given at command line.  *\/$/;"	m	struct:gengetopt_args_info
+plen_to_mask	src/tun6.c	/^static void plen_to_mask(unsigned plen, struct in6_addr *mask)$/;"	f	file:
+plen_to_sin6	src/tun6.c	/^static void plen_to_sin6(unsigned plen, struct sockaddr_in6 *sin6)$/;"	f	file:
+pln	src/dhcp.h	/^  uint8_t pln;  \/**< 8.bit: (ar$pln) byte length of each protocol address *\/$/;"	m	struct:dhcp_arp_packet_t
+policy	src/pepper.h	/^  uint32_t policy; \/**< Encryption policy *\/$/;"	m	struct:app_conn_t
+port	src/redir.h	/^  int port; \/**< Listen port *\/$/;"	m	struct:redir_t
+prefix	src/pepper.h	/^  struct in6_addr prefix;        \/**< IPv6 prefix *\/$/;"	m	struct:options_t	typeref:struct:options_t::in6_addr
+prefix	src/redir.h	/^  struct in6_addr prefix; \/**< IPv6 prefix *\/$/;"	m	struct:redir_t	typeref:struct:redir_t::in6_addr
+prefixlen	src/pepper.h	/^  int prefixlen;                 \/**< IPv6 prefix length *\/$/;"	m	struct:options_t
+prefixlen	src/redir.h	/^  int prefixlen; \/**< IPv6 prefix length *\/$/;"	m	struct:redir_t
+prefixlen	src/tun6.h	/^  uint8_t prefixlen; \/**< Prefix length of the IPv6 address (64 by default) *\/$/;"	m	struct:tun6_t
+prev	src/dhcp.h	/^  struct dhcp_conn_t *prev;    \/**< Previous in linked list. 0: First *\/$/;"	m	struct:dhcp_conn_t	typeref:struct:dhcp_conn_t::dhcp_conn_t
+prev	src/ippool.h	/^  struct ippoolm_t *prev;        \/**< Previous member from linked list of free dynamic or static *\/$/;"	m	struct:ippoolm_t	typeref:struct:ippoolm_t::ippoolm_t
+prev	src/pepper.h	/^  struct app_conn_t *prev; \/**< Previous in linked list. 0: First *\/$/;"	m	struct:app_conn_t	typeref:struct:app_conn_t::app_conn_t
+prev	src/radius.h	/^  int prev;                  \/**< Pointer to the previous in queue. -1: First *\/$/;"	m	struct:radius_queue_t
+prev	src/radius.h	/^  struct RADIUSm_t *prev;        \/**< Previous member (for double linked list of available members) *\/$/;"	m	struct:radiusm_t	typeref:struct:radiusm_t::RADIUSm_t
+pro	src/dhcp.h	/^  uint16_t pro; \/**< 16.bit: (ar$pro) Protocol address space.  For$/;"	m	struct:dhcp_arp_packet_t
+proc_write_zero	src/tun6.c	/^static int proc_write_zero(const char *path)$/;"	f	file:
+process_options	src/pepper.c	/^static int process_options(int argc, char **argv, int firsttime)$/;"	f	file:
+promisc	src/dhcp.h	/^  int promisc;          \/**< Set interface in promisc mode *\/$/;"	m	struct:dhcp_t
+prot	src/dhcp.h	/^  uint16_t prot; \/**< Layer 3 protocol. *\/$/;"	m	struct:dhcp_ethhdr_t
+proto	src/tun6.c	/^  uint16_t proto;$/;"	m	struct:__anon1	file:
+protocol	src/dhcp.h	/^  uint8_t  protocol; \/**< Protocol *\/$/;"	m	struct:dhcp_iphdr_t
+protocol	src/tun.h	/^  unsigned int protocol:8; \/**< Up layer protocol number *\/$/;"	m	struct:tun_packet_t
+prototypes	configure	/^   function prototypes and stuff, but not '\\xHH' hex character constants.$/;"	f
+proxyaddr	src/pepper.h	/^  struct sockaddr_storage proxyaddr;   \/**< IP address of proxy client(s) *\/$/;"	m	struct:options_t	typeref:struct:options_t::sockaddr_storage
+proxyaddr	src/radius.h	/^  struct sockaddr_storage proxyaddr; \/**< Proxy client address *\/$/;"	m	struct:radius_t	typeref:struct:radius_t::sockaddr_storage
+proxyclient_arg	src/cmdline.h	/^  char * proxyclient_arg;  \/**< IP address of proxy client(s).  *\/$/;"	m	struct:gengetopt_args_info
+proxyclient_given	src/cmdline.h	/^  int proxyclient_given ;  \/**< Whether proxyclient was given.  *\/$/;"	m	struct:gengetopt_args_info
+proxyclient_orig	src/cmdline.h	/^  char * proxyclient_orig;  \/**< IP address of proxy client(s) original value given at command line.  *\/$/;"	m	struct:gengetopt_args_info
+proxyfd	src/radius.h	/^  int proxyfd;                    \/**< Proxy socket file descriptor *\/$/;"	m	struct:radius_t
+proxyhismac	src/pepper.h	/^  uint8_t proxyhismac[DHCP_ETH_ALEN]; \/**< His MAC address *\/$/;"	m	struct:app_conn_t
+proxylisten	src/pepper.h	/^  struct sockaddr_storage proxylisten; \/**< IP address to listen to *\/$/;"	m	struct:options_t	typeref:struct:options_t::sockaddr_storage
+proxylisten	src/radius.h	/^  struct sockaddr_storage proxylisten; \/**< Proxy address to listen to *\/$/;"	m	struct:radius_t	typeref:struct:radius_t::sockaddr_storage
+proxylisten_arg	src/cmdline.h	/^  char * proxylisten_arg;  \/**< IP address to listen to.  *\/$/;"	m	struct:gengetopt_args_info
+proxylisten_given	src/cmdline.h	/^  int proxylisten_given ;  \/**< Whether proxylisten was given.  *\/$/;"	m	struct:gengetopt_args_info
+proxylisten_orig	src/cmdline.h	/^  char * proxylisten_orig;  \/**< IP address to listen to original value given at command line.  *\/$/;"	m	struct:gengetopt_args_info
+proxymask	src/pepper.h	/^  struct sockaddr_storage proxymask;   \/**< IP mask of proxy client(s) *\/$/;"	m	struct:options_t	typeref:struct:options_t::sockaddr_storage
+proxymask	src/radius.h	/^  struct sockaddr_storage proxymask; \/**< Proxy client mask *\/$/;"	m	struct:radius_t	typeref:struct:radius_t::sockaddr_storage
+proxynasip	src/pepper.h	/^  uint32_t proxynasip;              \/**< Set by access request *\/$/;"	m	struct:app_conn_t
+proxynasport	src/pepper.h	/^  uint32_t proxynasport;            \/**< Set by access request *\/$/;"	m	struct:app_conn_t
+proxyourmac	src/pepper.h	/^  uint8_t proxyourmac[DHCP_ETH_ALEN]; \/**< Our MAC address *\/$/;"	m	struct:app_conn_t
+proxyport	src/pepper.h	/^  int proxyport;                       \/**< UDP port to listen to *\/$/;"	m	struct:options_t
+proxyport	src/radius.h	/^  uint16_t proxyport;        \/**< Proxy port to listen to *\/$/;"	m	struct:radius_t
+proxyport_arg	src/cmdline.h	/^  int proxyport_arg;  \/**< UDP port to listen to (default='0').  *\/$/;"	m	struct:gengetopt_args_info
+proxyport_given	src/cmdline.h	/^  int proxyport_given ;  \/**< Whether proxyport was given.  *\/$/;"	m	struct:gengetopt_args_info
+proxyport_orig	src/cmdline.h	/^  char * proxyport_orig;  \/**< UDP port to listen to original value given at command line.  *\/$/;"	m	struct:gengetopt_args_info
+proxysecret	src/pepper.h	/^  char* proxysecret;                   \/**< Proxy shared secret *\/$/;"	m	struct:options_t
+proxysecret	src/radius.h	/^  char proxysecret[RADIUS_SECRETSIZE]; \/**< Proxy secret *\/$/;"	m	struct:radius_t
+proxysecret_arg	src/cmdline.h	/^  char * proxysecret_arg;  \/**< Radius proxy shared secret.  *\/$/;"	m	struct:gengetopt_args_info
+proxysecret_given	src/cmdline.h	/^  int proxysecret_given ;  \/**< Whether proxysecret was given.  *\/$/;"	m	struct:gengetopt_args_info
+proxysecret_orig	src/cmdline.h	/^  char * proxysecret_orig;  \/**< Radius proxy shared secret original value given at command line.  *\/$/;"	m	struct:gengetopt_args_info
+proxysecretlen	src/radius.h	/^  int proxysecretlen;        \/**< Length of sharet secret *\/$/;"	m	struct:radius_t
+proxyuser	src/pepper.h	/^  char proxyuser[USERNAMESIZE];     \/**< Unauthenticated user: *\/$/;"	m	struct:app_conn_t
+proxyuserlen	src/pepper.h	/^  uint8_t proxyuserlen;             \/**< Length of unauthenticated user *\/$/;"	m	struct:app_conn_t
+pt	extra/hsl.php	/^    $pt=phpCAS::retrievePT(CAS_SERVICE,$err_code,$output);$/;"	v
+qdcount	src/dhcp.h	/^  uint16_t qdcount; \/**< 16 bit: Number of questions *\/$/;"	m	struct:dhcp_dns_packet_t
+queue	src/radius.h	/^  struct radius_queue_t queue[RADIUS_QUEUESIZE]; \/**< Outstanding replies *\/$/;"	m	struct:radius_t	typeref:struct:radius_t::radius_queue_t
+radius	src/pepper.c	/^static struct radius_t *radius = NULL;  \/**< Radius client instance *\/$/;"	v	typeref:struct:radius_t	file:
+radius_access_accept	src/pepper.c	/^static int radius_access_accept(struct app_conn_t *conn)$/;"	f	file:
+radius_access_challenge	src/pepper.c	/^static int radius_access_challenge(struct app_conn_t *conn)$/;"	f	file:
+radius_access_reject	src/pepper.c	/^static int radius_access_reject(struct app_conn_t *conn)$/;"	f	file:
+radius_acctcheck	src/radius.c	/^int radius_acctcheck(struct radius_t *this, struct radius_packet_t *pack)$/;"	f
+radius_acctreq_authenticator	src/radius.c	/^static int radius_acctreq_authenticator(struct radius_t *this,$/;"	f	file:
+radius_addattr	src/radius.c	/^int radius_addattr(struct radius_t *this, struct radius_packet_t *pack,$/;"	f
+radius_addattrv6	src/radius.c	/^int radius_addattrv6(struct radius_t *this, struct radius_packet_t *pack,$/;"	f
+radius_attr_t	src/radius.h	/^struct radius_attr_t$/;"	s
+radius_attrv6_t	src/radius.h	/^struct radius_attrv6_t$/;"	s
+radius_authcheck	src/radius.c	/^static int radius_authcheck(struct radius_t *this, struct radius_packet_t *pack,$/;"	f	file:
+radius_authresp_authenticator	src/radius.c	/^static int radius_authresp_authenticator(struct radius_t *this,$/;"	f	file:
+radius_cmpattr	src/radius.c	/^\/* static *\/ int radius_cmpattr(struct radius_attr_t *t1, struct radius_attr_t *t2)$/;"	f
+radius_cmpattrv6	src/radius.c	/^\/* static *\/ int radius_cmpattrv6(struct radius_attrv6_t *t1, struct radius_attrv6_t *t2)$/;"	f
+radius_cmptv	src/radius.c	/^static int radius_cmptv(struct timeval *tv1, struct timeval *tv2)$/;"	f	file:
+radius_coaresp	src/radius.c	/^int radius_coaresp(struct radius_t *this,$/;"	f
+radius_conf	src/pepper.c	/^int radius_conf(struct radius_t *radius_obj,$/;"	f
+radius_countattr	src/radius.c	/^\/* static *\/ int radius_countattr(struct radius_packet_t *pack, uint8_t type)$/;"	f
+radius_decaps	src/radius.c	/^int radius_decaps(struct radius_t *this)$/;"	f
+radius_default_pack	src/radius.c	/^int radius_default_pack(struct radius_t *this,$/;"	f
+radius_free	src/radius.c	/^int radius_free(struct radius_t *this)$/;"	f
+radius_getattr	src/radius.c	/^int radius_getattr(struct radius_packet_t *pack, struct radius_attr_t **attr,$/;"	f
+radius_getattrv6	src/radius.c	/^int radius_getattrv6(struct radius_packet_t *pack, struct radius_attrv6_t **attr,$/;"	f
+radius_hmac_md5	src/radius.c	/^static int radius_hmac_md5(struct radius_t *this, struct radius_packet_t *pack,$/;"	f	file:
+radius_keydecode	src/radius.c	/^int radius_keydecode(struct radius_t *this, uint8_t *dst, int dstsize,$/;"	f
+radius_keyencode	src/radius.c	/^int radius_keyencode(struct radius_t *this, uint8_t *dst, int dstsize,$/;"	f
+radius_new	src/radius.c	/^int radius_new(struct radius_t **this,$/;"	f
+radius_packet_t	src/radius.h	/^struct radius_packet_t$/;"	s
+radius_printqueue	src/radius.c	/^static int radius_printqueue(struct radius_t *this)$/;"	f	file:
+radius_proxy_ind	src/radius.c	/^int radius_proxy_ind(struct radius_t *this)$/;"	f
+radius_pwdecode	src/radius.c	/^int radius_pwdecode(struct radius_t *this, uint8_t *dst, int dstsize,$/;"	f
+radius_pwencode	src/radius.c	/^int radius_pwencode(struct radius_t *this, uint8_t *dst, int dstsize,$/;"	f
+radius_queue_in	src/radius.c	/^static int radius_queue_in(struct radius_t *this, struct radius_packet_t *pack,$/;"	f	file:
+radius_queue_out	src/radius.c	/^static int radius_queue_out(struct radius_t *this, struct radius_packet_t *pack,$/;"	f	file:
+radius_queue_reschedule	src/radius.c	/^static int radius_queue_reschedule(struct radius_t *this, int id)$/;"	f	file:
+radius_queue_t	src/radius.h	/^struct radius_queue_t$/;"	s
+radius_req	src/radius.c	/^int radius_req(struct radius_t *this,$/;"	f
+radius_resp	src/radius.c	/^int radius_resp(struct radius_t *this,$/;"	f
+radius_set	src/radius.c	/^void radius_set(struct radius_t *this, int debug,$/;"	f
+radius_set_cb_acct_conf	src/radius.c	/^int radius_set_cb_acct_conf(struct radius_t *this,$/;"	f
+radius_set_cb_auth_conf	src/radius.c	/^int radius_set_cb_auth_conf(struct radius_t *this,$/;"	f
+radius_set_cb_coa_ind	src/radius.c	/^int radius_set_cb_coa_ind(struct radius_t *this,$/;"	f
+radius_set_cb_ind	src/radius.c	/^int radius_set_cb_ind(struct radius_t *this,$/;"	f
+radius_t	src/radius.h	/^struct radius_t$/;"	s
+radius_timeleft	src/radius.c	/^int radius_timeleft(struct radius_t *this, struct timeval *timeout)$/;"	f
+radius_timeout	src/radius.c	/^int radius_timeout(struct radius_t *this)$/;"	f
+radiusacctport	src/pepper.h	/^  uint16_t radiusacctport;       \/**< Accounting UDP port *\/$/;"	m	struct:options_t
+radiusacctport	src/redir.h	/^  uint16_t radiusacctport; \/**< Accounting port of RADIUS server *\/$/;"	m	struct:redir_t
+radiusacctport_arg	src/cmdline.h	/^  int radiusacctport_arg;  \/**< Accounting UDP port of radius server (default='1813').  *\/$/;"	m	struct:gengetopt_args_info
+radiusacctport_given	src/cmdline.h	/^  int radiusacctport_given ;  \/**< Whether radiusacctport was given.  *\/$/;"	m	struct:gengetopt_args_info
+radiusacctport_orig	src/cmdline.h	/^  char * radiusacctport_orig;  \/**< Accounting UDP port of radius server original value given at command line.  *\/$/;"	m	struct:gengetopt_args_info
+radiusauthport	src/pepper.h	/^  uint16_t radiusauthport;       \/**< Authentication UDP port *\/$/;"	m	struct:options_t
+radiusauthport	src/redir.h	/^  uint16_t radiusauthport; \/**< Authentication port of RADIUS server *\/$/;"	m	struct:redir_t
+radiusauthport_arg	src/cmdline.h	/^  int radiusauthport_arg;  \/**< Authentication UDP port of radius server (default='1812').  *\/$/;"	m	struct:gengetopt_args_info
+radiusauthport_given	src/cmdline.h	/^  int radiusauthport_given ;  \/**< Whether radiusauthport was given.  *\/$/;"	m	struct:gengetopt_args_info
+radiusauthport_orig	src/cmdline.h	/^  char * radiusauthport_orig;  \/**< Authentication UDP port of radius server original value given at command line.  *\/$/;"	m	struct:gengetopt_args_info
+radiuscalled	src/pepper.h	/^  char* radiuscalled;            \/**< Radius Called-Station-ID *\/$/;"	m	struct:options_t
+radiuscalled	src/redir.h	/^  char *radiuscalled; \/**< Called station *\/$/;"	m	struct:redir_t
+radiuscalled_arg	src/cmdline.h	/^  char * radiuscalled_arg;  \/**< Radius Called-Station-ID.  *\/$/;"	m	struct:gengetopt_args_info
+radiuscalled_given	src/cmdline.h	/^  int radiuscalled_given ;  \/**< Whether radiuscalled was given.  *\/$/;"	m	struct:gengetopt_args_info
+radiuscalled_orig	src/cmdline.h	/^  char * radiuscalled_orig;  \/**< Radius Called-Station-ID original value given at command line.  *\/$/;"	m	struct:gengetopt_args_info
+radiusid	src/pepper.h	/^  uint8_t radiusid;              \/**< ID to reply with *\/$/;"	m	struct:app_conn_t
+radiuslisten	src/pepper.h	/^  struct sockaddr_storage radiuslisten;  \/**< IP address to listen to *\/$/;"	m	struct:options_t	typeref:struct:options_t::sockaddr_storage
+radiuslisten	src/redir.h	/^  struct sockaddr_storage radiuslisten; \/**< Listen address to communicate with RADIUS server *\/$/;"	m	struct:redir_t	typeref:struct:redir_t::sockaddr_storage
+radiuslisten_arg	src/cmdline.h	/^  char * radiuslisten_arg;  \/**< IP address to send from.  *\/$/;"	m	struct:gengetopt_args_info
+radiuslisten_given	src/cmdline.h	/^  int radiuslisten_given ;  \/**< Whether radiuslisten was given.  *\/$/;"	m	struct:gengetopt_args_info
+radiuslisten_orig	src/cmdline.h	/^  char * radiuslisten_orig;  \/**< IP address to send from original value given at command line.  *\/$/;"	m	struct:gengetopt_args_info
+radiuslocationid	src/pepper.h	/^  char* radiuslocationid;        \/**< WISPr location ID *\/$/;"	m	struct:options_t
+radiuslocationid	src/redir.h	/^  char* radiuslocationid; \/**< Location ID *\/$/;"	m	struct:redir_t
+radiuslocationid_arg	src/cmdline.h	/^  char * radiuslocationid_arg;  \/**< WISPr Location ID.  *\/$/;"	m	struct:gengetopt_args_info
+radiuslocationid_given	src/cmdline.h	/^  int radiuslocationid_given ;  \/**< Whether radiuslocationid was given.  *\/$/;"	m	struct:gengetopt_args_info
+radiuslocationid_orig	src/cmdline.h	/^  char * radiuslocationid_orig;  \/**< WISPr Location ID original value given at command line.  *\/$/;"	m	struct:gengetopt_args_info
+radiuslocationname	src/pepper.h	/^  char* radiuslocationname;      \/**< WISPr location name *\/$/;"	m	struct:options_t
+radiuslocationname	src/redir.h	/^  char* radiuslocationname; \/**< Location name *\/$/;"	m	struct:redir_t
+radiuslocationname_arg	src/cmdline.h	/^  char * radiuslocationname_arg;  \/**< WISPr Location Name.  *\/$/;"	m	struct:gengetopt_args_info
+radiuslocationname_given	src/cmdline.h	/^  int radiuslocationname_given ;  \/**< Whether radiuslocationname was given.  *\/$/;"	m	struct:gengetopt_args_info
+radiuslocationname_orig	src/cmdline.h	/^  char * radiuslocationname_orig;  \/**< WISPr Location Name original value given at command line.  *\/$/;"	m	struct:gengetopt_args_info
+radiusm_t	src/radius.h	/^struct radiusm_t$/;"	s
+radiusnasid	src/pepper.h	/^  char* radiusnasid;             \/**< Radius NAS-Identifier *\/$/;"	m	struct:options_t
+radiusnasid	src/redir.h	/^  char *radiusnasid; \/**< NAS ID *\/$/;"	m	struct:redir_t
+radiusnasid_arg	src/cmdline.h	/^  char * radiusnasid_arg;  \/**< Radius NAS-Identifier (default='nas01').  *\/$/;"	m	struct:gengetopt_args_info
+radiusnasid_given	src/cmdline.h	/^  int radiusnasid_given ;  \/**< Whether radiusnasid was given.  *\/$/;"	m	struct:gengetopt_args_info
+radiusnasid_orig	src/cmdline.h	/^  char * radiusnasid_orig;  \/**< Radius NAS-Identifier original value given at command line.  *\/$/;"	m	struct:gengetopt_args_info
+radiusnasip	src/pepper.h	/^  struct sockaddr_storage radiusnasip; \/**< Radius NAS-IP-Address *\/$/;"	m	struct:options_t	typeref:struct:options_t::sockaddr_storage
+radiusnasip	src/redir.h	/^  struct sockaddr_storage radiusnasip; \/**< Address of NAS *\/$/;"	m	struct:redir_t	typeref:struct:redir_t::sockaddr_storage
+radiusnasip_arg	src/cmdline.h	/^  char * radiusnasip_arg;  \/**< Radius NAS-IP-Address.  *\/$/;"	m	struct:gengetopt_args_info
+radiusnasip_given	src/cmdline.h	/^  int radiusnasip_given ;  \/**< Whether radiusnasip was given.  *\/$/;"	m	struct:gengetopt_args_info
+radiusnasip_orig	src/cmdline.h	/^  char * radiusnasip_orig;  \/**< Radius NAS-IP-Address original value given at command line.  *\/$/;"	m	struct:gengetopt_args_info
+radiusnasporttype	src/pepper.h	/^  int radiusnasporttype;         \/**< NAS-Port-Type *\/$/;"	m	struct:options_t
+radiusnasporttype	src/redir.h	/^  int radiusnasporttype; \/**< NAS port type of NAS *\/$/;"	m	struct:redir_t
+radiusnasporttype_arg	src/cmdline.h	/^  int radiusnasporttype_arg;  \/**< Radius NAS-Port-Type (default='19').  *\/$/;"	m	struct:gengetopt_args_info
+radiusnasporttype_given	src/cmdline.h	/^  int radiusnasporttype_given ;  \/**< Whether radiusnasporttype was given.  *\/$/;"	m	struct:gengetopt_args_info
+radiusnasporttype_orig	src/cmdline.h	/^  char * radiusnasporttype_orig;  \/**< Radius NAS-Port-Type original value given at command line.  *\/$/;"	m	struct:gengetopt_args_info
+radiuspeer	src/pepper.h	/^  struct sockaddr_storage radiuspeer; \/**< Where to send reply *\/$/;"	m	struct:app_conn_t	typeref:struct:app_conn_t::sockaddr_storage
+radiussecret	src/pepper.h	/^  char* radiussecret;            \/**< Radius shared secret *\/$/;"	m	struct:options_t
+radiussecret	src/redir.h	/^  char *radiussecret; \/**< RADIUS secret *\/$/;"	m	struct:redir_t
+radiussecret_arg	src/cmdline.h	/^  char * radiussecret_arg;  \/**< Radius shared secret.  *\/$/;"	m	struct:gengetopt_args_info
+radiussecret_given	src/cmdline.h	/^  int radiussecret_given ;  \/**< Whether radiussecret was given.  *\/$/;"	m	struct:gengetopt_args_info
+radiussecret_orig	src/cmdline.h	/^  char * radiussecret_orig;  \/**< Radius shared secret original value given at command line.  *\/$/;"	m	struct:gengetopt_args_info
+radiusserver0	src/redir.h	/^  struct sockaddr_storage radiusserver0; \/**< Address of primary RADIUS server *\/$/;"	m	struct:redir_t	typeref:struct:redir_t::sockaddr_storage
+radiusserver1	src/pepper.h	/^  struct sockaddr_storage radiusserver1; \/**< IP address of radius server 1 *\/$/;"	m	struct:options_t	typeref:struct:options_t::sockaddr_storage
+radiusserver1	src/redir.h	/^  struct sockaddr_storage radiusserver1; \/**< Address of secondary RADIUS server *\/$/;"	m	struct:redir_t	typeref:struct:redir_t::sockaddr_storage
+radiusserver1_arg	src/cmdline.h	/^  char * radiusserver1_arg;  \/**< IP address of radius server 1 (default='rad01.hotradius.com').  *\/$/;"	m	struct:gengetopt_args_info
+radiusserver1_given	src/cmdline.h	/^  int radiusserver1_given ;  \/**< Whether radiusserver1 was given.  *\/$/;"	m	struct:gengetopt_args_info
+radiusserver1_orig	src/cmdline.h	/^  char * radiusserver1_orig;  \/**< IP address of radius server 1 original value given at command line.  *\/$/;"	m	struct:gengetopt_args_info
+radiusserver2	src/pepper.h	/^  struct sockaddr_storage radiusserver2; \/**< IP address of radius server 2 *\/$/;"	m	struct:options_t	typeref:struct:options_t::sockaddr_storage
+radiusserver2_arg	src/cmdline.h	/^  char * radiusserver2_arg;  \/**< IP address of radius server 2 (default='rad02.hotradius.com').  *\/$/;"	m	struct:gengetopt_args_info
+radiusserver2_given	src/cmdline.h	/^  int radiusserver2_given ;  \/**< Whether radiusserver2 was given.  *\/$/;"	m	struct:gengetopt_args_info
+radiusserver2_orig	src/cmdline.h	/^  char * radiusserver2_orig;  \/**< IP address of radius server 2 original value given at command line.  *\/$/;"	m	struct:gengetopt_args_info
+radiuswait	src/pepper.h	/^  int radiuswait;                \/**< Radius request in progres *\/$/;"	m	struct:app_conn_t
+rbuf	src/dhcp.h	/^  char *rbuf;$/;"	m	struct:dhcp_t
+rbuf_len	src/dhcp.h	/^  unsigned int rbuf_len;$/;"	m	struct:dhcp_t
+rbuf_max	src/dhcp.h	/^  unsigned int rbuf_max;$/;"	m	struct:dhcp_t
+rbuf_offset	src/dhcp.h	/^  unsigned int rbuf_offset;$/;"	m	struct:dhcp_t
+records	src/dhcp.h	/^  uint8_t  records[DHCP_IP_PLEN]; \/**< DNS records *\/$/;"	m	struct:dhcp_dns_packet_t
+recvkey	src/pepper.h	/^  uint8_t recvkey[RADIUS_ATTR_VLEN]; \/**< Key used to decode received message *\/$/;"	m	struct:app_conn_t
+recvlen	src/pepper.h	/^  int recvlen; \/**< Length of recvkey *\/$/;"	m	struct:app_conn_t
+redir	src/pepper.c	/^static struct redir_t *redir = NULL;    \/**< Redir instance *\/$/;"	v	typeref:struct:redir_t	file:
+redir_accept	src/redir.c	/^int redir_accept(struct redir_t *redir, int ipv6)$/;"	f
+redir_cb_radius_auth_conf	src/redir.c	/^static int redir_cb_radius_auth_conf(struct radius_t *radius,$/;"	f	file:
+redir_challenge	src/redir.c	/^static int redir_challenge(unsigned char *dst)$/;"	f	file:
+redir_chartohex	src/redir.c	/^static int redir_chartohex(unsigned char *src, int len, char *dst)$/;"	f	file:
+redir_close	src/redir.c	/^static void redir_close(int new_socket)$/;"	f	file:
+redir_conn_t	src/redir.h	/^struct redir_conn_t$/;"	s
+redir_free	src/redir.c	/^int redir_free(struct redir_t *redir)$/;"	f
+redir_getparam	src/redir.c	/^static int redir_getparam(struct redir_t *redir, char *src,$/;"	f	file:
+redir_getpath	src/redir.c	/^static int redir_getpath(struct redir_t *redir, char *src, char *dst, int dstsize)$/;"	f	file:
+redir_getreq	src/redir.c	/^static int redir_getreq(struct redir_t *redir, int fd, struct redir_conn_t *conn)$/;"	f	file:
+redir_geturl	src/redir.c	/^static int redir_geturl(struct redir_t *redir, char *src, char *dst, int dstsize)$/;"	f	file:
+redir_hextochar	src/redir.c	/^static int redir_hextochar(char *src, int len, unsigned char * dst)$/;"	f	file:
+redir_memcopy	src/redir.c	/^static void redir_memcopy(int msg_type, unsigned char *challenge, char *hexchal, struct redir_msg_t *msg, struct sockaddr_in address, struct sockaddr_in6 addressv6, struct sockaddr_storage addrstorage)$/;"	f	file:
+redir_msg_t	src/redir.h	/^struct redir_msg_t$/;"	s
+redir_new	src/redir.c	/^int redir_new(struct redir_t **redir,$/;"	f
+redir_radius	src/redir.c	/^static int redir_radius(struct redir_t *redir, struct sockaddr_storage *addr,$/;"	f	file:
+redir_reply	src/redir.c	/^static int redir_reply(struct redir_t *redir, int fd,$/;"	f	file:
+redir_set	src/redir.c	/^void redir_set(struct redir_t *redir, int debug, struct in6_addr *prefix, int prefixlen,$/;"	f
+redir_set_cb_getstate	src/redir.c	/^int redir_set_cb_getstate(struct redir_t *redir,$/;"	f
+redir_set_cb_getstatev6	src/redir.c	/^int redir_set_cb_getstatev6(struct redir_t* redir, int (*cb_getstatev6)(struct redir_t* redir, struct in6_addr* addr, struct redir_conn_t* conn))$/;"	f
+redir_sig_handler	src/redir.c	/^static void redir_sig_handler(int signum)$/;"	f	file:
+redir_stradd	src/redir.c	/^static int redir_stradd(char *dst, unsigned int dstsize, char *fmt, ...)$/;"	f	file:
+redir_t	src/redir.h	/^struct redir_t$/;"	s
+redir_urldecode	src/redir.c	/^static int redir_urldecode(  char *src, int srclen, char *dst, unsigned int dstsize)$/;"	f	file:
+redir_urlencode	src/redir.c	/^static int redir_urlencode( char *src, int srclen, char *dst, int dstsize)$/;"	f	file:
+redir_xmlreply	src/redir.c	/^static int redir_xmlreply(struct redir_t *redir, struct redir_conn_t *conn,$/;"	f	file:
+redirurl	extra/hsl.php	/^$redirurl=cbGetValue($_REQUEST,'redirurl');$/;"	v
+redirurl	src/redir.h	/^  char *redirurl; \/**< Redirection URL (point on redirurlbuf) *\/$/;"	m	struct:redir_conn_t
+redirurlbuf	src/redir.h	/^  char redirurlbuf[RADIUS_ATTR_VLEN + 1]; \/**< Redirection URL obtained from radius server *\/$/;"	m	struct:redir_conn_t
+redirurldecode	extra/hsl.php	/^$redirurldecode=urldecode($redirurl);$/;"	v
+redirurllen	src/redir.h	/^  int redirurllen; \/**< Length of redirurl *\/$/;"	m	struct:redir_conn_t
+refresh	extra/hsl.php	/^  $refresh=HS_REDIR_TIMEOUT.';url='.$url;$/;"	v
+reply	src/redir.h	/^  char *reply; \/**< Reply message (point on replybuf) *\/$/;"	m	struct:redir_conn_t
+replybuf	src/redir.h	/^  char replybuf[RADIUS_ATTR_VLEN + 1]; \/**< Reply message *\/$/;"	m	struct:redir_conn_t
+reprocess_options	src/pepper.c	/^static void reprocess_options(int argc, char **argv)$/;"	f	file:
+reqfd	src/tun6.c	/^  int reqfd; \/**< File descriptor for ioctl() *\/$/;"	m	struct:tun6	file:
+reqip	src/pepper.h	/^  struct in_addr reqip;    \/**< IP requested by client *\/$/;"	m	struct:app_conn_t	typeref:struct:app_conn_t::in_addr
+rereadtime	src/pepper.c	/^static struct timeval rereadtime; \/**< Time to reread configuration *\/$/;"	v	typeref:struct:timeval	file:
+res	extra/hsl.php	/^$res=cbGetValue($_REQUEST,'res');$/;"	v
+response	src/redir.h	/^  int response; \/**< 0: No adius response yet; 1:Reject; 2:Accept; 3:Timeout *\/$/;"	m	struct:redir_conn_t
+restrict	src/tun6.h	70;"	d
+retrans	src/radius.h	/^  int retrans;               \/**< How many times did we retransmit this? *\/$/;"	m	struct:radius_queue_t
+routes	src/tun.h	/^  int routes;            \/**< One if we allocated an automatic route *\/$/;"	m	struct:tun_t
+routesv6	src/tun6.h	/^  int routesv6; \/**< One if we allocated an automatic route *\/$/;"	m	struct:tun6_t
+runscript	src/pepper.c	/^static int runscript(struct app_conn_t *appconn, char* script)$/;"	f	file:
+saddr	src/dhcp.h	/^  uint32_t saddr; \/**< Source IPv4 address *\/$/;"	m	struct:dhcp_iphdr_t
+safe_strcpy	src/tun6.c	163;"	d	file:
+secret	src/radius.h	/^  char secret[RADIUS_SECRETSIZE]; \/**< Shared secret *\/$/;"	m	struct:radius_t
+secret	src/redir.h	/^  char *secret; \/**< Shared secret with CGI script *\/$/;"	m	struct:redir_t
+secretlen	src/radius.h	/^  int secretlen;                  \/**< Length of sharet secret *\/$/;"	m	struct:radius_t
+secs	src/dhcp.h	/^  uint16_t secs;   \/**< 2 Filled in by client, seconds elapsed since$/;"	m	struct:dhcp_packet_t
+secureURL	extra/hsl.php	/^$secureURL='https:\/\/'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];$/;"	v
+sendkey	src/pepper.h	/^  uint8_t sendkey[RADIUS_ATTR_VLEN]; \/**< Key used to encode message to send *\/$/;"	m	struct:app_conn_t
+sendlen	src/pepper.h	/^  int sendlen; \/**< Length of sendkey *\/$/;"	m	struct:app_conn_t
+seq	src/dhcp.h	/^  uint32_t seq; \/**< Sequence number. *\/$/;"	m	struct:dhcp_tcphdr_t
+seq	src/radius.h	/^  uint16_t seq;              \/**< The sequence number *\/$/;"	m	struct:radius_queue_t
+seqnext	src/radius.h	/^  struct qmsg_t *seqnext;    \/**< Pointer to next in sequence hash list *\/$/;"	m	struct:radius_queue_t	typeref:struct:radius_queue_t::qmsg_t
+service	contrib/cas/casProxy.php	/^$service='http:\/\/'.$_SERVER['HTTP_HOST'].'\/casClient.php';$/;"	v
+session_id	src/pepper.h	/^  uint32_t session_id; \/**< Accounting session ID *\/$/;"	m	struct:app_conn_t
+sessionid	src/pepper.h	/^  char sessionid[REDIR_SESSIONID_LEN]; \/**< Accounting session ID *\/$/;"	m	struct:app_conn_t
+sessionid	src/redir.h	/^  char sessionid[REDIR_SESSIONID_LEN]; \/**< Accounting session ID *\/$/;"	m	struct:redir_conn_t
+sessionterminatetime	src/pepper.h	/^  time_t sessionterminatetime; \/**< Time when session terminates *\/$/;"	m	struct:app_conn_t
+sessionterminatetime	src/redir.h	/^  int sessionterminatetime; \/**< Time when session terminate *\/$/;"	m	struct:redir_msg_t
+sessionterminatetime	src/redir.h	/^  time_t sessionterminatetime; \/**< Time when session terminate *\/$/;"	m	struct:redir_conn_t
+sessiontimeout	src/pepper.h	/^  long int sessiontimeout; \/**< RADIUS session timeout *\/$/;"	m	struct:app_conn_t
+sessiontimeout	src/redir.h	/^  long int sessiontimeout; \/**< Session timeout *\/$/;"	m	struct:redir_conn_t
+sessiontimeout	src/redir.h	/^  long int sessiontimeout; \/**< Session timeout *\/$/;"	m	struct:redir_msg_t
+set_env	src/pepper.c	/^static int set_env(char *name, char *value, unsigned int len, struct in_addr *addr,$/;"	f	file:
+set_envv6	src/pepper.c	/^static int set_envv6(char *name, char *value, unsigned int len, struct in6_addr *addr,$/;"	f	file:
+set_macallowed	src/pepper.c	/^static int set_macallowed(char *macallowed, int len)$/;"	f	file:
+set_sessionid	src/pepper.c	/^static void set_sessionid(struct app_conn_t *appconn)$/;"	f	file:
+set_uamallowed	src/pepper.c	/^static int set_uamallowed(char *uamallowed, int len)$/;"	f	file:
+sha	src/dhcp.h	/^  uint8_t sha[DHCP_ETH_ALEN]; \/**< nbytes: (ar$sha) Hardware address of$/;"	m	struct:dhcp_arp_packet_t
+siaddr	src/dhcp.h	/^  uint32_t siaddr; \/**< 4 IP address of next server to use in$/;"	m	struct:dhcp_packet_t
+sig_handler	src/pepper.c	/^static void sig_handler(int signum)$/;"	f	file:
+sname	src/dhcp.h	/^  uint8_t sname[DHCP_SNAME_LEN]; \/**< 64 Optional server host name,$/;"	m	struct:dhcp_packet_t
+spa	src/dhcp.h	/^  uint8_t spa[DHCP_IP_ALEN];  \/**< mbytes: (ar$spa) Protocol address of$/;"	m	struct:dhcp_arp_packet_t
+spring_forward_gap	configure	/^spring_forward_gap ()$/;"	f
+src	src/dhcp.h	/^  uint16_t src; \/**< Source port. *\/$/;"	m	struct:dhcp_tcphdr_t
+src	src/dhcp.h	/^  uint16_t src; \/**< Source port. *\/$/;"	m	struct:dhcp_udphdr_t
+src	src/dhcp.h	/^  uint8_t  src[DHCP_ETH_ALEN]; \/**< Source address. *\/$/;"	m	struct:dhcp_ethhdr_t
+src	src/tun.h	/^  unsigned int src:32; \/**< IPv4 source address *\/$/;"	m	struct:tun_packet_t
+src_addr	src/dhcp.h	/^  uint8_t src_addr[16]; \/**< IPv6 source address *\/$/;"	m	struct:dhcp_ipv6hdr_t
+src_addr	src/tun6.h	/^  uint8_t src_addr[16]; \/**< IPv6 source address. *\/$/;"	m	struct:tun6_packet_t
+start_time	src/pepper.h	/^  struct timeval start_time; \/**< Start time of connection *\/$/;"	m	struct:app_conn_t	typeref:struct:app_conn_t::timeval
+start_time	src/redir.h	/^  struct timeval start_time; \/**< Transferred in callback *\/$/;"	m	struct:redir_conn_t	typeref:struct:redir_conn_t::timeval
+starttime	src/redir.h	/^  int starttime; \/**< Start time *\/$/;"	m	struct:redir_t
+stataddr	src/ippool.h	/^  struct in_addr stataddr;       \/**< Static address range network address *\/$/;"	m	struct:ippool_t	typeref:struct:ippool_t::in_addr
+state	src/radius.h	/^  int state;                 \/**< 0=empty, 1=full *\/$/;"	m	struct:radius_queue_t
+statebuf	src/pepper.h	/^  uint8_t statebuf[RADIUS_ATTR_VLEN + 1]; \/**< Radius state *\/$/;"	m	struct:app_conn_t
+statebuf	src/redir.h	/^  uint8_t statebuf[RADIUS_ATTR_VLEN + 1]; \/**< Radius state *\/$/;"	m	struct:redir_conn_t
+statebuf	src/redir.h	/^  uint8_t statebuf[RADIUS_ATTR_VLEN + 1]; \/**< Radius state *\/$/;"	m	struct:redir_msg_t
+statedir_arg	src/cmdline.h	/^  char * statedir_arg;  \/**< Directory of nonvolatile data (default='\/var\/lib\/pepper\/').  *\/$/;"	m	struct:gengetopt_args_info
+statedir_given	src/cmdline.h	/^  int statedir_given ;  \/**< Whether statedir was given.  *\/$/;"	m	struct:gengetopt_args_info
+statedir_orig	src/cmdline.h	/^  char * statedir_orig;  \/**< Directory of nonvolatile data original value given at command line.  *\/$/;"	m	struct:gengetopt_args_info
+statelen	src/pepper.h	/^  int statelen; \/**< Length of statebuf *\/$/;"	m	struct:app_conn_t
+statelen	src/redir.h	/^  int statelen; \/**< Length of state *\/$/;"	m	struct:redir_conn_t
+statelen	src/redir.h	/^  int statelen; \/**< Length of state *\/$/;"	m	struct:redir_msg_t
+staticipv6_arg	src/cmdline.h	/^  char * staticipv6_arg;  \/**< IPv6 address of the TUN interface *\/$/;"	m	struct:gengetopt_args_info
+staticipv6_given	src/cmdline.h	/^  int staticipv6_given;  \/**< Whether staticipv6 was given.  *\/$/;"	m	struct:gengetopt_args_info
+staticipv6_orig	src/cmdline.h	/^  char * staticipv6_orig;  \/**< IPv6 address of the TUN interface *\/$/;"	m	struct:gengetopt_args_info
+statip	src/pepper.h	/^  char *statip;                  \/**< Static IP address pool *\/$/;"	m	struct:options_t
+statip_arg	src/cmdline.h	/^  char * statip_arg;  \/**< Static IP address pool.  *\/$/;"	m	struct:gengetopt_args_info
+statip_given	src/cmdline.h	/^  int statip_given ;  \/**< Whether statip was given.  *\/$/;"	m	struct:gengetopt_args_info
+statip_orig	src/cmdline.h	/^  char * statip_orig;  \/**< Static IP address pool original value given at command line.  *\/$/;"	m	struct:gengetopt_args_info
+statmask	src/ippool.h	/^  struct in_addr statmask;       \/**< Static address range network mask *\/$/;"	m	struct:ippool_t	typeref:struct:ippool_t::in_addr
+string_arg	src/cmdline.c	/^  char * string_arg;$/;"	m	struct:line_list	file:
+style	extra/welcome.php	/^$style='text-align:center;background-color:#FAD155;';$/;"	v
+sys_err	src/syserr.c	/^void sys_err(int pri, char *fn, int ln, int en, char *fmt, ...)$/;"	f
+sys_errpack	src/syserr.c	/^void sys_errpack(int pri, char *fn, int ln, int en, struct sockaddr_in *peer,$/;"	f
+t	src/dhcp.h	/^  uint8_t t; \/**< EAPOL tag type *\/$/;"	m	struct:dhcp_eapol_tag_t
+t	src/dhcp.h	/^  uint8_t t; \/**< Type *\/$/;"	m	struct:dhcp_tag_t
+t	src/radius.h	/^        uint8_t  t[RADIUS_ATTR_VLEN - 4];$/;"	m	union:radius_attr_t::__anon2::__anon3::__anon4
+t	src/radius.h	/^        uint8_t  t[RADIUS_ATTR_VLEN - 4];$/;"	m	union:radius_attrv6_t::__anon5::__anon6::__anon7
+t	src/radius.h	/^      uint8_t t;$/;"	m	struct:radius_attr_t::__anon2::__anon3
+t	src/radius.h	/^      uint8_t t;$/;"	m	struct:radius_attrv6_t::__anon5::__anon6
+t	src/radius.h	/^    uint8_t  t[RADIUS_ATTR_VLEN];$/;"	m	union:radius_attr_t::__anon2
+t	src/radius.h	/^    uint8_t  t[RADIUS_ATTR_VLEN];$/;"	m	union:radius_attrv6_t::__anon5
+t	src/radius.h	/^  uint8_t t; \/**< Type *\/$/;"	m	struct:radius_attr_t
+t	src/radius.h	/^  uint8_t t; \/**< Type *\/$/;"	m	struct:radius_attrv6_t
+terminate_cause	src/pepper.h	/^  uint32_t terminate_cause; \/**< RADIUS cause of termination *\/$/;"	m	struct:app_conn_t
+termstate	src/redir.c	/^static int termstate = REDIR_TERM_INIT;    \/**< When we were terminated *\/$/;"	v	file:
+tha	src/dhcp.h	/^  uint8_t tha[DHCP_ETH_ALEN]; \/**< nbytes: (ar$tha) Hardware address of$/;"	m	struct:dhcp_arp_packet_t
+timeleft	extra/hsl.php	/^$timeleft=cbGetValue($_REQUEST,'timeleft');$/;"	v
+timeout	src/radius.h	/^  struct timeval timeout;    \/**< When do we retransmit this packet? *\/$/;"	m	struct:radius_queue_t	typeref:struct:radius_queue_t::timeval
+timercmp	src/dhcp.c	146;"	d	file:
+tmp	extra/hsl-msg-en.php	/^$tmp='Click here if you want to loggout completely from CAS';$/;"	v
+tmp	extra/hsl-msg-en.php	/^$tmp='Enter a secret in HS_UAMSECRET ['.@constant('HS_UAMSECRET').']';$/;"	v
+tmp	extra/hsl-msg-en.php	/^$tmp='If you want to use CAS authentication';$/;"	v
+tmp	extra/hsl-msg-en.php	/^$tmp='USE_CAS=true ['.(USE_CAS?'true':'false').']';$/;"	v
+tmp	extra/hsl-msg-fr.php	/^$tmp='Cliquez ici pour vous déconnecter complètement de CAS';$/;"	v
+tmp	extra/hsl-msg-fr.php	/^$tmp='Donner une valeur à HS_UAMSECRET ['.@constant('HS_UAMSECRET').']';$/;"	v
+tmp	extra/hsl-msg-fr.php	/^$tmp='Pour activer l\\'authentification CAS';$/;"	v
+tmp	extra/hsl-msg-fr.php	/^$tmp='USE_CAS=true ['.(USE_CAS?'true':'false').']';$/;"	v
+tmp	extra/hsl.php	/^$tmp='background-color:#FDF2D1;border:thin solid black;';$/;"	v
+tos	src/dhcp.h	/^  uint32_t  tos : 8; \/**< Type of service *\/$/;"	m	struct:dhcp_iphdr_t
+tot_len	src/dhcp.h	/^  uint32_t tot_len : 16; \/**< Total length *\/$/;"	m	struct:dhcp_iphdr_t
+tpa	src/dhcp.h	/^  uint8_t tpa[DHCP_IP_ALEN]; \/**< mbytes: (ar$tpa) Protocol address of$/;"	m	struct:dhcp_arp_packet_t
+traffic_class	src/dhcp.h	/^  uint32_t traffic_class:8; \/**< Priority field *\/$/;"	m	struct:dhcp_ipv6hdr_t
+traffic_class	src/tun6.h	/^  uint32_t traffic_class:8; \/**< Priority field. *\/$/;"	m	struct:tun6_packet_t
+ttl	src/dhcp.h	/^  uint8_t  ttl; \/**< Time to live *\/$/;"	m	struct:dhcp_iphdr_t
+ttl	src/tun.h	/^  unsigned int ttl:8; \/**< Time to live *\/$/;"	m	struct:tun_packet_t
+tun	src/pepper.c	/^static struct tun_t *tun = NULL;        \/**< TUN instance *\/$/;"	v	typeref:struct:tun_t	file:
+tun6	src/tun6.c	/^struct tun6$/;"	s	file:
+tun6_addAddress	src/tun6.c	/^static int tun6_addAddress(struct tun6 *t, const struct in6_addr *addr, unsigned prefixlen)$/;"	f	file:
+tun6_addroute	src/tun6.c	/^int tun6_addroute(struct tun6_t *this, struct in6_addr *dst, struct in6_addr *gateway, uint8_t prefixlen)$/;"	f
+tun6_create	src/tun6.c	/^static struct tun6 *tun6_create(const char *req_name)$/;"	f	file:
+tun6_decaps	src/tun6.c	/^int tun6_decaps(struct tun6_t* this)$/;"	f
+tun6_destroy	src/tun6.c	/^static void tun6_destroy(struct tun6* t)$/;"	f	file:
+tun6_encaps	src/tun6.c	/^int tun6_encaps(struct tun6_t* this, void* pack, unsigned int len)$/;"	f
+tun6_free	src/tun6.c	/^int tun6_free(struct tun6_t* tun)$/;"	f
+tun6_new	src/tun6.c	/^int tun6_new(struct tun6_t** tun)$/;"	f
+tun6_packet_t	src/tun6.h	/^struct tun6_packet_t$/;"	s
+tun6_recv_inner	src/tun6.c	/^static inline int tun6_recv_inner(int fd, void *buffer, size_t maxlen)$/;"	f	file:
+tun6_runscript	src/tun6.c	/^int tun6_runscript(struct tun6_t *tun, char* script)$/;"	f
+tun6_send	src/tun6.c	/^static int tun6_send(struct tun6 *t, const void *packet, size_t len)$/;"	f	file:
+tun6_setState	src/tun6.c	/^static int tun6_setState(struct tun6 *t, int up)$/;"	f	file:
+tun6_set_cb_ind	src/tun6.c	/^int tun6_set_cb_ind(struct tun6_t *this, int (*cb_ind) (struct tun6_t *tun, void *pack, unsigned len))$/;"	f
+tun6_setaddr	src/tun6.c	/^int tun6_setaddr(struct tun6_t *this, struct in6_addr *addr, uint8_t prefixlen)$/;"	f
+tun6_sifflags	src/tun6.c	/^int tun6_sifflags(struct tun6_t *this, int flags)$/;"	f
+tun6_t	src/tun6.h	/^typedef struct tun6_t$/;"	s
+tun6_t	src/tun6.h	/^} tun6_t;$/;"	t	typeref:struct:tun6_t
+tun_addaddr	src/tun.c	/^int tun_addaddr(struct tun_t *this,$/;"	f
+tun_addroute	src/tun.c	/^int tun_addroute(struct tun_t *this,$/;"	f
+tun_decaps	src/tun.c	/^int tun_decaps(struct tun_t *this)$/;"	f
+tun_delroute	src/tun.c	/^static int tun_delroute(struct tun_t *this,$/;"	f	file:
+tun_encaps	src/tun.c	/^int tun_encaps(struct tun_t *tun, void *pack, unsigned len)$/;"	f
+tun_free	src/tun.c	/^int tun_free(struct tun_t *tun)$/;"	f
+tun_gifindex	src/tun.c	/^static int tun_gifindex(struct tun_t *this, unsigned int *ifindex)$/;"	f	file:
+tun_head_is_ipv6	src/tun6.c	106;"	d	file:
+tun_head_is_ipv6	src/tun6.c	143;"	d	file:
+tun_head_t	src/tun6.c	/^typedef uint32_t tun_head_t;$/;"	t	file:
+tun_head_t	src/tun6.c	/^} tun_head_t;$/;"	t	typeref:struct:__anon1	file:
+tun_new	src/tun.c	/^int tun_new(struct tun_t **tun)$/;"	f
+tun_nlattr	src/tun.c	/^static int tun_nlattr(struct nlmsghdr *n, int nsize, int type, void *d, int dlen)$/;"	f	file:
+tun_packet_t	src/tun.h	/^struct tun_packet_t$/;"	s
+tun_route	src/tun.c	/^static int tun_route(struct tun_t *this,$/;"	f	file:
+tun_runscript	src/tun.c	/^int tun_runscript(struct tun_t *tun, char* script)$/;"	f
+tun_set_cb_ind	src/tun.c	/^int tun_set_cb_ind(struct tun_t *this,$/;"	f
+tun_setaddr	src/tun.c	/^int tun_setaddr(struct tun_t *this,$/;"	f
+tun_sifflags	src/tun.c	/^static int tun_sifflags(struct tun_t *this, int flags)$/;"	f	file:
+tun_t	src/tun.h	/^struct tun_t$/;"	s
+tunv6	src/pepper.c	/^static struct tun6_t* tunv6 = NULL;     \/**< TUN6 instance *\/$/;"	v	typeref:struct:tun6_t	file:
+type	src/dhcp.h	/^  uint8_t  type; \/**< EAP type *\/$/;"	m	struct:dhcp_eap_t
+type	src/dhcp.h	/^  uint8_t  type; \/**< Type *\/$/;"	m	struct:dhcp_dot1xhdr_t
+type	src/dhcp.h	/^  uint8_t type; \/**< Type of message. *\/$/;"	m	struct:dhcp_icmpv6packet_t
+type	src/radius.h	/^  uint8_t type;              \/**< The type of packet *\/$/;"	m	struct:radius_queue_t
+type	src/redir.h	/^  int type; \/**< REDIR_LOGOUT, LOGIN, PRELOGIN, CHALLENGE, MSDOWNLOAD *\/$/;"	m	struct:redir_conn_t
+type	src/redir.h	/^  long int type; \/**< Type of message *\/$/;"	m	struct:redir_msg_t
+types	src/pepper.h	/^  uint32_t types; \/**< Encryption types *\/$/;"	m	struct:app_conn_t
+u_char	src/compat.h	/^  typedef unsigned char u_char;$/;"	t
+u_int	src/compat.h	/^  typedef unsigned int u_int;$/;"	t
+u_long	src/compat.h	/^  typedef unsigned long u_long;$/;"	t
+u_short	src/compat.h	/^  typedef unsigned short u_short;$/;"	t
+uam_msg	src/pepper.c	/^static int uam_msg(struct redir_msg_t *msg)$/;"	f	file:
+uamabort	src/pepper.h	/^  int uamabort; \/**< If UAM authentication is aborted *\/$/;"	m	struct:app_conn_t
+uamallowed_arg	src/cmdline.c	/^  char * uamallowed_arg;$/;"	m	struct:uamallowed_list	file:
+uamallowed_arg	src/cmdline.h	/^  char ** uamallowed_arg;  \/**< Domain names exempt from access check .  *\/$/;"	m	struct:gengetopt_args_info
+uamallowed_given	src/cmdline.h	/^  unsigned int uamallowed_given ;  \/**< Whether uamallowed was given.  *\/$/;"	m	struct:gengetopt_args_info
+uamallowed_list	src/cmdline.c	/^struct uamallowed_list$/;"	s	file:
+uamallowed_orig	src/cmdline.c	/^  char *uamallowed_orig;$/;"	m	struct:uamallowed_list	file:
+uamallowed_orig	src/cmdline.h	/^  char ** uamallowed_orig;  \/**< Domain names exempt from access check  original value given at command line.  *\/$/;"	m	struct:gengetopt_args_info
+uamanydns	src/pepper.h	/^  int uamanydns;                 \/**< Allow client to use any DNS server *\/$/;"	m	struct:options_t
+uamanydns_flag	src/cmdline.h	/^  int uamanydns_flag;  \/**< Allow client to use any DNS server (default=off).  *\/$/;"	m	struct:gengetopt_args_info
+uamanydns_given	src/cmdline.h	/^  int uamanydns_given ;  \/**< Whether uamanydns was given.  *\/$/;"	m	struct:gengetopt_args_info
+uamchal	src/pepper.h	/^  uint8_t uamchal[REDIR_MD5LEN]; \/**< UAM challenge number *\/$/;"	m	struct:app_conn_t
+uamchal	src/redir.h	/^  uint8_t uamchal[REDIR_MD5LEN]; \/**< Challenge as sent to web server *\/$/;"	m	struct:redir_conn_t
+uamchal	src/redir.h	/^  uint8_t uamchal[REDIR_MD5LEN]; \/**< UAM challenge *\/$/;"	m	struct:redir_msg_t
+uamhomepage	src/pepper.h	/^  char* uamhomepage;             \/**< URL of redirection homepage *\/$/;"	m	struct:options_t
+uamhomepage_arg	src/cmdline.h	/^  char * uamhomepage_arg;  \/**< URL of homepage to redirect unauthenticated users to.  *\/$/;"	m	struct:gengetopt_args_info
+uamhomepage_given	src/cmdline.h	/^  int uamhomepage_given ;  \/**< Whether uamhomepage was given.  *\/$/;"	m	struct:gengetopt_args_info
+uamhomepage_orig	src/cmdline.h	/^  char * uamhomepage_orig;  \/**< URL of homepage to redirect unauthenticated users to original value given at command line.  *\/$/;"	m	struct:gengetopt_args_info
+uamhomepageport	src/pepper.h	/^  int uamhomepageport;           \/**< Port of redirection homepage *\/$/;"	m	struct:options_t
+uamip	extra/hsl.php	/^  $uamip=$GLOBALS['uamip'];$/;"	v
+uamip	extra/hsl.php	/^$uamip=cbGetValue($_REQUEST,'uamip');$/;"	v
+uamlisten	src/dhcp.h	/^  struct in_addr uamlisten; \/**< IP address to redirect HTTP requests to *\/$/;"	m	struct:dhcp_t	typeref:struct:dhcp_t::in_addr
+uamlisten	src/pepper.h	/^  struct in_addr uamlisten;      \/**< IP address of local authentication *\/$/;"	m	struct:options_t	typeref:struct:options_t::in_addr
+uamlisten6	src/dhcp.h	/^  struct in6_addr uamlisten6; \/**< IPv6 address to redirect HTTP requests to *\/$/;"	m	struct:dhcp_t	typeref:struct:dhcp_t::in6_addr
+uamlisten6	src/pepper.h	/^  struct in6_addr uamlisten6;    \/**< IPv6 address of local authentication *\/$/;"	m	struct:options_t	typeref:struct:options_t::in6_addr
+uamlisten_arg	src/cmdline.h	/^  char * uamlisten_arg;  \/**< IP address to listen to for authentication requests.  *\/$/;"	m	struct:gengetopt_args_info
+uamlisten_given	src/cmdline.h	/^  int uamlisten_given ;  \/**< Whether uamlisten was given.  *\/$/;"	m	struct:gengetopt_args_info
+uamlisten_orig	src/cmdline.h	/^  char * uamlisten_orig;  \/**< IP address to listen to for authentication requests original value given at command line.  *\/$/;"	m	struct:gengetopt_args_info
+uamokaddr	src/dhcp.h	/^  struct in_addr *uamokaddr; \/**< Allowed network IP addresses *\/$/;"	m	struct:dhcp_t	typeref:struct:dhcp_t::in_addr
+uamokaddr	src/pepper.h	/^  struct in_addr uamokaddr[UAMOKNET_MAX]; \/**< List of allowed network IPv4 *\/$/;"	m	struct:options_t	typeref:struct:options_t::in_addr
+uamokaddr6	src/dhcp.h	/^  struct in6_addr *uamokaddr6; \/**< Allowed network IPv6 addresses *\/$/;"	m	struct:dhcp_t	typeref:struct:dhcp_t::in6_addr
+uamokaddr6	src/pepper.h	/^  struct in6_addr uamokaddr6[UAMOKNET_MAX]; \/**< List of allowed network IPv6 *\/$/;"	m	struct:options_t	typeref:struct:options_t::in6_addr
+uamokip	src/pepper.h	/^  struct in_addr uamokip[UAMOKIP_MAX]; \/**< List of allowed IP addresses *\/$/;"	m	struct:options_t	typeref:struct:options_t::in_addr
+uamokip6	src/pepper.h	/^  struct in6_addr uamokip6[UAMOKIP_MAX]; \/**< List of allowed IPv6 addresses *\/$/;"	m	struct:options_t	typeref:struct:options_t::in6_addr
+uamokiplen	src/pepper.h	/^  int uamokiplen;                \/**< Number of allowed IP addresses *\/$/;"	m	struct:options_t
+uamokiplen6	src/pepper.h	/^  int uamokiplen6;               \/**< Number of allowed IP addresses *\/$/;"	m	struct:options_t
+uamokmask	src/dhcp.h	/^  struct in_addr *uamokmask; \/**< Allowed network IP masks *\/$/;"	m	struct:dhcp_t	typeref:struct:dhcp_t::in_addr
+uamokmask	src/pepper.h	/^  struct in_addr uamokmask[UAMOKNET_MAX]; \/**< List of allowed network mask *\/$/;"	m	struct:options_t	typeref:struct:options_t::in_addr
+uamokmask6	src/dhcp.h	/^  struct in6_addr *uamokmask6; \/**< Allowed network IPv6 masks *\/$/;"	m	struct:dhcp_t	typeref:struct:dhcp_t::in6_addr
+uamokmask6	src/pepper.h	/^  struct in6_addr uamokmask6[UAMOKNET_MAX]; \/**< List of allowed network IPv6 prefix *\/$/;"	m	struct:options_t	typeref:struct:options_t::in6_addr
+uamoknetlen	src/dhcp.h	/^  int uamoknetlen;          \/**< Number of allowed networks *\/$/;"	m	struct:dhcp_t
+uamoknetlen	src/pepper.h	/^  int uamoknetlen;               \/**< Number of networks *\/$/;"	m	struct:options_t
+uamoknetlen6	src/dhcp.h	/^  int uamoknetlen6;          \/**< Number of allowed networks *\/$/;"	m	struct:dhcp_t
+uamoknetlen6	src/pepper.h	/^  int uamoknetlen6;              \/**< Number of networks *\/$/;"	m	struct:options_t
+uamport	extra/hsl.php	/^  $uamport=$GLOBALS['uamport'];$/;"	v
+uamport	extra/hsl.php	/^$uamport=cbGetValue($_REQUEST,'uamport');$/;"	v
+uamport	src/dhcp.h	/^  uint16_t uamport;     \/**< TCP port to redirect HTTP requests to *\/$/;"	m	struct:dhcp_t
+uamport	src/pepper.h	/^  int uamport;                   \/**< TCP port to listen to *\/$/;"	m	struct:options_t
+uamport_arg	src/cmdline.h	/^  int uamport_arg;  \/**< TCP port to bind to for authentication requests (default='3990').  *\/$/;"	m	struct:gengetopt_args_info
+uamport_given	src/cmdline.h	/^  int uamport_given ;  \/**< Whether uamport was given.  *\/$/;"	m	struct:gengetopt_args_info
+uamport_orig	src/cmdline.h	/^  char * uamport_orig;  \/**< TCP port to bind to for authentication requests original value given at command line.  *\/$/;"	m	struct:gengetopt_args_info
+uamsecret	src/pepper.h	/^  char* uamsecret;               \/**< Shared secret *\/$/;"	m	struct:options_t
+uamsecret_arg	src/cmdline.h	/^  char * uamsecret_arg;  \/**< Shared secret between uamserver and pepper.  *\/$/;"	m	struct:gengetopt_args_info
+uamsecret_given	src/cmdline.h	/^  int uamsecret_given ;  \/**< Whether uamsecret was given.  *\/$/;"	m	struct:gengetopt_args_info
+uamsecret_orig	src/cmdline.h	/^  char * uamsecret_orig;  \/**< Shared secret between uamserver and pepper original value given at command line.  *\/$/;"	m	struct:gengetopt_args_info
+uamserver	src/pepper.h	/^  struct in_addr uamserver[UAMSERVER_MAX]; \/**< IP address of UAM server *\/$/;"	m	struct:options_t	typeref:struct:options_t::in_addr
+uamserver6	src/pepper.h	/^  struct in6_addr uamserver6[UAMSERVER_MAX]; \/**< IPv6 address of UAM server *\/$/;"	m	struct:options_t	typeref:struct:options_t::in6_addr
+uamserver6_arg	src/cmdline.h	/^  char * uamserver6_arg; \/**< IPv6 UAM server authentication.  *\/$/;"	m	struct:gengetopt_args_info
+uamserver6_given	src/cmdline.h	/^  int uamserver6_given ;  \/**< Whether uamserver6 was given.  *\/$/;"	m	struct:gengetopt_args_info
+uamserver6_orig	src/cmdline.h	/^  char * uamserver6_orig; \/**< IPv6 UAM server authentication original value given at command line. *\/$/;"	m	struct:gengetopt_args_info
+uamserver_arg	src/cmdline.h	/^  char * uamserver_arg;  \/**< URL of authentication web server (default='https:\/\/login.hotradius.com').  *\/$/;"	m	struct:gengetopt_args_info
+uamserver_given	src/cmdline.h	/^  int uamserver_given ;  \/**< Whether uamserver was given.  *\/$/;"	m	struct:gengetopt_args_info
+uamserver_orig	src/cmdline.h	/^  char * uamserver_orig;  \/**< URL of authentication web server original value given at command line.  *\/$/;"	m	struct:gengetopt_args_info
+uamserverlen	src/pepper.h	/^  int uamserverlen;              \/**< Number of IPv4 UAM servers *\/$/;"	m	struct:options_t
+uamserverlen6	src/pepper.h	/^  int uamserverlen6;             \/**< Number of IPv6 UAM servers *\/$/;"	m	struct:options_t
+uamserverport	src/pepper.h	/^  int uamserverport;             \/**< Port of IPv4 UAM server *\/$/;"	m	struct:options_t
+uamserverport6	src/pepper.h	/^  int uamserverport6;            \/**< Port of IPv6 UAM server *\/$/;"	m	struct:options_t
+uamtime	src/pepper.h	/^  int uamtime; \/**< UAM time *\/$/;"	m	struct:app_conn_t
+uamtime	src/redir.h	/^  int uamtime; \/**< UAM time *\/$/;"	m	struct:redir_conn_t
+uamurl	src/pepper.h	/^  char* uamurl;                  \/**< URL of authentication server *\/$/;"	m	struct:options_t
+uamurl6	src/pepper.h	/^  char* uamurl6;                 \/**< URL of authentication IPv6 server *\/$/;"	m	struct:options_t
+udph	src/dhcp.h	/^  struct dhcp_udphdr_t udph; \/**< UDP header *\/$/;"	m	struct:dhcp_dns_fullpacket6_t	typeref:struct:dhcp_dns_fullpacket6_t::dhcp_udphdr_t
+udph	src/dhcp.h	/^  struct dhcp_udphdr_t udph; \/**< UDP header *\/$/;"	m	struct:dhcp_dns_fullpacket_t	typeref:struct:dhcp_dns_fullpacket_t::dhcp_udphdr_t
+udph	src/dhcp.h	/^  struct dhcp_udphdr_t udph; \/**< UDP header *\/$/;"	m	struct:dhcp_fullpacket_t	typeref:struct:dhcp_fullpacket_t::dhcp_udphdr_t
+unauth_cp	src/dhcp.h	/^  uint8_t unauth_cp;           \/**< Unauthenticated codepoint *\/$/;"	m	struct:dhcp_conn_t
+unit	src/pepper.h	/^  int unit; \/**< Used for NAS port *\/$/;"	m	struct:app_conn_t
+uplink	src/pepper.h	/^  void *uplink;             \/**< Uplink network interface (Internet) *\/$/;"	m	struct:app_conn_t
+upprot_getip	src/pepper.c	/^int upprot_getip(struct app_conn_t *appconn,$/;"	f
+upprot_getipv6	src/pepper.c	/^int upprot_getipv6(struct app_conn_t *appconn,$/;"	f
+urandom_fp	src/radius.h	/^  FILE *urandom_fp;          \/**< \/dev\/urandom FILE pointer *\/$/;"	m	struct:radius_t
+url	extra/hsl.php	/^  $url=$GLOBALS['baseURL'].'\/logon?username='.$GLOBALS['username'];$/;"	v
+url	src/redir.h	/^  char *url; \/**< URL of IPv4 webserver *\/$/;"	m	struct:redir_t
+url6	src/redir.h	/^  char* url6; \/**< URL of IPv6 webserver *\/$/;"	m	struct:redir_t
+usemac	src/dhcp.h	/^  int usemac;           \/**< Use given mac address *\/$/;"	m	struct:dhcp_t
+user	extra/hsl.php	/^        $user=cbGetValue($phpCAS,'user');$/;"	v
+user	src/pepper.h	/^  char user[USERNAMESIZE];     \/**< User: *\/$/;"	m	struct:app_conn_t
+userlen	src/pepper.h	/^  uint8_t userlen;             \/**< Length of user *\/$/;"	m	struct:app_conn_t
+username	extra/hsl.php	/^  $username=$GLOBALS['username'];$/;"	v
+username	extra/hsl.php	/^$username=cbGetValue($_REQUEST,'username'); \/\/ For debug$/;"	v
+username	src/redir.h	/^  char username[REDIR_USERNAMESIZE]; \/**< User name *\/$/;"	m	struct:redir_conn_t
+username	src/redir.h	/^  char username[REDIR_USERNAMESIZE]; \/**< User name *\/$/;"	m	struct:redir_msg_t
+userurl	extra/hsl.php	/^  $userurl=$GLOBALS['userurl'];$/;"	v
+userurl	extra/hsl.php	/^$userurl=cbGetValue($_REQUEST,'userurl');$/;"	v
+userurl	src/pepper.h	/^  char userurl[USERURLSIZE]; \/**< Requested user URL *\/$/;"	m	struct:app_conn_t
+userurl	src/redir.h	/^  char userurl[REDIR_USERURLSIZE]; \/**< Original client requested webpage *\/$/;"	m	struct:redir_conn_t
+userurl	src/redir.h	/^  char userurl[REDIR_USERURLSIZE]; \/**< Requested user URL *\/$/;"	m	struct:redir_msg_t
+userurldecode	extra/hsl.php	/^$userurldecode=urldecode($userurl);$/;"	v
+v	src/dhcp.h	/^  uint8_t v[DHCP_EAPOL_TAG_VLEN]; \/**< Payload *\/$/;"	m	struct:dhcp_eapol_tag_t
+v	src/dhcp.h	/^  uint8_t v[DHCP_TAG_VLEN]; \/**< Value *\/$/;"	m	struct:dhcp_tag_t
+v	src/radius.h	/^      } v;$/;"	m	struct:radius_attr_t::__anon2::__anon3	typeref:union:radius_attr_t::__anon2::__anon3::__anon4
+v	src/radius.h	/^      } v;$/;"	m	struct:radius_attrv6_t::__anon5::__anon6	typeref:union:radius_attrv6_t::__anon5::__anon6::__anon7
+v	src/radius.h	/^  } v; \/**< Variable-size payload *\/$/;"	m	struct:radius_attr_t	typeref:union:radius_attr_t::__anon2
+v	src/radius.h	/^  } v; \/**< Variable-size payload *\/$/;"	m	struct:radius_attrv6_t	typeref:union:radius_attrv6_t::__anon5
+ver	src/dhcp.h	/^  uint8_t  ver; \/**< Version *\/$/;"	m	struct:dhcp_dot1xhdr_t
+ver	src/tun.h	/^  unsigned int ver:4; \/**< IPv4 version *\/$/;"	m	struct:tun_packet_t
+version	src/dhcp.h	/^  uint32_t  version : 4; \/**< Version (always 4) *\/$/;"	m	struct:dhcp_iphdr_t
+version	src/dhcp.h	/^  uint32_t version:4; \/**< Version (always 6) *\/$/;"	m	struct:dhcp_ipv6hdr_t
+version	src/tun6.h	/^  uint32_t version:4; \/**< Version of IPv6 (always 6). *\/$/;"	m	struct:tun6_packet_t
+version_given	src/cmdline.h	/^  int version_given ;  \/**< Whether version was given.  *\/$/;"	m	struct:gengetopt_args_info
+vv	src/radius.h	/^    } vv;$/;"	m	union:radius_attr_t::__anon2	typeref:struct:radius_attr_t::__anon2::__anon3
+vv	src/radius.h	/^    } vv;$/;"	m	union:radius_attrv6_t::__anon5	typeref:struct:radius_attrv6_t::__anon5::__anon6
+win	src/dhcp.h	/^  uint16_t win; \/**< Window size. *\/$/;"	m	struct:dhcp_tcphdr_t
+xid	src/dhcp.h	/^  uint32_t xid;    \/**< 4 Transaction ID, a random number chosen$/;"	m	struct:dhcp_packet_t
+year_2050_test	configure	/^year_2050_test ()$/;"	f
+yiaddr	src/dhcp.h	/^  uint32_t yiaddr; \/**< 4 'your' (client) IP address.*\/$/;"	m	struct:dhcp_packet_t
