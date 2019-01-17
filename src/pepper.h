@@ -80,7 +80,7 @@
 /* #define COUNT_DOWNLINK_DROP 1 */
 /* #define COUNT_UPLINK_DROP 1 */
 
-#define APP_NUM_CONN 1024 /**< Maximum number of hight-level connections */
+#define APP_NUM_CONN 8192 /**< Maximum number of hight-level connections */
 #define EAP_LEN 2048 /**< EAP challenge length (rather large) */
 
 #define MACOK_MAX 16 /**< Authorized MAC table size */
