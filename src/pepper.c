@@ -271,8 +271,9 @@ static void set_sessionid(struct app_conn_t *appconn)
 {
   struct timeval timenow;
   gettimeofday(&timenow, NULL);
+  appconn->peer = 0;
   (void) snprintf(appconn->sessionid, REDIR_SESSIONID_LEN, "%.8x%.8x",
-                  (int) timenow.tv_sec, appconn->unit);
+                  (int) timenow.tv_sec, (int)timenow.tv_sec);
 }
 
 /**
@@ -2400,6 +2401,19 @@ static int checkconn(void)
       interimtime = timenow.tv_sec - conn->interim_time.tv_sec;
       interimtime += (timenow.tv_usec - conn->interim_time.tv_usec) / 1000000;
 
+      if(conn->peer && conn->peer->peer==conn) {
+          long int _sessiontime = 0;
+          long int _idletime = 0;
+          _sessiontime = timenow.tv_sec - conn->peer->start_time.tv_sec;
+          _sessiontime += (timenow.tv_usec - conn->peer->start_time.tv_usec) / 1000000;
+          if(sessiontime > _sessiontime)
+              sessiontime = _sessiontime;
+          _idletime = timenow.tv_sec - conn->peer->last_time.tv_sec;
+          _idletime += (timenow.tv_usec - conn->peer->last_time.tv_usec) / 1000000;
+          if(idletime > _idletime)
+              idletime = _idletime;
+      }
+
       if((conn->sessiontimeout) &&
           (sessiontime > conn->sessiontimeout))
       {
@@ -3293,6 +3307,7 @@ static int dnprot_accept(struct app_conn_t *appconn)
   if(!appconn->authenticated)
   {
     appconn->authenticated = 1;
+    appconn->sessionid[8] = appconn->ipv6?'6':'4';
     (void) acct_req(appconn, RADIUS_STATUS_TYPE_START);
   }
 
@@ -5181,23 +5196,27 @@ static int cb_dhcp_unauth_dnat(struct dhcp_conn_t *conn)
       if(appconn->authenticated && conn->peer)
       {
         struct app_conn_t *newconn = (struct app_conn_t*)conn->peer;
+        newconn->peer = appconn;
+        appconn->peer = newconn;
+        memcpy(newconn->sessionid,appconn->sessionid,8);
+        strncpy(newconn->user, appconn->user, REDIR_USERNAMESIZE);
+        newconn->user[REDIR_USERNAMESIZE - 1] = '\0';
+        newconn->userlen = appconn->userlen;
+        strncpy(newconn->proxyuser, appconn->proxyuser, REDIR_USERNAMESIZE);
+        newconn->proxyuser[REDIR_USERNAMESIZE - 1] = '\0';
+        newconn->proxyuserlen = appconn->proxyuserlen;
+        memcpy(newconn->classbuf, appconn->classbuf, appconn->classlen);
+        newconn->classlen = appconn->classlen;
+        newconn->interim_interval = appconn->interim_interval;
+        newconn->sessiontimeout = appconn->sessiontimeout;
+        newconn->idletimeout = appconn->idletimeout;
+        newconn->bandwidthmaxup = appconn->bandwidthmaxup;
+        newconn->bandwidthmaxdown = appconn->bandwidthmaxdown;
+        newconn->maxinputoctets = appconn->maxinputoctets;
+        newconn->maxoutputoctets = appconn->maxoutputoctets;
+        newconn->maxtotaloctets = appconn->maxtotaloctets;
+        newconn->sessionterminatetime = appconn->sessionterminatetime;
         result = dnprot_accept(newconn);
-        if(result == 0) {
-            strncpy(newconn->user, appconn->user, REDIR_USERNAMESIZE);
-            newconn->user[REDIR_USERNAMESIZE - 1] = '\0';
-            newconn->userlen = appconn->userlen;
-            memcpy(newconn->classbuf, appconn->classbuf, appconn->classlen);
-            newconn->classlen = appconn->classlen;
-            newconn->interim_interval = appconn->interim_interval;
-            newconn->sessiontimeout = appconn->sessiontimeout;
-            newconn->idletimeout = appconn->idletimeout;
-            newconn->bandwidthmaxup = appconn->bandwidthmaxup;
-            newconn->bandwidthmaxdown = appconn->bandwidthmaxdown;
-            newconn->maxinputoctets = appconn->maxinputoctets;
-            newconn->maxoutputoctets = appconn->maxoutputoctets;
-            newconn->maxtotaloctets = appconn->maxtotaloctets;
-            newconn->sessionterminatetime = appconn->sessionterminatetime;
-        }
       }
       else
       {

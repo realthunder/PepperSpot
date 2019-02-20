@@ -138,6 +138,7 @@ struct app_conn_t
   int ipv6; /**< If IPv6 is used */
   struct app_conn_t *next; /**< Next in linked list. 0: Last */
   struct app_conn_t *prev; /**< Previous in linked list. 0: First */
+  struct app_conn_t *peer; /**< peer connection of the other ip version */
 
   /* Pointers to protocol handlers */
   void *uplink;             /**< Uplink network interface (Internet) */
