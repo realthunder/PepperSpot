@@ -192,6 +192,12 @@ struct gengetopt_args_info
   unsigned int macallowed_given ;  /**< Whether macallowed was given.  */
   int macsuffix_given ;  /**< Whether macsuffix was given.  */
   int macpasswd_given ;  /**< Whether macpasswd was given.  */
+
+#ifdef HAS_VCAP
+  char *vcapip_arg;
+  char *vcapip_orig;
+  int vcapip_given;
+#endif
 } ;
 
 /**

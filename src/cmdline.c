@@ -131,7 +131,9 @@ void clear_given (struct gengetopt_args_info *args_info)
   args_info->macallowed_given = 0 ;
   args_info->macsuffix_given = 0 ;
   args_info->macpasswd_given = 0 ;
-
+#ifdef HAS_VCAP
+  args_info->vcapip_given = 0 ;
+#endif
 }
 
 static
@@ -245,7 +247,10 @@ void clear_args (struct gengetopt_args_info *args_info)
   args_info->macsuffix_orig = NULL;
   args_info->macpasswd_arg = gengetopt_strdup ("password");
   args_info->macpasswd_orig = NULL;
-  
+#ifdef HAS_VCAP
+  args_info->vcapip_arg = NULL;
+  args_info->vcapip_orig = NULL;
+#endif
 }
 
 void
@@ -319,7 +324,6 @@ cmdline_parser_print_help (void)
   printf("%s\n","      --macallowed=STRING       List of allowed MAC addresses");
   printf("%s\n","      --macsuffix=STRING        Suffix to add to the MAC address");
   printf("%s\n","      --macpasswd=STRING        Password used when performing MAC \n                                  authentication  (default=`password')");
-  
 }
 
 void
@@ -817,6 +821,18 @@ cmdline_parser_release (struct gengetopt_args_info *args_info)
       free (args_info->macpasswd_orig); /* free previous argument */
       args_info->macpasswd_orig = 0;
     }
+#ifdef HAS_VCAP
+  if (args_info->vcapip_arg)
+    {
+      free (args_info->vcapip_arg); /* free previous argument */
+      args_info->vcapip_arg = 0;
+    }
+  if (args_info->vcapip_orig)
+    {
+      free (args_info->vcapip_orig); /* free previous argument */
+      args_info->vcapip_orig = 0;
+    }
+#endif
 
   clear_given (args_info);
 }
@@ -1222,6 +1238,15 @@ cmdline_parser_file_save(const char *filename, struct gengetopt_args_info *args_
       fprintf(outfile, "%s\n", "macpasswd");
     }
   }
+#ifdef HAS_VCAP
+  if (args_info->vcapip_given) {
+    if (args_info->vcapip_orig) {
+      fprintf(outfile, "%s=\"%s\"\n", "vcapip", args_info->vcapip_orig);
+    } else {
+      fprintf(outfile, "%s\n", "vcapip");
+    }
+  }
+#endif
   
   fclose (outfile);
 
@@ -1425,6 +1450,7 @@ cmdline_parser_internal (int argc, char * const *argv, struct gengetopt_args_inf
         { "macallowed",  1, NULL, 0 },
         { "macsuffix",  1, NULL, 0 },
         { "macpasswd",  1, NULL, 0 },
+        { "vcapip",  1, NULL, 0 },
         { NULL,  0, NULL, 0 }
       };
 
@@ -2504,6 +2530,26 @@ cmdline_parser_internal (int argc, char * const *argv, struct gengetopt_args_inf
               free (args_info->macpasswd_orig); /* free previous string */
             args_info->macpasswd_orig = gengetopt_strdup (optarg);
           }
+#ifdef HAS_VCAP
+          else if (strcmp (long_options[option_index].name, "vcapip") == 0) 
+          {
+            if (local_args_info.vcapip_given)
+              {
+                fprintf (stderr, "%s: `--vcapip' option given more than once%s\n", argv[0], (additional_error ? additional_error : ""));
+                goto failure;
+              }
+            if (args_info->vcapip_given && ! override)
+              continue;
+            local_args_info.vcapip_given = 1;
+            args_info->vcapip_given = 1;
+            if (args_info->vcapip_arg)
+              free (args_info->vcapip_arg); /* free previous string */
+            args_info->vcapip_arg = gengetopt_strdup (optarg);
+            if (args_info->vcapip_orig)
+              free (args_info->vcapip_orig); /* free previous string */
+            args_info->vcapip_orig = gengetopt_strdup (optarg);
+          }
+#endif
           
           break;
         case '?':  /* Invalid option.  */

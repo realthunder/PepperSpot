@@ -361,6 +361,10 @@ struct options_t
   int macoklen;                  /**< Number of MAC addresses */
   char* macsuffix;               /**< Suffix to add to MAC address */
   char* macpasswd;               /**< Password to use for MAC authentication */
+
+#ifdef HAS_VCAP
+  char *vcapip;
+#endif
 };
 
 #endif /*_PEPPER_H */

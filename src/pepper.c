@@ -138,6 +138,11 @@
 #include "util.h"
 #include "compat.h"
 
+#ifdef HAS_VCAP
+#include "vcap.h"
+vcap_context_t *vcap_ctx;
+#endif
+
 #ifndef DEBUG_REDIR
 /**
  * \def DEBUG_REDIR
@@ -1051,6 +1056,9 @@ static int process_options(int argc, char **argv, int firsttime)
 #endif
 
   /* Handle each option */
+#ifdef HAS_VCAP
+  options.vcapip = args_info.vcapip_arg;
+#endif
 
   /* debug                                                        */
   if(args_info.debug_flag)
@@ -3339,6 +3347,14 @@ static int cb_tun6_ind(struct tun6_t* tun_obj, void* pack, unsigned len)
 
   appconn = (struct app_conn_t*) ipm->peer;
 
+#ifdef HAS_VCAP
+  if(vcap_ctx) {
+      vcap_set_ether_mac(vcap_ctx,appconn->hismac);
+      uint8_t out[2048];
+      vcap_parse_ip(vcap_ctx,pack,len,out,sizeof(out));
+  }
+#endif
+
   if(appconn->authenticated == 1)
   {
 #ifndef NO_LEAKY_BUCKET
@@ -3412,6 +3428,14 @@ int cb_tun_ind(struct tun_t *tun_obj, void *pack, unsigned len)
   }
 
   appconn = (struct app_conn_t*) ipm->peer;
+
+#ifdef HAS_VCAP
+  if(vcap_ctx) {
+      vcap_set_ether_mac(vcap_ctx,appconn->hismac);
+      uint8_t out[2048];
+      vcap_parse_ip(vcap_ctx,pack,len,out,sizeof(out));
+  }
+#endif
 
   if(appconn->authenticated == 1)
   {
@@ -6024,6 +6048,28 @@ int main(int argc, char **argv)
   ipv6 = !strncmp(options.ipversion, "ipv6", 4);
   ipv4 = !strncmp(options.ipversion, "ipv4", 4);
   dual = !strncmp(options.ipversion, "dual", 4);
+
+#ifdef HAS_VCAP
+  if(options.vcapip) {
+    const char *accept[] = {"text/html"};
+    vcap_config_t conf;
+    vcap_default_config(&conf);
+    conf.log_tag = options.radiusnasid;
+    conf.log_target = options.vcapip;
+    conf.accepts = accept;
+    conf.accept_count = sizeof(accept)/sizeof(accept[0]);
+    conf.nic = 0;
+    if(getenv("VCAP_LOGMASK")) 
+        conf.log_mask = atoi(getenv("VCAP_LOGMASK"));
+    conf.use_pcap = 0;
+    vcap_ctx = vcap_new(&conf);
+    if(!vcap_ctx || vcap_start(vcap_ctx)) {
+      fprintf(stderr,"failed to start vcap");
+      vcap_destroy(vcap_ctx);
+      vcap_ctx = 0;
+    }
+  }
+#endif
 
   /* Initialise connections */
   (void) initconn();
