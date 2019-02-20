@@ -38,7 +38,7 @@ sbin_PROGRAMS = pepper$(EXEEXT)
 # deprecation warnings
 #AM_CFLAGS += -Wno-deprecated-declarations
 @ENABLE_DEBUG_BUILD_TRUE@am__append_1 = -g
-@ENABLE_DEBUG_BUILD_FALSE@am__append_2 = -DNDEBUG
+@ENABLE_DEBUG_BUILD_FALSE@am__append_2 = -g -O3 -DNDEBUG
 subdir = src
 DIST_COMMON = $(srcdir)/Makefile.am $(srcdir)/Makefile.in
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
