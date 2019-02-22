@@ -3227,6 +3227,11 @@ static int dhcp_receive_ipv6(struct dhcp_t* this, struct dhcp_ipv6packet_t* pack
   {
     case DHCP_AUTH_PASS:
       /* Pass packets unmodified */
+      if (this->cb_passv6) {
+        /* It is common to have multiple ipv6 address per client, let peer take
+         * care of that */
+        this->cb_passv6(conn, &conn->hisipv6);
+      }
       break;
     case DHCP_AUTH_UNAUTH_TOS:
       /* Set TOS to specified value (unauthenticated)
@@ -3781,6 +3786,12 @@ int dhcp_eapol_ind(struct dhcp_t *this)  /* EAPOL Indication */
 int dhcp_set_cb_requestv6(struct dhcp_t *this,  int (*cb_request) (struct dhcp_conn_t *conn, struct in6_addr *addr))
 {
   this->cb_requestv6 = cb_request;
+  return 0;
+}
+
+int dhcp_set_cb_passv6(struct dhcp_t *this,  int (*cb_pass) (struct dhcp_conn_t *conn, struct in6_addr *addr))
+{
+  this->cb_passv6 = cb_pass;
   return 0;
 }
 

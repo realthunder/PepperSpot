@@ -272,8 +272,8 @@ static void set_sessionid(struct app_conn_t *appconn)
   struct timeval timenow;
   gettimeofday(&timenow, NULL);
   appconn->peer = 0;
-  (void) snprintf(appconn->sessionid, REDIR_SESSIONID_LEN, "%.8x%.8x",
-                  (int) timenow.tv_sec, (int)timenow.tv_sec);
+  (void) snprintf(appconn->sessionid, REDIR_SESSIONID_LEN, "%.8x%.8x%.8x",
+                  (unsigned) timenow.tv_sec, appconn->unit, (unsigned) timenow.tv_sec);
 }
 
 /**
@@ -2941,10 +2941,16 @@ static int acct_req(struct app_conn_t *conn, int status_type)
                           ntohl(conn->hisip.s_addr), NULL, 0);
   else
   {
+    struct in6_addr *addr;
     (void) radius_addattrv6(radius, &radius_pack, RADIUS_ATTR_FRAMED_IPV6_PREFIX, 0, 0,
                             options.prefix, NULL, options.prefixlen + 2);
 
-    ippool_getv6suffix(&idv6, &conn->hisipv6, options.ipv6mask);
+
+    if(conn->uplink)
+        addr = &((struct ippoolm_t*)conn->uplink)->addrv6;
+    else
+        addr = &conn->hisipv6;
+    ippool_getv6suffix(&idv6, &addr, options.ipv6mask);
 
     suf = ((uint32_t*)idv6.s6_addr)[3];
     suf <<= 32;
@@ -5336,6 +5342,61 @@ static int cb_dhcp_requestv6(struct dhcp_conn_t *conn, struct in6_addr *addr)
 }
 
 /**
+ * \brief Callback function to check for multiple IPv6 address of an authenticated MAC.
+ * \param conn the dhcp_conn_t instance
+ * \param addr the IPv6 address of the client
+ * \return ignored
+ */
+static int cb_dhcp_passv6(struct dhcp_conn_t *conn, struct in6_addr *addr)
+{
+  struct ippoolm_t *ipm = NULL;
+  struct app_conn_t *appconn = conn->peer;
+  struct ippoolm_t *uplink;
+
+  if(options.debug) printf("IPv6 requested address\n");
+
+  if(!appconn)
+  {
+    sys_err(LOG_ERR, __FILE__, __LINE__, 0,
+            "Peer protocol not defined");
+    return -1;
+  }
+
+  uplink = (struct ippoolm_t *)appconn->uplink;
+  if(!uplink)
+  {
+    sys_err(LOG_ERR, __FILE__, __LINE__, 0,
+            "Peer no uplink");
+    return -1;
+  }
+
+  if(ippool_newip6(ippool, &ipm, addr))
+      return 0;
+
+  ipm->peer = appconn;
+  ipm->next = uplink;
+  appconn->uplink = ipm;
+
+  /* limit the number of ipv6 address per user */
+  if(uplink) {
+    int i;
+    uplink->prev = ipm;
+    for(i=0;i<3 && uplink;uplink=uplink->next,++i);
+    if(uplink) {
+      uplink->prev->next = 0;
+      while(uplink) {
+        ipm = uplink;
+        uplink = uplink->next;
+        ipm->prev = 0;
+        ipm->next = 0;
+        ippool_freeip(ippool, ipm);
+      }
+    }
+  }
+  return 0;
+}
+
+/**
  * \brief Callback function after client has connect to the portal (L2).
  * \param conn the dhcp_conn_t instance
  * \return 0 if success, -1 otherwise
@@ -5422,12 +5483,17 @@ static int cb_dhcp_disconnectv6(struct dhcp_conn_t *conn)
 
   conn->authstate = DHCP_AUTH_NONE; /* TODO: Redundant */
 
-  if(appconn->uplink)
-    if(ippool_freeip(ippool, (struct ippoolm_t *) appconn->uplink))
+  while(appconn->uplink) {
+    struct ippoolm_t *uplink = (struct ippoolm_t *)appconn->uplink;
+    appconn->uplink = uplink->next;
+    uplink->prev = 0;
+    uplink->next = 0;
+    if(ippool_freeip(ippool, uplink))
     {
       sys_err(LOG_ERR, __FILE__, __LINE__, 0,
               "ippool_freeip() failed!");
     }
+  }
   (void) freeconn(appconn);
 
   return 0;
@@ -6229,6 +6295,7 @@ int main(int argc, char **argv)
       /* [SV] */
       dhcp_set_cb_ipv6_ind(dhcp, cb_dhcp_ipv6_ind);
       dhcp_set_cb_requestv6(dhcp, cb_dhcp_requestv6);
+      dhcp_set_cb_passv6(dhcp, cb_dhcp_passv6);
       dhcp_set_cb_connectv6(dhcp, cb_dhcp_connectv6);
       dhcp_set_cb_disconnectv6(dhcp, cb_dhcp_disconnectv6);
 

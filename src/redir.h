@@ -72,7 +72,7 @@
 #define REDIR_CHALLENGETIMEOUT1 300 /**< First challenge timeout in seconds */
 #define REDIR_CHALLENGETIMEOUT2 600 /**< Second challenge timeout in seconds */
 
-#define REDIR_SESSIONID_LEN 17 /**< Session ID length */
+#define REDIR_SESSIONID_LEN 25 /**< Session ID length */
 
 #define REDIR_URL_LEN 250 /**< Maximum URL length */
 

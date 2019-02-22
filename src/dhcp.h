@@ -671,6 +671,11 @@ struct dhcp_t
   int (*cb_requestv6)(struct dhcp_conn_t *conn, struct in6_addr *addr);
 
   /**
+   * \brief Callback function to let peer check for multiple IPv6 address per MAC.
+   */
+  int (*cb_passv6)(struct dhcp_conn_t *conn, struct in6_addr *addr);
+
+  /**
    * \brief Callback function when IPv6 peers connect.
    */
   int (*cb_connectv6) (struct dhcp_conn_t *conn);
@@ -851,6 +856,14 @@ int dhcp_set_cb_ipv6_ind(struct dhcp_t *this, int (*cb_ind) (struct dhcp_conn_t 
  * \return 0
  */
 int dhcp_set_cb_requestv6(struct dhcp_t *this,  int (*cb_request) (struct dhcp_conn_t *conn, struct in6_addr *addr));
+
+/**
+ * \brief Set the callback which is called to let peer check for multiple IPv6 address of an authenticated MAC.
+ * \param this dhcp_t instance
+ * \param cb_pass the callback
+ * \return 0
+ */
+int dhcp_set_cb_pass(struct dhcp_t *this,  int (*cb_pass) (struct dhcp_conn_t *conn, struct in6_addr *addr));
 
 /**
  * \brief Set the callback which is called when an IPv6 connection is created.
