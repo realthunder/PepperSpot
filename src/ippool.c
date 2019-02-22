@@ -425,7 +425,8 @@ int ippool_new(struct ippool_t **this, char *dyn,  char *stat,
   }
 
   listsize = dynsize + statsize;  /* Allocate space for static IP addresses */
-  listsize = dynsize + statsize + ipv6size; /* 32 IPv6 address */
+  ipv6size = listsize*4;
+  listsize += ipv6size; /* extra IPv6 address */
 
   if(!(*this = calloc(sizeof(struct ippool_t), 1)))
   {
