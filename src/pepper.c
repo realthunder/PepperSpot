@@ -2946,17 +2946,32 @@ static int acct_req(struct app_conn_t *conn, int status_type)
                             options.prefix, NULL, options.prefixlen + 2);
 
 
-    if(conn->uplink)
+    if(conn->uplink) {
         addr = &((struct ippoolm_t*)conn->uplink)->addrv6;
-    else
+        if(options.debug) {
+          char buf1[INET6_ADDRSTRLEN],buf2[INET6_ADDRSTRLEN];
+          printf("acct %s -> %s, %p\n", inet_ntop(AF_INET6, conn->hisipv6.s6_addr, buf1, sizeof(buf1)),
+                inet_ntop(AF_INET6, addr, buf2, sizeof(buf2)), conn->uplink);
+        }
+    } else
         addr = &conn->hisipv6;
-    ippool_getv6suffix(&idv6, &addr, options.ipv6mask);
+    ippool_getv6suffix(&idv6, addr, options.ipv6mask);
+
+    if(options.debug) {
+        char buf[INET6_ADDRSTRLEN];
+        printf("acct suffix %d, %s\n", options.ipv6mask, inet_ntop(AF_INET6, &idv6, buf, sizeof(buf)));
+    }
 
     suf = ((uint32_t*)idv6.s6_addr)[3];
     suf <<= 32;
     suf |= ((uint32_t*)idv6.s6_addr)[2];
 
     memcpy(idv6.s6_addr, (void *)&suf, 8);
+
+    if(options.debug) {
+        char buf[INET6_ADDRSTRLEN];
+        printf("acct suffix %s\n", inet_ntop(AF_INET6, &idv6, buf, sizeof(buf)));
+    }
 
     (void) radius_addattrv6(radius, &radius_pack, RADIUS_ATTR_FRAMED_INTERFACE_ID, 0, 0, idv6, NULL, 8);
   }
@@ -5349,47 +5364,56 @@ static int cb_dhcp_requestv6(struct dhcp_conn_t *conn, struct in6_addr *addr)
  */
 static int cb_dhcp_passv6(struct dhcp_conn_t *conn, struct in6_addr *addr)
 {
+  int i;
   struct ippoolm_t *ipm = NULL;
   struct app_conn_t *appconn = conn->peer;
   struct ippoolm_t *uplink;
 
-  if(options.debug) printf("IPv6 requested address\n");
-
-  if(!appconn)
-  {
-    sys_err(LOG_ERR, __FILE__, __LINE__, 0,
-            "Peer protocol not defined");
+  if(!appconn) {
+    if(options.debug)
+      printf("Peer protocol not defined");
     return -1;
   }
 
   uplink = (struct ippoolm_t *)appconn->uplink;
-  if(!uplink)
-  {
-    sys_err(LOG_ERR, __FILE__, __LINE__, 0,
-            "Peer no uplink");
+  if(!uplink) {
+    if(options.debug)
+      printf("Peer no uplink");
     return -1;
   }
 
   if(ippool_newip6(ippool, &ipm, addr))
       return 0;
 
+  if(options.debug) {
+      char buf1[INET6_ADDRSTRLEN],buf2[INET6_ADDRSTRLEN];
+      printf("new IPv6 address %s -> %s\n",
+              inet_ntop(AF_INET6, &appconn->hisipv6, buf1, sizeof(buf1)),
+              inet_ntop(AF_INET6, &ipm->addrv6, buf2, sizeof(buf2)));
+  }
+
   ipm->peer = appconn;
   ipm->next = uplink;
   appconn->uplink = ipm;
-
-  /* limit the number of ipv6 address per user */
+  uplink->prev = ipm;
+  for(i=0;i<2 && uplink;uplink=uplink->next,++i);
   if(uplink) {
-    int i;
-    uplink->prev = ipm;
-    for(i=0;i<3 && uplink;uplink=uplink->next,++i);
-    if(uplink) {
-      uplink->prev->next = 0;
-      while(uplink) {
-        ipm = uplink;
-        uplink = uplink->next;
-        ipm->prev = 0;
-        ipm->next = 0;
-        ippool_freeip(ippool, ipm);
+    uplink->prev->next = 0;
+    while(uplink) {
+      ipm = uplink;
+      uplink = uplink->next;
+      ipm->prev = 0;
+      ipm->next = 0;
+      if(options.debug) {
+          char buf[INET6_ADDRSTRLEN];
+          printf("free %s\n",inet_ntop(AF_INET6, &ipm->addrv6, buf, sizeof(buf)));
+      }
+      ippool_freeip(ippool, ipm);
+    }
+    if(options.debug) {
+      for(ipm=appconn->uplink;ipm;ipm=ipm->next) {
+        char buf[INET6_ADDRSTRLEN];
+        printf("remaining %p,%s\n",ipm,inet_ntop(AF_INET6, &ipm->addrv6, buf, sizeof(buf)));
       }
     }
   }

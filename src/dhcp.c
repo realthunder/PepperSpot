@@ -3143,6 +3143,12 @@ static int dhcp_receive_ipv6(struct dhcp_t* this, struct dhcp_ipv6packet_t* pack
     if(!IN6_IS_ADDR_UNSPECIFIED(&conn->hisipv6) && !IN6_IS_ADDR_LINKLOCAL((struct in6_addr*)&pack->ip6h.src_addr) && !IN6_IS_ADDR_UNSPECIFIED((struct in6_addr*)&pack->ip6h.src_addr))
     {
       memcpy(&conn->hisipv6, pack->ip6h.src_addr, sizeof(struct in6_addr));
+
+      if (this->cb_passv6) {
+        /* It is common to have multiple ipv6 address per client, let peer take
+        * care of that */
+        this->cb_passv6(conn, &conn->hisipv6);
+      }
     }
   }
   else
@@ -3227,11 +3233,6 @@ static int dhcp_receive_ipv6(struct dhcp_t* this, struct dhcp_ipv6packet_t* pack
   {
     case DHCP_AUTH_PASS:
       /* Pass packets unmodified */
-      if (this->cb_passv6) {
-        /* It is common to have multiple ipv6 address per client, let peer take
-         * care of that */
-        this->cb_passv6(conn, &conn->hisipv6);
-      }
       break;
     case DHCP_AUTH_UNAUTH_TOS:
       /* Set TOS to specified value (unauthenticated)
