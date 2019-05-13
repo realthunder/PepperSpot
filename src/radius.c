@@ -82,6 +82,7 @@
 #include "syserr.h"
 #include "radius.h"
 #include "md5.h"
+#include "util.h"
 
 /**
  * \brief Print information about radius packet queue.
@@ -91,14 +92,14 @@
 static int radius_printqueue(struct radius_t *this)
 {
   int n = 0;
-  printf("next %d, first %d, last %d\n",
+  pepper_printf("next %d, first %d, last %d\n",
          this->next, this->first, this ->last);
 
   for(n = 0; n < 256; n++)
   {
     if(this->queue[n].state)
     {
-      printf("%3d %3d %3d %3d %8d %8d %d\n",
+      pepper_printf("%3d %3d %3d %3d %8d %8d %d\n",
              n, this->queue[n].state,
              this->queue[n].next,
              this->queue[n].prev,
@@ -248,11 +249,11 @@ static int radius_queue_in(struct radius_t *this, struct radius_packet_t *pack,
   struct timeval *tv = NULL;
   struct radius_attr_t *ma = NULL; /* Message authenticator */
 
-  if(this->debug) printf("radius_queue_in\n");
+  if(this->debug) pepper_printf("radius_queue_in\n");
 
   if(this->debug)
   {
-    printf("radius_queue_in\n");
+    pepper_printf("radius_queue_in\n");
     radius_printqueue(this);
   }
 
@@ -303,7 +304,7 @@ static int radius_queue_in(struct radius_t *this, struct radius_packet_t *pack,
 
   if(this->debug)
   {
-    printf("radius_queue_in end\n");
+    pepper_printf("radius_queue_in end\n");
     radius_printqueue(this);
   }
 
@@ -321,7 +322,7 @@ static int radius_queue_in(struct radius_t *this, struct radius_packet_t *pack,
 static int radius_queue_out(struct radius_t *this, struct radius_packet_t *pack,
                      int id, void **cbp)
 {
-  if(this->debug) if(this->debug) printf("radius_queue_out\n");
+  if(this->debug) if(this->debug) pepper_printf("radius_queue_out\n");
 
   if(this->queue[id].state != 1)
   {
@@ -332,7 +333,7 @@ static int radius_queue_out(struct radius_t *this, struct radius_packet_t *pack,
 
   if(this->debug)
   {
-    printf("radius_queue_out\n");
+    pepper_printf("radius_queue_out\n");
     radius_printqueue(this);
   }
 
@@ -354,7 +355,7 @@ static int radius_queue_out(struct radius_t *this, struct radius_packet_t *pack,
 
   if(this->debug)
   {
-    printf("radius_queue_out end\n");
+    pepper_printf("radius_queue_out end\n");
     radius_printqueue(this);
   }
 
@@ -380,7 +381,7 @@ static int radius_queue_reschedule(struct radius_t *this, int id)
 
   if(this->debug)
   {
-    printf("radius_reschedule\n");
+    pepper_printf("radius_reschedule\n");
     radius_printqueue(this);
   }
 
@@ -435,7 +436,7 @@ static int radius_cmptv(struct timeval *tv1, struct timeval *tv2)
 
   if(0)
   {
-    printf("tv1 %8d %8d tv2 %8d %8d\n",
+    pepper_printf("tv1 %8d %8d tv2 %8d %8d\n",
            (int) tv1->tv_sec, (int) tv1->tv_usec,
            (int) tv2->tv_sec, (int) tv2->tv_usec);
   }
@@ -447,7 +448,7 @@ static int radius_cmptv(struct timeval *tv1, struct timeval *tv2)
 
   if(0)
   {
-    printf("tv1 %8d %8d tv2 %8d %8d diff %8d %8d\n",
+    pepper_printf("tv1 %8d %8d tv2 %8d %8d diff %8d %8d\n",
            (int) tv1->tv_sec, (int) tv1->tv_usec,
            (int) tv2->tv_sec, (int) tv2->tv_usec,
            (int) diff.tv_sec, (int) diff.tv_usec);
@@ -466,7 +467,7 @@ static int radius_cmptv(struct timeval *tv1, struct timeval *tv2)
   }
   if(0)
   {
-    printf("tv1 %8d %8d tv2 %8d %8d diff %8d %8d\n",
+    pepper_printf("tv1 %8d %8d tv2 %8d %8d diff %8d %8d\n",
            (int) tv1->tv_sec, (int) tv1->tv_usec,
            (int) tv2->tv_sec, (int) tv2->tv_usec,
            (int) diff.tv_sec, (int) diff.tv_usec);
@@ -474,26 +475,26 @@ static int radius_cmptv(struct timeval *tv1, struct timeval *tv2)
 
   if(diff.tv_sec < 0)
   {
-    if(0) printf("-1\n");
+    if(0) pepper_printf("-1\n");
     return -1;
   }
   if(diff.tv_sec > 0)
   {
-    if(0) printf("1\n");
+    if(0) pepper_printf("1\n");
     return  1;
   }
 
   if(diff.tv_usec < 0)
   {
-    if(0) printf("-1\n");
+    if(0) pepper_printf("-1\n");
     return -1;
   }
   if(diff.tv_usec > 0)
   {
-    if(0) printf("1\n");
+    if(0) pepper_printf("1\n");
     return  1;
   }
-  if(0) printf("0 \n");
+  if(0) pepper_printf("0 \n");
   return 0;
 }
 
@@ -552,13 +553,13 @@ int radius_timeout(struct radius_t *this)
   void *cbp = NULL;
   int ipv6 = this->ouraddr.ss_family == AF_INET6 ? 1 : 0;
 
-  /*printf("Retrans: New beginning %d\n", (int) now);*/
+  /*pepper_printf("Retrans: New beginning %d\n", (int) now);*/
 
   gettimeofday(&now, NULL);
 
   if(this->debug)
   {
-    printf("radius_timeout %8d %8d\n",
+    pepper_printf("radius_timeout %8d %8d\n",
            (int) now.tv_sec, (int) now.tv_usec);
     radius_printqueue(this);
   }
@@ -682,10 +683,10 @@ int radius_timeout(struct radius_t *this)
 
   if(this->debug)
   {
-    printf("radius_timeout\n");
+    pepper_printf("radius_timeout\n");
     if(this->first > 0)
     {
-      printf("first %d, timeout %8d %8d\n", this->first,
+      pepper_printf("first %d, timeout %8d %8d\n", this->first,
              (int) this->queue[this->first].timeout.tv_sec,
              (int) this->queue[this->first].timeout.tv_usec);
     }
@@ -940,8 +941,8 @@ int radius_getattr(struct radius_packet_t *pack, struct radius_attr_t **attr,
 
   if(0)
   {
-    printf("radius_getattr \n");
-    printf("radius_getattr payload %.2x %.2x %.2x %.2x\n",
+    pepper_printf("radius_getattr \n");
+    pepper_printf("radius_getattr payload %.2x %.2x %.2x %.2x\n",
            pack->payload[0], pack->payload[1], pack->payload[2],
            pack->payload[3]);
   }
@@ -953,7 +954,7 @@ int radius_getattr(struct radius_packet_t *pack, struct radius_attr_t **attr,
       t = (struct radius_attr_t*) (((char *) &(pack->payload)) + offset);  /* cast with (char *) to avoid use of void* in arithmetic warning */
       if(0)
       {
-        printf("radius_getattr %d %d %d %.2x %.2x \n", t->t, t->l,
+        pepper_printf("radius_getattr %d %d %d %.2x %.2x \n", t->t, t->l,
                ntohl(t->v.vv.i), (int) t->v.vv.t, (int) t->v.vv.l);
       }
       if((t->t == type) && (ntohl(t->v.vv.i) == vendor_id) && (t->v.vv.t == vendor_type))
@@ -961,7 +962,7 @@ int radius_getattr(struct radius_packet_t *pack, struct radius_attr_t **attr,
         if(count == instance)
         {
           *attr = (struct radius_attr_t *) &t->v.vv.t;
-          if(0) printf("Found\n");
+          if(0) pepper_printf("Found\n");
           return 0;
         }
         else
@@ -1009,8 +1010,8 @@ int radius_getattrv6(struct radius_packet_t *pack, struct radius_attrv6_t **attr
 
   if(0)
   {
-    printf("radius_getattrv6 \n");
-    printf("radius_getattrv6 payload %.2x %.2x %.2x %.2x\n",
+    pepper_printf("radius_getattrv6 \n");
+    pepper_printf("radius_getattrv6 payload %.2x %.2x %.2x %.2x\n",
            pack->payload[0], pack->payload[1], pack->payload[2],
            pack->payload[3]);
   }
@@ -1022,7 +1023,7 @@ int radius_getattrv6(struct radius_packet_t *pack, struct radius_attrv6_t **attr
       t = (struct radius_attrv6_t*) (((char *) &(pack->payload)) + offset); /* cast with (char *) to avoid use of void* in arithmetic warning */
       if(0)
       {
-        printf("radius_getattrv6 %d %d %d %.2x %.2x \n", t->t, t->l,
+        pepper_printf("radius_getattrv6 %d %d %d %.2x %.2x \n", t->t, t->l,
                ntohl(t->v.vv.i), (int) t->v.vv.t, (int) t->v.vv.l);
       }
       if((t->t == type) && (ntohl(t->v.vv.i) == vendor_id) && (t->v.vv.t == vendor_type))
@@ -1030,7 +1031,7 @@ int radius_getattrv6(struct radius_packet_t *pack, struct radius_attrv6_t **attr
         if(count == instance)
         {
           *attr = (struct radius_attrv6_t *) &t->v.vv.t;
-          if(0) printf("Found\n");
+          if(0) pepper_printf("Found\n");
           return 0;
         }
         else
@@ -1092,7 +1093,7 @@ int radius_getattrv6(struct radius_packet_t *pack, struct radius_attrv6_t **attr
   }
   while(offset < ntohs(pack->length));
 
-  if(0) printf("Count %d\n", count);
+  if(0) pepper_printf("Count %d\n", count);
   return count;
 }
 
@@ -1282,32 +1283,32 @@ int radius_pwdecode(struct radius_t *this, uint8_t *dst, int dstsize,
 
   if(this->debug)
   {
-    printf("pwdecode srclen %d\n", srclen);
+    pepper_printf("pwdecode srclen %d\n", srclen);
     for(n = 0; n < srclen; n++)
     {
-      printf("%.2x ", src[n]);
+      pepper_printf("%.2x ", src[n]);
       if((n % 16) == 15)
-        printf("\n");
+        pepper_printf("\n");
     }
-    printf("\n");
+    pepper_printf("\n");
 
-    printf("pwdecode authenticator \n");
+    pepper_printf("pwdecode authenticator \n");
     for(n = 0; n < RADIUS_AUTHLEN; n++)
     {
-      printf("%.2x ", authenticator[n]);
+      pepper_printf("%.2x ", authenticator[n]);
       if((n % 16) == 15)
-        printf("\n");
+        pepper_printf("\n");
     }
-    printf("\n");
+    pepper_printf("\n");
 
-    printf("pwdecode secret \n");
+    pepper_printf("pwdecode secret \n");
     for(n = 0; n< secretlen; n++)
     {
-      printf("%.2x ", secret[n]);
+      pepper_printf("%.2x ", secret[n]);
       if((n % 16) == 15)
-        printf("\n");
+        pepper_printf("\n");
     }
-    printf("\n");
+    pepper_printf("\n");
   }
 
   /* Get MD5 hash on secret + authenticator */
@@ -1333,14 +1334,14 @@ int radius_pwdecode(struct radius_t *this, uint8_t *dst, int dstsize,
 
   if(this->debug)
   {
-    printf("pwdecode dest \n");
+    pepper_printf("pwdecode dest \n");
     for(n = 0; n < 32; n++)
     {
-      printf("%.2x ", dst[n]);
+      pepper_printf("%.2x ", dst[n]);
       if((n % 16) == 15)
-        printf("\n");
+        pepper_printf("\n");
     }
-    printf("\n");
+    pepper_printf("\n");
   }
 
   return 0;
@@ -1686,7 +1687,7 @@ int radius_req(struct radius_t *this,
     addr.sin_family = AF_INET;
   }
 
-  if(this->debug) printf("Lastreply: %d\n", this->lastreply);
+  if(this->debug) pepper_printf("Lastreply: %d\n", this->lastreply);
 
   if(!this->lastreply)
   {
@@ -1884,7 +1885,7 @@ int radius_decaps(struct radius_t *this)
   int coarequest = 0;
   int ipv6 = 0;
 
-  if(this->debug) printf("Received radius packet\n");
+  if(this->debug) pepper_printf("Received radius packet\n");
 
   if((status = recvfrom(this->fd, &pack, sizeof(pack), 0,
                          (struct sockaddr *) &addr_ss, &fromlen)) <= 0)
@@ -2088,7 +2089,7 @@ int radius_proxy_ind(struct radius_t *this)
   struct sockaddr_storage addr;
   socklen_t fromlen = sizeof(addr);
 
-  if(this->debug) printf("Received radius packet\n");
+  if(this->debug) pepper_printf("Received radius packet\n");
 
   if((status = recvfrom(this->proxyfd, &pack, sizeof(pack), 0,
                          (struct sockaddr *) &addr, &fromlen)) <= 0)

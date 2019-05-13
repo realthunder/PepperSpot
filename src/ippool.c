@@ -80,6 +80,7 @@
 #include "syserr.h"
 #include "ippool.h"
 #include "lookup.h"
+#include "util.h"
 
 /**
  * \brief Print all addresses from the pool.
@@ -91,15 +92,15 @@ static int ippool_printaddr(struct ippool_t *this)
   int n = 0;
   char buf[INET_ADDRSTRLEN];
 
-  printf("Firstdyn %d\n", this->firstdyn - this->member);
-  printf("Lastdyn %d\n",  this->lastdyn - this->member);
-  printf("Firststat %d\n", this->firststat - this->member);
-  printf("Laststat %d\n",  this->laststat - this->member);
-  printf("Listsize %d\n",  this->listsize);
+  pepper_printf("Firstdyn %d\n", this->firstdyn - this->member);
+  pepper_printf("Lastdyn %d\n",  this->lastdyn - this->member);
+  pepper_printf("Firststat %d\n", this->firststat - this->member);
+  pepper_printf("Laststat %d\n",  this->laststat - this->member);
+  pepper_printf("Listsize %d\n",  this->listsize);
 
   for(n = 0; n < this->listsize; n++)
   {
-    printf("Unit %d inuse %d prev %d next %d addr %s %x\n",
+    pepper_printf("Unit %d inuse %d prev %d next %d addr %s %x\n",
            n,
            this->member[n].inuse,
            this->member[n].prev - this->member,
@@ -452,7 +453,7 @@ int ippool_new(struct ippool_t **this, char *dyn,  char *stat,
        ((1 << (*this)->hashlog) < listsize);
        (*this)->hashlog++);
 
-  printf("Hashlog %d %d %d\n", (*this)->hashlog, listsize, (1 << (*this)->hashlog));
+  pepper_printf("Hashlog %d %d %d\n", (*this)->hashlog, listsize, (1 << (*this)->hashlog));
 
   /* Determine hashsize */
   (*this)->hashsize = 1 << (*this)->hashlog; /* Fails if mask=0: All Internet*/
@@ -565,7 +566,8 @@ int ippool_getip6(struct ippool_t *this, struct ippoolm_t **member, struct in6_a
   for(p = this->hash[hash]; p; p = p->nexthash)
   {
     char buf[INET6_ADDRSTRLEN];
-    printf("compare with %s\n", inet_ntop(AF_INET6, &p->addrv6, buf, sizeof(buf)));
+    if(this->debug)
+        pepper_printf("compare with %s\n", inet_ntop(AF_INET6, &p->addrv6, buf, sizeof(buf)));
     if(IN6_ARE_ADDR_EQUAL(&p->addrv6, addr) && (p->inuse))
     {
       if(member) *member = p;
@@ -620,7 +622,8 @@ int ippool_newip6(struct ippool_t* this, struct ippoolm_t** member, struct in6_a
 
     if(p2 || !this->firstipv6)
     {
-      printf("!this->firstipv6 || p2");
+      if(this->debug)
+        pepper_printf("!this->firstipv6 || p2");
       return -1; /* address already owned by someone else */
     }
 
@@ -646,7 +649,7 @@ int ippool_newip6(struct ippool_t* this, struct ippoolm_t** member, struct in6_a
 
     return 0; /* success */
   }
-  printf("addrv6 unspec: %p\n", addr);
+  if(this->debug) pepper_printf("addrv6 unspec: %p\n", addr);
   return -1;
 }
 

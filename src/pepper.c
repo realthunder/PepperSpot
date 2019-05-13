@@ -245,19 +245,19 @@ static void sig_handler(int signum)
       while(waitpid(-1, NULL, WNOHANG) > 0);
       break;
     case SIGTERM:  /* Termination handler for clean shutdown */
-      if(options.debug) printf("SIGTERM received!\n");
+      if(options.debug) pepper_printf("SIGTERM received!\n");
       g_keep_going = 0;
       break;
     case SIGINT:   /* Termination handler for clean shutdown */
-      if(options.debug) printf("SIGTERM received!\n");
+      if(options.debug) pepper_printf("SIGTERM received!\n");
       g_keep_going = 0;
       break;
     case SIGALRM:  /* Alarm handler for general house keeping */
-      /* if(options.debug) printf("SIGALRM received!\n"); */
+      /* if(options.debug) pepper_printf("SIGALRM received!\n"); */
       g_do_timeouts = 1;
       break;
     case SIGHUP:   /* Sighup handler for rereading configuration file */
-      if(options.debug) printf("SIGHUP received!\n");
+      if(options.debug) pepper_printf("SIGHUP received!\n");
       g_do_sighup = 1;
       break;
   }
@@ -313,7 +313,7 @@ static int leaky_bucket(struct app_conn_t *conn, int octetsup, int octetsdown)
   timediff = (timenow.tv_sec - conn->last_time.tv_sec) * ((uint64_t) 1000000);
   timediff += (timenow.tv_usec - conn->last_time.tv_usec);
 
-  /*  if(options.debug) printf("Leaky bucket timediff: %lld, bucketup: %d, bucketdown: %d %d %d\n",
+  /*  if(options.debug) pepper_printf("Leaky bucket timediff: %lld, bucketup: %d, bucketdown: %d %d %d\n",
       timediff, conn->bucketup, conn->bucketdown,
       octetsup, octetsdown);*/
 
@@ -331,7 +331,7 @@ static int leaky_bucket(struct app_conn_t *conn, int octetsup, int octetsdown)
 
     if((conn->bucketup + octetsup) > conn->bucketupsize)
     {
-      /*if(options.debug) printf("Leaky bucket deleting uplink packet\n");*/
+      /*if(options.debug) pepper_printf("Leaky bucket deleting uplink packet\n");*/
       result = -1;
     }
     else
@@ -352,7 +352,7 @@ static int leaky_bucket(struct app_conn_t *conn, int octetsup, int octetsdown)
 
     if((conn->bucketdown + octetsdown) > conn->bucketdownsize)
     {
-      /*if(options.debug) printf("Leaky bucket deleting downlink packet\n");*/
+      /*if(options.debug) pepper_printf("Leaky bucket deleting downlink packet\n");*/
       result = -1;
     }
     else
@@ -708,7 +708,7 @@ static int get_namepart6(char *src, char *host, int *port)
   }
   else
   {
-    printf("URL must start with http:// or https:// %s!", src);
+    pepper_printf("URL must start with http:// or https:// %s!", src);
     return -1;
   }
 
@@ -852,7 +852,7 @@ static int set_uamallowed(char *uamallowed, int len)
             
             if(options.debug & DEBUG_CONF)
             {
-              printf("Uamallowed IP address %d: %s\n",
+              pepper_printf("Uamallowed IP address %d: %s\n",
                      options.uamokiplen,
                      inet_ntop(AF_INET, &addr->sin_addr, buf, INET_ADDRSTRLEN));
             }
@@ -877,7 +877,7 @@ static int set_uamallowed(char *uamallowed, int len)
             addrv6 = (struct sockaddr_in6 *)rp->ai_addr;
             if(options.debug & DEBUG_CONF)
             {
-              printf("Uamallowed IPv6 address %d: %s\n",
+              pepper_printf("Uamallowed IPv6 address %d: %s\n",
                      options.uamokiplen6,
                      inet_ntop(AF_INET6, &addrv6->sin6_addr, buf, INET6_ADDRSTRLEN));
             }
@@ -979,7 +979,7 @@ static int set_macallowed(char *macallowed, int len)
     }
     if(options.debug & DEBUG_CONF)
     {
-      printf("Macallowed address #%d: %.2X-%.2X-%.2X-%.2X-%.2X-%.2X\n",
+      pepper_printf("Macallowed address #%d: %.2X-%.2X-%.2X-%.2X-%.2X-%.2X\n",
              options.macoklen,
              options.macok[options.macoklen][0],
              options.macok[options.macoklen][1],
@@ -1202,7 +1202,7 @@ static int process_options(int argc, char **argv, int firsttime)
   /* uamserver                                                   */
   if(options.debug & DEBUG_CONF)
   {
-    printf("Uamurl: %s\n", args_info.uamserver_arg);
+    pepper_printf("Uamurl: %s\n", args_info.uamserver_arg);
   }
   memset(options.uamserver, 0, sizeof(options.uamserver));
   options.uamserverlen = 0;
@@ -1215,7 +1215,7 @@ static int process_options(int argc, char **argv, int firsttime)
   }
 
   /* TODO: parsing ip url */
-  if(options.debug & DEBUG_CONF) printf("UAM server:%s\n", hostname);
+  if(options.debug & DEBUG_CONF) pepper_printf("UAM server:%s\n", hostname);
 
   memset(&hints, 0, sizeof(struct addrinfo));
   hints.ai_family = AF_INET;
@@ -1239,7 +1239,7 @@ static int process_options(int argc, char **argv, int firsttime)
       {
         if(getnameinfo(rp->ai_addr, rp->ai_addrlen, uamserveraddr, INET_ADDRSTRLEN, NULL, 0, NI_NUMERICHOST) == 0)
         {
-          printf("Uamserver IP address #%d: %s\n", j, uamserveraddr);
+          pepper_printf("Uamserver IP address #%d: %s\n", j, uamserveraddr);
         }
       }
       if(options.uamserverlen >= UAMSERVER_MAX)
@@ -1265,7 +1265,7 @@ static int process_options(int argc, char **argv, int firsttime)
   /* uamserver6                                                   */
   if(options.debug & DEBUG_CONF)
   {
-    printf("Uamurl6: %s\n", args_info.uamserver6_arg);
+    pepper_printf("Uamurl6: %s\n", args_info.uamserver6_arg);
   }
 
   memset(options.uamserver6, 0, sizeof(options.uamserver6));
@@ -1275,7 +1275,7 @@ static int process_options(int argc, char **argv, int firsttime)
   {
     if(!args_info.uamserver6_arg)
     {
-      printf("uamserver6 option must be configured!\n");
+      pepper_printf("uamserver6 option must be configured!\n");
       return -1;
     }
 
@@ -1288,7 +1288,7 @@ static int process_options(int argc, char **argv, int firsttime)
     }
 
     /* TODO: parsing ipv6 url */
-    if(options.debug) printf("UAM server6:%s\n", hostname);
+    if(options.debug) pepper_printf("UAM server6:%s\n", hostname);
 
     memset(&hints, 0, sizeof(struct addrinfo));
     hints.ai_family = AF_INET6;
@@ -1312,7 +1312,7 @@ static int process_options(int argc, char **argv, int firsttime)
         {
           if(getnameinfo(rp->ai_addr, rp->ai_addrlen, uamserveraddr6, INET6_ADDRSTRLEN, NULL, 0, NI_NUMERICHOST) == 0)
           {
-            printf("Uamserver IPv6 address #%d: %s\n", j, uamserveraddr6);
+            pepper_printf("Uamserver IPv6 address #%d: %s\n", j, uamserveraddr6);
           }
         }
         if(options.uamserverlen6 >= UAMSERVER_MAX)
@@ -1431,7 +1431,7 @@ static int process_options(int argc, char **argv, int firsttime)
   {
     if(options.debug & DEBUG_CONF)
     {
-      printf("Uamallowed #%d: %s\n",
+      pepper_printf("Uamallowed #%d: %s\n",
               numargs, args_info.uamallowed_arg[numargs]);
     }
     if(set_uamallowed(args_info.uamallowed_arg[numargs],
@@ -1564,7 +1564,7 @@ static int process_options(int argc, char **argv, int firsttime)
     }
     else
     {
-      printf("%s\n",   args_info.radiuslisten_arg);
+      pepper_printf("%s\n",   args_info.radiuslisten_arg);
 
       for(rp = res; rp != NULL; rp = rp->ai_next)
       {
@@ -1598,7 +1598,7 @@ static int process_options(int argc, char **argv, int firsttime)
         inet_ntop(res->ai_family, &((struct sockaddr_in6 *)&options.radiuslisten)->sin6_addr, buf, sizeof(buf));
       }
 
-      printf("RADIUS LISTEN:%s\n", buf);
+      pepper_printf("RADIUS LISTEN:%s\n", buf);
       freeaddrinfo(res);
     }
   }
@@ -1660,7 +1660,7 @@ static int process_options(int argc, char **argv, int firsttime)
         inet_ntop(res->ai_family, &((struct sockaddr_in6 *)&options.radiusserver1)->sin6_addr, buf, sizeof(buf));
       }
 
-      printf("RADIUS SERVER1:%s\n", buf);
+      pepper_printf("RADIUS SERVER1:%s\n", buf);
       freeaddrinfo(res);
     }
   }
@@ -1717,7 +1717,7 @@ static int process_options(int argc, char **argv, int firsttime)
         inet_ntop(res->ai_family, &((struct sockaddr_in6 *)&options.radiusserver2)->sin6_addr, buf, sizeof(buf));
       }
 
-      printf("RADIUS SERVER2:%s\n", buf);
+      pepper_printf("RADIUS SERVER2:%s\n", buf);
       freeaddrinfo(res);
     }
   }
@@ -1791,7 +1791,7 @@ static int process_options(int argc, char **argv, int firsttime)
         inet_ntop(res->ai_family, &((struct sockaddr_in6 *)&options.radiusnasip)->sin6_addr, buf, sizeof(buf));
       }
 
-      printf("RADIUS NAS IP:%s\n", buf);
+      pepper_printf("RADIUS NAS IP:%s\n", buf);
       freeaddrinfo(res);
     }
   }
@@ -1897,7 +1897,7 @@ static int process_options(int argc, char **argv, int firsttime)
         inet_ntop(res->ai_family, &((struct sockaddr_in6 *)&options.proxylisten)->sin6_addr, buf, sizeof(buf));
       }
 
-      printf("RADIUS PROXY LISTEN:%s\n", buf);
+      pepper_printf("RADIUS PROXY LISTEN:%s\n", buf);
       freeaddrinfo(res);
     }
   }
@@ -1968,7 +1968,7 @@ static int process_options(int argc, char **argv, int firsttime)
   {
     if(options.debug & DEBUG_CONF)
     {
-      printf("Macallowed #%d: %s\n", numargs,
+      pepper_printf("Macallowed #%d: %s\n", numargs,
               args_info.macallowed_arg[numargs]);
     }
 
@@ -2291,7 +2291,7 @@ static int getconn_username(struct app_conn_t **conn, char *username,
 {
   struct app_conn_t *appconn = NULL;
   username[usernamelen] = 0;
-  printf("username: %s\n", username);
+  pepper_printf("username: %s\n", username);
 
   appconn = g_firstusedconn;
   while(appconn)
@@ -2302,13 +2302,13 @@ static int getconn_username(struct app_conn_t **conn, char *username,
               "Connection with inuse == 0!");
     }
     appconn->user[appconn->userlen] = 0;
-    printf("user: %s\n", appconn->user);
+    pepper_printf("user: %s\n", appconn->user);
 
     if((appconn->authenticated) && (appconn->userlen == usernamelen) &&
         !memcmp(appconn->user, username, usernamelen))
     {
       *conn = appconn;
-      printf("Found\n");
+      pepper_printf("Found\n");
       return 0;
     }
     appconn = appconn->next;
@@ -2950,7 +2950,7 @@ static int acct_req(struct app_conn_t *conn, int status_type)
         addr = &((struct ippoolm_t*)conn->uplink)->addrv6;
         if(options.debug) {
           char buf1[INET6_ADDRSTRLEN],buf2[INET6_ADDRSTRLEN];
-          printf("acct %s -> %s, %p\n", inet_ntop(AF_INET6, conn->hisipv6.s6_addr, buf1, sizeof(buf1)),
+          pepper_printf("acct %s -> %s, %p\n", inet_ntop(AF_INET6, conn->hisipv6.s6_addr, buf1, sizeof(buf1)),
                 inet_ntop(AF_INET6, addr, buf2, sizeof(buf2)), conn->uplink);
         }
     } else
@@ -2959,7 +2959,7 @@ static int acct_req(struct app_conn_t *conn, int status_type)
 
     if(options.debug) {
         char buf[INET6_ADDRSTRLEN];
-        printf("acct suffix %d, %s\n", options.ipv6mask, inet_ntop(AF_INET6, &idv6, buf, sizeof(buf)));
+        pepper_printf("acct suffix %d, %s\n", options.ipv6mask, inet_ntop(AF_INET6, &idv6, buf, sizeof(buf)));
     }
 
     suf = ((uint32_t*)idv6.s6_addr)[3];
@@ -2970,7 +2970,7 @@ static int acct_req(struct app_conn_t *conn, int status_type)
 
     if(options.debug) {
         char buf[INET6_ADDRSTRLEN];
-        printf("acct suffix %s\n", inet_ntop(AF_INET6, &idv6, buf, sizeof(buf)));
+        pepper_printf("acct suffix %s\n", inet_ntop(AF_INET6, &idv6, buf, sizeof(buf)));
     }
 
     (void) radius_addattrv6(radius, &radius_pack, RADIUS_ATTR_FRAMED_INTERFACE_ID, 0, 0, idv6, NULL, 8);
@@ -3027,7 +3027,7 @@ static int acct_req(struct app_conn_t *conn, int status_type)
     if(options.condown)
     {
       if(options.debug)
-        printf("Calling connection down script: %s\n", options.condown);
+        pepper_printf("Calling connection down script: %s\n", options.condown);
       (void) runscript(conn, options.condown);
     }
   }
@@ -3319,7 +3319,7 @@ static int dnprot_accept(struct app_conn_t *appconn)
   if((options.conup) && (!appconn->authenticated))
   {
     if(options.debug)
-      printf("Calling connection up script: %s\n", options.conup);
+      pepper_printf("Calling connection up script: %s\n", options.conup);
 
     (void) runscript(appconn, options.conup);
   }
@@ -3364,13 +3364,13 @@ static int cb_tun6_ind(struct tun6_t* tun_obj, void* pack, unsigned len)
 
   if(options.debug)
   {
-    printf("cb_tun6_ind. Packet received: Forwarding to link layer\n");
-    printf("will send to %s\n", inet_ntop(AF_INET6, &dst, buf, sizeof(buf)));
+    pepper_printf("cb_tun6_ind. Packet received: Forwarding to link layer\n");
+    pepper_printf("will send to %s\n", inet_ntop(AF_INET6, &dst, buf, sizeof(buf)));
   }
 
   if(ippool_getip6(ippool, &ipm, &dst))
   {
-    if(options.debug) printf("Received packet with no destination!!!\n");
+    if(options.debug) pepper_printf("Received packet with no destination!!!\n");
     return 0;
   }
 
@@ -3433,18 +3433,18 @@ int cb_tun_ind(struct tun_t *tun_obj, void *pack, unsigned len)
   tun_obj = NULL;
 
   if(options.debug)
-    printf("cb_tun_ind. Packet received: Forwarding to link layer\n");
+    pepper_printf("cb_tun_ind. Packet received: Forwarding to link layer\n");
 
   dst.s_addr = iph->dst;
 
   if(options.debug)
   {
-    printf("will send to %s\n", inet_ntop(AF_INET, &dst, buf, sizeof(buf)));
+    pepper_printf("will send to %s\n", inet_ntop(AF_INET, &dst, buf, sizeof(buf)));
   }
 
   if(ippool_getip(ippool, &ipm, &dst))
   {
-    if(options.debug) printf("Received packet with no destination!!!\n");
+    if(options.debug) pepper_printf("Received packet with no destination!!!\n");
     return 0;
   }
 
@@ -3513,7 +3513,7 @@ static int cb_redir_getstate(struct redir_t *redir_obj, struct in_addr *addr,
   /* To avoid unused parameter warning */
   redir_obj = NULL;
 
-  if(options.debug) printf("cb_redir_getstate\n");
+  if(options.debug) pepper_printf("cb_redir_getstate\n");
 
   if(ippool_getip(ippool, &ipm, addr))
   {
@@ -3603,7 +3603,7 @@ static int cb_redir_getstatev6(struct redir_t* redir_obj, struct in6_addr* addr,
   if(options.debug)
   {
     char buf[INET6_ADDRSTRLEN];
-    printf("getstatev6 our IPv6 address: %s\n", inet_ntop(AF_INET6, &appconn->ouripv6, buf, sizeof(buf)));
+    pepper_printf("getstatev6 our IPv6 address: %s\n", inet_ntop(AF_INET6, &appconn->ouripv6, buf, sizeof(buf)));
   }
 
   memcpy(&conn->ouripv6, &appconn->ouripv6, sizeof(struct in6_addr));
@@ -3661,7 +3661,7 @@ int accounting_request(struct radius_packet_t *pack,
   struct sockaddr_storage nasip;
   uint32_t nasport = 0;
 
-  printf("Accounting request\n");
+  if(options.debug) pepper_printf("Accounting request\n");
 
   if(radius_default_pack(radius, &radius_pack,
                           RADIUS_CODE_ACCOUNTING_RESPONSE))
@@ -3728,9 +3728,9 @@ int accounting_request(struct radius_packet_t *pack,
   {
     if(options.debug)
     {
-      printf("Calling Station ID is: ");
-      for(n = 0; n < hismacattr->l - 2; n++) printf("%c", hismacattr->v.t[n]);
-      printf("\n");
+      pepper_printf("Calling Station ID is: ");
+      for(n = 0; n < hismacattr->l - 2; n++) pepper_printf("%c", hismacattr->v.t[n]);
+      pepper_printf("\n");
     }
     if((macstrlen = hismacattr->l - 2) >= (RADIUS_ATTR_VLEN - 1))
     {
@@ -3877,7 +3877,7 @@ int access_request(struct radius_packet_t *pack,
   int instance = 0;
   int eaplen = 0;
 
-  if(options.debug) printf("Radius access request received!\n");
+  if(options.debug) pepper_printf("Radius access request received!\n");
 
   if(radius_default_pack(radius, &radius_pack, RADIUS_CODE_ACCESS_REJECT))
   {
@@ -3894,9 +3894,9 @@ int access_request(struct radius_packet_t *pack,
   {
     if(options.debug)
     {
-      printf("Framed IP address is: ");
-      for(n = 0; n < hisipattr->l - 2; n++) printf("%.2x", hisipattr->v.t[n]);
-      printf("\n");
+      pepper_printf("Framed IP address is: ");
+      for(n = 0; n < hisipattr->l - 2; n++) pepper_printf("%.2x", hisipattr->v.t[n]);
+      pepper_printf("\n");
     }
     if((hisipattr->l - 2) != sizeof(hisip.s_addr))
     {
@@ -3912,9 +3912,9 @@ int access_request(struct radius_packet_t *pack,
   {
     if(options.debug)
     {
-      printf("Framed IPv6 prefix is: ");
-      for(n = 0; n < hisprefixattr->l - 2; n++) printf("%.2x", hisprefixattr->v.t[n]);
-      printf("\n");
+      pepper_printf("Framed IPv6 prefix is: ");
+      for(n = 0; n < hisprefixattr->l - 2; n++) pepper_printf("%.2x", hisprefixattr->v.t[n]);
+      pepper_printf("\n");
     }
     if((hisprefixattr->l - 2) != sizeof(hisprefix))
     {
@@ -3930,9 +3930,9 @@ int access_request(struct radius_packet_t *pack,
   {
     if(options.debug)
     {
-      printf("Framed Interface Id is: ");
-      for(n = 0; n < hisifaceidattr->l - 2; n++) printf("%.2x", hisifaceidattr->v.t[n]);
-      printf("\n");
+      pepper_printf("Framed Interface Id is: ");
+      for(n = 0; n < hisifaceidattr->l - 2; n++) pepper_printf("%.2x", hisifaceidattr->v.t[n]);
+      pepper_printf("\n");
     }
     if((hisifaceidattr->l - 2) != sizeof(ifaceid))
     {
@@ -3948,9 +3948,9 @@ int access_request(struct radius_packet_t *pack,
   {
     if(options.debug)
     {
-      printf("Calling Station ID is: ");
-      for(n = 0; n < hismacattr->l - 2; n++) printf("%c", hismacattr->v.t[n]);
-      printf("\n");
+      pepper_printf("Calling Station ID is: ");
+      for(n = 0; n < hismacattr->l - 2; n++) pepper_printf("%c", hismacattr->v.t[n]);
+      pepper_printf("\n");
     }
     if((macstrlen = hismacattr->l - 2) >= (RADIUS_ATTR_VLEN - 1))
     {
@@ -3997,9 +3997,9 @@ int access_request(struct radius_packet_t *pack,
   {
     if(options.debug)
     {
-      printf("Username is: ");
-      for(n = 0; n < uidattr->l - 2; n++) printf("%c", uidattr->v.t[n]);
-      printf("\n");
+      pepper_printf("Username is: ");
+      for(n = 0; n < uidattr->l - 2; n++) pepper_printf("%c", uidattr->v.t[n]);
+      pepper_printf("\n");
     }
   }
 
@@ -4007,7 +4007,7 @@ int access_request(struct radius_packet_t *pack,
   {
     if(ippool_getip(ippool, &ipm, &hisip))
     {
-      if(options.debug) printf("Radius request: Address not found!!!\n");
+      if(options.debug) pepper_printf("Radius request: Address not found!!!\n");
       return radius_resp(radius, &radius_pack, peer, pack->authenticator);
     }
 
@@ -4064,9 +4064,9 @@ int access_request(struct radius_packet_t *pack,
   {
     if(options.debug)
     {
-      printf("Password is: ");
-      for(n = 0; n < pwdattr->l - 2; n++) printf("%.2x", pwdattr->v.t[n]);
-      printf("\n");
+      pepper_printf("Password is: ");
+      for(n = 0; n < pwdattr->l - 2; n++) pepper_printf("%.2x", pwdattr->v.t[n]);
+      pepper_printf("\n");
     }
     if(radius_pwdecode(radius, (uint8_t*) pwd, RADIUS_ATTR_VLEN, &pwdlen,
                         pwdattr->v.t, pwdattr->l - 2, pack->authenticator,
@@ -4077,7 +4077,7 @@ int access_request(struct radius_packet_t *pack,
               "radius_pwdecode() failed");
       return -1;
     }
-    if(options.debug) printf("Password is: %s\n", pwd);
+    if(options.debug) pepper_printf("Password is: %s\n", pwd);
   }
 
   /* Get EAP message */
@@ -4409,7 +4409,7 @@ int radius_conf(struct radius_t *radius_obj,
   pack_req = NULL;
 
   if(options.debug)
-    printf("Received configuration management message from radius server\n");
+    pepper_printf("Received configuration management message from radius server\n");
 
   if(!pack) /* Timeout */
   {
@@ -4422,7 +4422,7 @@ int radius_conf(struct radius_t *radius_obj,
   if(pack->code == RADIUS_CODE_ACCESS_REJECT)
   {
     if(options.debug)
-      printf("Received access reject from radius server\n");
+      pepper_printf("Received access reject from radius server\n");
     return 0;
   }
 
@@ -4430,7 +4430,7 @@ int radius_conf(struct radius_t *radius_obj,
   if(pack->code == RADIUS_CODE_ACCESS_CHALLENGE)
   {
     if(options.debug)
-      printf("Received access reject from radius server\n");
+      pepper_printf("Received access reject from radius server\n");
     return 0;
   }
 
@@ -4556,7 +4556,7 @@ int cb_radius_auth_conf(struct radius_t *radius_obj,
   struct app_conn_t *appconn = (struct app_conn_t*) cbp;
 
   if(options.debug)
-    printf("Received access request confirmation from radius server\n");
+    pepper_printf("Received access request confirmation from radius server\n");
 
   if(!appconn)
   {
@@ -4584,7 +4584,7 @@ int cb_radius_auth_conf(struct radius_t *radius_obj,
   if(pack->code == RADIUS_CODE_ACCESS_REJECT)
   {
     if(options.debug)
-      printf("Received access reject from radius server\n");
+      pepper_printf("Received access reject from radius server\n");
     return dnprot_reject(appconn);
   }
 
@@ -4592,7 +4592,7 @@ int cb_radius_auth_conf(struct radius_t *radius_obj,
   if(pack->code == RADIUS_CODE_ACCESS_CHALLENGE)
   {
     if(options.debug)
-      printf("Received access challenge from radius server\n");
+      pepper_printf("Received access challenge from radius server\n");
 
     /* Get EAP message */
     appconn->challen = 0;
@@ -4697,9 +4697,9 @@ int cb_radius_auth_conf(struct radius_t *radius_obj,
     {
       if(options.debug)
       {
-        printf("Framed IPv6 address is: ");
-        for(n = 0; n < hisipattr->l - 2; n++) printf("%.2x", hisipattr->v.t[n]);
-        printf("\n");
+        pepper_printf("Framed IPv6 address is: ");
+        for(n = 0; n < hisipattr->l - 2; n++) pepper_printf("%.2x", hisipattr->v.t[n]);
+        pepper_printf("\n");
       }
       if((hisipattr->l - 2) != sizeof(struct in_addr))
       {
@@ -4721,9 +4721,9 @@ int cb_radius_auth_conf(struct radius_t *radius_obj,
     {
       if(options.debug)
       {
-        printf("Framed IP address is: ");
-        for(n = 0; n < hisipattr->l - 2; n++) printf("%.2x", hisipattr->v.t[n]);
-        printf("\n");
+        pepper_printf("Framed IP address is: ");
+        for(n = 0; n < hisipattr->l - 2; n++) pepper_printf("%.2x", hisipattr->v.t[n]);
+        pepper_printf("\n");
       }
       if((hisipattr->l - 2) != sizeof(struct in_addr))
       {
@@ -5112,7 +5112,7 @@ int cb_radius_coa_ind(struct radius_t *radius_obj, struct radius_packet_t *pack,
   int found = 0;
 
   if(options.debug)
-    printf("Received coa or disconnect request\n");
+    pepper_printf("Received coa or disconnect request\n");
 
   if(pack->code != RADIUS_CODE_DISCONNECT_REQUEST)
   {
@@ -5286,7 +5286,7 @@ static int cb_dhcp_requestv6(struct dhcp_conn_t *conn, struct in6_addr *addr)
   struct ippoolm_t *ipm = NULL;
   struct app_conn_t *appconn = conn->peer;
 
-  if(options.debug) printf("IPv6 requested address\n");
+  if(options.debug) pepper_printf("IPv6 requested address\n");
 
   if(!appconn)
   {
@@ -5355,14 +5355,14 @@ static int cb_dhcp_passv6(struct dhcp_conn_t *conn, struct in6_addr *addr)
 
   if(!appconn) {
     if(options.debug)
-      printf("Peer protocol not defined");
+      pepper_printf("Peer protocol not defined");
     return -1;
   }
 
   uplink = (struct ippoolm_t *)appconn->uplink;
   if(!uplink) {
     if(options.debug)
-      printf("Peer no uplink");
+      pepper_printf("Peer no uplink");
     return -1;
   }
 
@@ -5371,7 +5371,7 @@ static int cb_dhcp_passv6(struct dhcp_conn_t *conn, struct in6_addr *addr)
 
   if(options.debug) {
       char buf1[INET6_ADDRSTRLEN],buf2[INET6_ADDRSTRLEN];
-      printf("new IPv6 address %s -> %s\n",
+      pepper_printf("new IPv6 address %s -> %s\n",
               inet_ntop(AF_INET6, &appconn->hisipv6, buf1, sizeof(buf1)),
               inet_ntop(AF_INET6, &ipm->addrv6, buf2, sizeof(buf2)));
   }
@@ -5390,14 +5390,14 @@ static int cb_dhcp_passv6(struct dhcp_conn_t *conn, struct in6_addr *addr)
       ipm->next = 0;
       if(options.debug) {
           char buf[INET6_ADDRSTRLEN];
-          printf("free %s\n",inet_ntop(AF_INET6, &ipm->addrv6, buf, sizeof(buf)));
+          pepper_printf("free %s\n",inet_ntop(AF_INET6, &ipm->addrv6, buf, sizeof(buf)));
       }
       ippool_freeip(ippool, ipm);
     }
     if(options.debug) {
       for(ipm=appconn->uplink;ipm;ipm=ipm->next) {
         char buf[INET6_ADDRSTRLEN];
-        printf("remaining %p,%s\n",ipm,inet_ntop(AF_INET6, &ipm->addrv6, buf, sizeof(buf)));
+        pepper_printf("remaining %p,%s\n",ipm,inet_ntop(AF_INET6, &ipm->addrv6, buf, sizeof(buf)));
       }
     }
   }
@@ -5420,7 +5420,7 @@ static int cb_dhcp_connectv6(struct dhcp_conn_t *conn)
           conn->hismac[2], conn->hismac[3],
           conn->hismac[4], conn->hismac[5]);
 
-  if(options.debug) printf("New IPv6 connection established\n");
+  if(options.debug) pepper_printf("New IPv6 connection established\n");
 
   /* Allocate new application connection */
   if(newconn(&appconn))
@@ -5442,7 +5442,7 @@ static int cb_dhcp_connectv6(struct dhcp_conn_t *conn)
 
   set_sessionid(appconn);
   conn->authstate = DHCP_AUTH_NONE; /* TODO: Not yet authenticated */
-  if(options.debug) printf("authstate:%d\n", conn->authstate);
+  if(options.debug) pepper_printf("authstate:%d\n", conn->authstate);
   return 0;
 }
 
@@ -5464,7 +5464,7 @@ static int cb_dhcp_disconnectv6(struct dhcp_conn_t *conn)
           conn->hismac[4], conn->hismac[5],
           inet_ntop(AF_INET6, &conn->hisipv6, buf, sizeof(buf)));
 
-  if(options.debug) printf("IPv6 DHCP connection removed\n");
+  if(options.debug) pepper_printf("IPv6 DHCP connection removed\n");
 
   if(!conn->peer)
     return 0; /* No appconn allocated. Stop here */
@@ -5521,7 +5521,7 @@ static int cb_dhcp_request(struct dhcp_conn_t *conn, struct in_addr *addr)
   struct app_conn_t *appconn = conn->peer;
   char buf[INET_ADDRSTRLEN];
 
-  if(options.debug) printf("DHCP requested IP address\n");
+  if(options.debug) pepper_printf("DHCP requested IP address\n");
 
   if(!appconn)
   {
@@ -5612,7 +5612,7 @@ static int cb_dhcp_connect(struct dhcp_conn_t *conn)
           conn->hismac[2], conn->hismac[3],
           conn->hismac[4], conn->hismac[5]);
 
-  if(options.debug) printf("New DHCP connection established\n");
+  if(options.debug) pepper_printf("New DHCP connection established\n");
 
   /* Allocate new application connection */
   if(newconn(&appconn))
@@ -5661,7 +5661,7 @@ static int cb_dhcp_disconnect(struct dhcp_conn_t *conn)
           conn->hismac[4], conn->hismac[5],
           inet_ntop(AF_INET, &conn->hisip, buf, sizeof(buf)));
 
-  if(options.debug) printf("DHCP connection removed\n");
+  if(options.debug) pepper_printf("DHCP connection removed\n");
 
   if(!conn->peer)
     return 0; /* No appconn allocated. Stop here */
@@ -5714,7 +5714,7 @@ static int cb_dhcp_ipv6_ind(struct dhcp_conn_t* conn, void* pack, unsigned int l
 {
   struct app_conn_t* appconn = conn->peer;
 
-  printf("cb_dhcp_ipv6_ind!\n");
+  pepper_printf("cb_dhcp_ipv6_ind!\n");
 
   if(!appconn)
   {
@@ -5760,12 +5760,12 @@ static int cb_dhcp_data_ind(struct dhcp_conn_t *conn, void *pack, unsigned len)
   struct app_conn_t *appconn = conn->peer;
 
   if(options.debug)
-    printf("cb_dhcp_data_ind. Packet received. DHCP authstate: %d\n",
+    pepper_printf("cb_dhcp_data_ind. Packet received. DHCP authstate: %d\n",
            conn->authstate);
 
   if(iph->src != conn->hisip.s_addr)
   {
-    if(options.debug) printf("Received packet with spoofed source!!!\n");
+    if(options.debug) pepper_printf("Received packet with spoofed source!!!\n");
     return 0;
   }
 
@@ -5817,7 +5817,7 @@ static int cb_dhcp_eap_ind(struct dhcp_conn_t *conn, void *pack, unsigned int le
   struct radius_packet_t radius_pack;
   unsigned int offset = 0;
 
-  if(options.debug) printf("EAP Packet received \n");
+  if(options.debug) pepper_printf("EAP Packet received \n");
 
   /* If this is the first EAPOL authentication request */
   if((appconn->dnprot == DNPROT_DHCP_NONE) ||
@@ -5931,14 +5931,14 @@ static int uam_msg(struct redir_msg_t *msg)
 
   if(!msg->ipv6 && ippool_getip(ippool, &ipm, &msg->addr))
   {
-    if(options.debug) printf("UAM login with unknown IP address: %s\n",
+    if(options.debug) pepper_printf("UAM login with unknown IP address: %s\n",
                                 inet_ntop(AF_INET, &msg->addr, buf, sizeof(buf)));
     return 0;
   }
 
   if(msg->ipv6 && ippool_getip6(ippool, &ipm, &msg->addrv6))
   {
-    if(options.debug) printf("UAM login with unknown IPv6 address!\n");
+    if(options.debug) pepper_printf("UAM login with unknown IPv6 address!\n");
     return 0;
   }
 
@@ -5968,7 +5968,7 @@ static int uam_msg(struct redir_msg_t *msg)
             msg->username, msg->ipv6 ? inet_ntop(AF_INET6, &appconn->hisipv6, buf, sizeof(buf)) : inet_ntop(AF_INET, &appconn->hisip, buf, sizeof(buf)));
 
     if(options.debug)
-      printf("Received login from UAM\n");
+      pepper_printf("Received login from UAM\n");
 
     /* Initialise */
     appconn->statelen = 0;
@@ -6035,7 +6035,7 @@ static int uam_msg(struct redir_msg_t *msg)
             appconn->user, msg->ipv6 ? inet_ntop(AF_INET6, &appconn->hisipv6, buf, sizeof(buf)) : inet_ntop(AF_INET, &appconn->hisip, buf, sizeof(buf)));
 
     if(options.debug)
-      printf("Received logoff from UAM\n");
+      pepper_printf("Received logoff from UAM\n");
 
     memcpy(appconn->uamchal, msg->uamchal, REDIR_MD5LEN);
     appconn->uamtime = time(NULL);
@@ -6144,13 +6144,13 @@ int main(int argc, char **argv)
   }
 
   if(options.debug)
-    printf("PepperSpot version %s started.\n", VERSION);
+    pepper_printf("PepperSpot version %s started.\n", VERSION);
 
   syslog(LOG_INFO, "PepperSpot %s Copyright 2008-2009 Thibault Vancon <thibault.vancon@pepperspot.info> and Sebastien Vincent <sebastien.vincent@pepperspot.info>.\n"
                    "Copyright 2002-2005 Mondru AB. Licensed under GPL.\n"
                    "See http://www.pepperspot.info/ for credits.", VERSION);
 
-  if(options.debug) printf("IPVERSION: %s\n", options.ipversion);
+  if(options.debug) pepper_printf("IPVERSION: %s\n", options.ipversion);
 
   ipv6 = !strncmp(options.ipversion, "ipv6", 4);
   ipv4 = !strncmp(options.ipversion, "ipv4", 4);
@@ -6223,7 +6223,7 @@ int main(int argc, char **argv)
     if(icmp6_init() == -1)
     {
       /* error */
-      printf("ICMPv6 socket creation error\n");
+      pepper_printf("ICMPv6 socket creation error\n");
       if(tun) tun_free(tun);
       if(ippool)
       {
@@ -6478,7 +6478,7 @@ int main(int argc, char **argv)
   }
 
   if(options.debug)
-    printf("Waiting for client request...\n");
+    pepper_printf("Waiting for client request...\n");
 
   /******************************************************************/
   /* Main select loop                                               */
@@ -6488,7 +6488,7 @@ int main(int argc, char **argv)
   {
     if(g_do_timeouts)
     {
-      /*if(options.debug) printf("Do timeouts!\n");*/
+      /*if(options.debug) pepper_printf("Do timeouts!\n");*/
       (void) radius_timeout(radius);
       if(dhcp) (void) dhcp_timeout(dhcp);
       (void) checkconn();
@@ -6551,7 +6551,7 @@ int main(int argc, char **argv)
         }
         break;
       case 0:
-        /*  if(options.debug) printf("PepperSpot is alive and ready to process packets!\n");*/
+        /*  if(options.debug) pepper_printf("PepperSpot is alive and ready to process packets!\n");*/
         break;
       default:
         break;
@@ -6669,7 +6669,7 @@ int main(int argc, char **argv)
     }
   }
 
-  if(options.debug) printf("Terminating PepperSpot!\n");
+  if(options.debug) pepper_printf("Terminating PepperSpot!\n");
 
   (void) killconn();
 

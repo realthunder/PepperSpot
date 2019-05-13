@@ -122,5 +122,12 @@ static inline void free_iov_data(struct iovec *iov, int count)
   }
 }
 
+#ifdef HAS_VCAP
+void vcap_log_output(int level,const char *fmt, ...);
+#   define pepper_printf(...) vcap_log_output(4, ## __VA_ARGS__)
+#else
+#   define pepper_printf printf
+#endif
+
 #endif /* __UTIL_H__ */
 

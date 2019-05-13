@@ -98,6 +98,7 @@
 #include "redir.h"
 #include "md5.h"
 #include "ippool.h"
+#include "util.h"
 #include "../config.h"
 
 static int optionsdebug = 1; /**< Print debug information while running */
@@ -125,11 +126,11 @@ static void redir_sig_handler(int signum)
   switch(signum)
   {
     case SIGTERM:
-      if(optionsdebug) printf("Terminating redir client!\n");
+      if(optionsdebug) pepper_printf("Terminating redir client!\n");
       keep_going = 0;
       break;
     case SIGINT:
-      if(optionsdebug) printf("Terminating redir client!\n");
+      if(optionsdebug) pepper_printf("Terminating redir client!\n");
       keep_going = 0;
       break;
     case SIGALRM:
@@ -452,7 +453,8 @@ static int redir_xmlreply(struct redir_t *redir, struct redir_conn_t *conn,
                      "<LoginURL>%s?res = smartclient&uamip=[%s]&uamport=%d&challenge=%s</LoginURL>\r\n",
                      redir->url6, inet_ntop(AF_INET6, &conn->ouripv6, buf, sizeof(buf)), redir->port, hexchal);
 
-        printf("<LoginURL>%s?res = smartclient&uamip=[%s]&uamport=%d&challenge=%s</LoginURL>\r\n",
+        if(optionsdebug)
+            pepper_printf("<LoginURL>%s?res = smartclient&uamip=[%s]&uamport=%d&challenge=%s</LoginURL>\r\n",
                redir->url6, inet_ntop(AF_INET6, &conn->ouripv6, buf, sizeof(buf)), redir->port, hexchal);
         redir_stradd(dst, dstsize,
                      "<AbortLoginURL>http://[%s]:%d/abort</AbortLoginURL>\r\n",
@@ -629,7 +631,7 @@ static int redir_reply(struct redir_t *redir, int fd,
                "HTTP/1.0 302 Moved Temporarily\r\n"
                "Location: %s?res=%s&uamip=[%s]&uamport=%d",
                redir->url6, resp, inet_ntop(AF_INET6, &conn->ouripv6, buf, sizeof(buf)), redir->port);
-      /* printf("HTTP/1.0 302 Moved Temporarily\r\n"
+      /* pepper_printf("HTTP/1.0 302 Moved Temporarily\r\n"
           "Location: %s?res=%s&uamip=[%s]&uamport=%d",
           redir->url6, resp, inet_ntop(AF_INET6, &conn->ouripv6, buf, sizeof(buf)), redir->port); */
     }
@@ -730,7 +732,7 @@ static int redir_reply(struct redir_t *redir, int fd,
   }
   redir_stradd(buffer, sizeof(buffer), "</HTML>\r\n");
 
-  if(optionsdebug) printf("redir_reply: Sending http reply: %s\n",
+  if(optionsdebug) pepper_printf("redir_reply: Sending http reply: %s\n",
                              buffer);
 
   if(send(fd, buffer, strlen(buffer), 0) < 0)
@@ -1037,7 +1039,7 @@ static int redir_getpath(struct redir_t *redir, char *src, char *dst, int dstsiz
   strncpy(dst, p1, dstlen);
   dst[dstlen] = 0;
 
-  printf("The path is: %s\n", dst);
+  if(optionsdebug) pepper_printf("The path is: %s\n", dst);
 
   return 0;
 }
@@ -1113,7 +1115,7 @@ static int redir_geturl(struct redir_t *redir, char *src, char *dst, int dstsize
   strncpy(dst + 7 + hostlen, path, pathlen);
   dst[7 + hostlen + pathlen] = 0;
 
-  if(optionsdebug) printf("Userurl: %s\n", dst);
+  if(optionsdebug) pepper_printf("Userurl: %s\n", dst);
 
   return 0;
 }
@@ -1142,7 +1144,7 @@ static int redir_getparam(struct redir_t *redir, char *src,
   /* To avoid unused parameter warning */
   redir = NULL;
 
-  printf("Looking for: %s\n", param); /*TODO*/
+  if(optionsdebug) pepper_printf("Looking for: %s\n", param); /*TODO*/
 
   if(!(peol = strstr(src, "\n"))) /* End of the first line */
     return -1;
@@ -1166,7 +1168,7 @@ static int redir_getparam(struct redir_t *redir, char *src,
   p2 = strstr(p1, "&");
   p3 = strstr(p1, " ");
 
-  printf("p1:\n%s\n\np2\n%s\n\np3:%s\n\n", p1, p2, p3);
+  if(optionsdebug) pepper_printf("p1:\n%s\n\np2\n%s\n\np3:%s\n\n", p1, p2, p3);
 
   if((p2 == NULL) && (p3 == NULL))  /* Not found at all */
     return -1;
@@ -1189,7 +1191,7 @@ static int redir_getparam(struct redir_t *redir, char *src,
 
   (void)redir_urldecode(p1, len, dst, dstsize);
 
-  printf("The parameter is: %s\n", dst);
+  if(optionsdebug) pepper_printf("The parameter is: %s\n", dst);
 
   return 0;
 }
@@ -1258,20 +1260,20 @@ static int redir_getreq(struct redir_t *redir, int fd, struct redir_conn_t *conn
 
   if(buflen <= 0)
   {
-    if(optionsdebug) printf("No HTTP request received!\n");
+    if(optionsdebug) pepper_printf("No HTTP request received!\n");
     return -1;
   }
 
   if(redir_getpath(redir, buffer, path, sizeof(path)))
   {
-    if(optionsdebug) printf("Could not parse path!\n");
+    if(optionsdebug) pepper_printf("Could not parse path!\n");
     return -1;
   }
 
   if(!redir_getparam(redir, buffer, "userurl",
                       conn->userurl, sizeof(conn->userurl)))
   {
-    if(optionsdebug) printf("User URL: %s!\n", conn->userurl);
+    if(optionsdebug) pepper_printf("User URL: %s!\n", conn->userurl);
   }
 
   if((!strcmp(path, "logon")) || (!strcmp(path, "login")))
@@ -1279,12 +1281,12 @@ static int redir_getreq(struct redir_t *redir, int fd, struct redir_conn_t *conn
     if(redir_getparam(redir, buffer, "username",
                        conn->username, sizeof(conn->username)))
     {
-      if(optionsdebug) printf("No username found!\n");
+      if(optionsdebug) pepper_printf("No username found!\n");
       return -1;
     }
 
     /* SV */
-    /* printf("username = %s\n", conn->username); */
+    /* pepper_printf("username = %s\n", conn->username); */
 
     if(!redir_getparam(redir, buffer, "response",
                         resp, sizeof(resp)))
@@ -1306,7 +1308,7 @@ static int redir_getreq(struct redir_t *redir, int fd, struct redir_conn_t *conn
     }
     else
     {
-      if(optionsdebug) printf("No password found!\n");
+      if(optionsdebug) pepper_printf("No password found!\n");
       return -1;
     }
 
@@ -1347,7 +1349,7 @@ static int redir_getreq(struct redir_t *redir, int fd, struct redir_conn_t *conn
   {
     if(redir_geturl(redir, buffer, conn->userurl, sizeof(conn->userurl)))
     {
-      if(optionsdebug) printf("Could not parse URL!\n");
+      if(optionsdebug) pepper_printf("Could not parse URL!\n");
       return -1;
     }
     return 0;
@@ -1383,7 +1385,7 @@ static int redir_cb_radius_auth_conf(struct radius_t *radius,
   pack_req = NULL;
 
   if(optionsdebug)
-    printf("Received access request confirmation from radius server\n");
+    pepper_printf("Received access request confirmation from radius server\n");
 
   if(!conn)
   {
@@ -1751,13 +1753,13 @@ static int redir_radius(struct redir_t *redir, struct sockaddr_storage *addr,
     char buff[2 * REDIR_MAXCHAR + 1];
     int nbSeg = conn->passwordlen / 2 / REDIR_MD5LEN;
 
-    if(optionsdebug) printf("NSEG: %d\n", nbSeg);
+    if(optionsdebug) pepper_printf("NSEG: %d\n", nbSeg);
     uint8_t* binCipher = conn->uamchal;
 
     if(optionsdebug)
     {
         redir_chartohex(binCipher, REDIR_MD5LEN, buff);
-        printf("C(%d): [%s]\n", 0, buff);
+        pepper_printf("C(%d): [%s]\n", 0, buff);
     }
 
     memset(user_password, 0, REDIR_MAXCHAR + 1);
@@ -1771,7 +1773,7 @@ static int redir_radius(struct redir_t *redir, struct sockaddr_storage *addr,
         if(optionsdebug)
         {
             redir_chartohex(chap_challenge, REDIR_MD5LEN, buff);
-            printf("H(%d): [%s]\n", i, buff);
+            pepper_printf("H(%d): [%s]\n", i, buff);
         }
 
         binCipher = &(conn->password[i * REDIR_MD5LEN]);
@@ -1779,7 +1781,7 @@ static int redir_radius(struct redir_t *redir, struct sockaddr_storage *addr,
         if(optionsdebug)
         {
             redir_chartohex(binCipher, REDIR_MD5LEN, buff);
-            printf("C(%d): [%s]\n", i + 1, buff);
+            pepper_printf("C(%d): [%s]\n", i + 1, buff);
         }
         
         for(n = 0 ; n < REDIR_MD5LEN ; n++)
@@ -1790,15 +1792,15 @@ static int redir_radius(struct redir_t *redir, struct sockaddr_storage *addr,
         if(optionsdebug)
         {
             redir_chartohex(&user_password[i * REDIR_MD5LEN], REDIR_MD5LEN, buff);
-            printf("P(%d): [%s]\n", i, buff);
+            pepper_printf("P(%d): [%s]\n", i, buff);
         }
     }
     
     if(optionsdebug)
     {
         redir_chartohex(user_password, nbSeg * REDIR_MD5LEN, buff);
-        printf("PWD: [%s]\n", buff);
-        printf("PWD: [%s]\n", user_password);
+        pepper_printf("PWD: [%s]\n", buff);
+        pepper_printf("PWD: [%s]\n", user_password);
     }
     radius_addattr(radius, &radius_pack, RADIUS_ATTR_USER_PASSWORD, 0, 0, 0,
                    user_password, strlen((char*)user_password));
@@ -1928,7 +1930,7 @@ static int redir_radius(struct redir_t *redir, struct sockaddr_storage *addr,
                 "select() returned -1!");
         break;
       case 0:
-        if(optionsdebug) printf("Select returned 0\n");
+        if(optionsdebug) pepper_printf("Select returned 0\n");
         radius_timeout(radius);
         break;
       default:
@@ -2078,16 +2080,16 @@ int redir_accept(struct redir_t *redir, int ipv6)
   }
 
   termstate = REDIR_TERM_GETREQ;
-  if(optionsdebug) printf("Calling redir_getreq()\n");
+  if(optionsdebug) pepper_printf("Calling redir_getreq()\n");
 
   if(redir_getreq(redir, new_socket, &conn))
   {
-    if(optionsdebug) printf("Error calling get_req. Terminating\n");
+    if(optionsdebug) pepper_printf("Error calling get_req. Terminating\n");
     exit(0);
   }
 
   termstate = REDIR_TERM_GETSTATE;
-  if(optionsdebug) printf("Calling cb_getstate()\n");
+  if(optionsdebug) pepper_printf("Calling cb_getstate()\n");
 
   if(addrstorage.ss_family == AF_INET)
   {
@@ -2111,18 +2113,18 @@ int redir_accept(struct redir_t *redir, int ipv6)
     memcpy(&msg.addrv6, &addressv6.sin6_addr, sizeof(struct in6_addr));
     state = redir->cb_getstatev6(redir, &addressv6.sin6_addr, &conn);
 
-    printf("redir_accept IPv6!\n");
+    if(optionsdebug) pepper_printf("redir_accept IPv6!\n");
   }
 
   termstate = REDIR_TERM_PROCESS;
-  if(optionsdebug) printf("Processing received request\n");
+  if(optionsdebug) pepper_printf("Processing received request\n");
 
   if(conn.type == REDIR_LOGIN)
   {
     /* Was client was already logged on? */
     if(state == 1)
     {
-      if(optionsdebug) printf("redir_accept: Already logged on\n");
+      if(optionsdebug) pepper_printf("redir_accept: Already logged on\n");
       redir_reply(redir, new_socket, &conn, REDIR_ALREADY, 0,
                   NULL, NULL, conn.userurl, NULL,
                   NULL, conn.hismac);
@@ -2133,7 +2135,7 @@ int redir_accept(struct redir_t *redir, int ipv6)
     /* Did the challenge expire? */
     if((conn.uamtime + REDIR_CHALLENGETIMEOUT2) < time(NULL))
     {
-      if(optionsdebug) printf("redir_accept: Challenge expired: %d : %d\n",
+      if(optionsdebug) pepper_printf("redir_accept: Challenge expired: %d : %d\n",
                                  conn.uamtime, time(NULL));
       redir_memcopy(REDIR_CHALLENGE, challenge, hexchal, &msg, address, addressv6, addrstorage);
       if(msgsnd(redir->msgid, &msg, sizeof(struct redir_msg_t) - sizeof(msg.type), 0) < 0)
@@ -2150,13 +2152,13 @@ int redir_accept(struct redir_t *redir, int ipv6)
     }
 
     termstate = REDIR_TERM_RADIUS;
-    if(optionsdebug) printf("Calling radius\n");
+    if(optionsdebug) pepper_printf("Calling radius\n");
 
-    if(optionsdebug) printf("redir_accept: Sending radius request\n");
+    if(optionsdebug) pepper_printf("redir_accept: Sending radius request\n");
     redir_radius(redir, &addrstorage, &conn);
 
     termstate = REDIR_TERM_REPLY;
-    if(optionsdebug) printf("Received radius reply\n");
+    if(optionsdebug) pepper_printf("Received radius reply\n");
 
     if(conn.response == REDIR_SUCCESS)   /* Radius-Accept */
     {
@@ -2312,7 +2314,7 @@ int redir_accept(struct redir_t *redir, int ipv6)
 
   /* It was not a request for a known path. It must be an original request */
 
-  if(optionsdebug) printf("redir_accept: Original request\n");
+  if(optionsdebug) pepper_printf("redir_accept: Original request\n");
 
   /* Did the challenge expire? */
   if((conn.uamtime + REDIR_CHALLENGETIMEOUT1) < time(NULL))
@@ -2348,7 +2350,7 @@ int redir_accept(struct redir_t *redir, int ipv6)
     buffer[bufsize - 1] = 0;
     if(buflen>bufsize) buflen = bufsize;
 
-    if(optionsdebug) printf("redir_reply: Sending http reply: %s\n",
+    if(optionsdebug) pepper_printf("redir_reply: Sending http reply: %s\n",
                                buffer);
 
     send(new_socket, buffer, buflen, 0);

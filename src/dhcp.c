@@ -644,7 +644,7 @@ static int dhcp_open_eth(char const *ifname, uint16_t protocol, int promisc,
   struct sockaddr_ll sa;
   memset(&ifr, 0, sizeof(ifr));
 
-  printf("Open socket for protocol %x\n", protocol);
+  pepper_printf("Open socket for protocol %x\n", protocol);
 
   /* Create socket */
   if((fd = socket(PF_PACKET, SOCK_RAW, htons(protocol))) < 0)
@@ -837,7 +837,7 @@ static int dhcp_open_eth(char const *ifname, uint16_t protocol, int promisc,
   /* Find suitable device */
   for(devnum = 0; devnum < 255; devnum++)   /* TODO 255 */
   {
-    snprintf(devname, sizeof(devname), "/dev/bpf%d", devnum);
+    snpepper_printf(devname, sizeof(devname), "/dev/bpf%d", devnum);
     devname[sizeof(devname)] = 0;
     if((fd = open(devname, O_RDWR)) >= 0) break;
     if(errno != EBUSY) break;
@@ -879,7 +879,7 @@ static int dhcp_open_eth(char const *ifname, uint16_t protocol, int promisc,
       return -1;
     }
 
-    if(0) printf("MAC Address %.2x %.2x %.2x %.2x %.2x %.2x\n",
+    if(0) pepper_printf("MAC Address %.2x %.2x %.2x %.2x %.2x %.2x\n",
                     macaddr[0], macaddr[1], macaddr[2],
                     macaddr[3], macaddr[4], macaddr[5]);
 
@@ -981,13 +981,13 @@ static int dhcp_send(struct dhcp_t *this,
     switch(protocol)
     {
       case 0x800:
-        printf("Sending IP packet\n");
+        pepper_printf("Sending IP packet\n");
         break;
       case 0x86dd:
-        printf("Sending IPv6 packet\n");
+        pepper_printf("Sending IPv6 packet\n");
         break;
       default:
-        printf("Sending other packet: 0x%x\n", protocol);
+        pepper_printf("Sending other packet: 0x%x\n", protocol);
         break;
     }
   }
@@ -1248,11 +1248,11 @@ int dhcp_validate(struct dhcp_t *this)
             "The number of free and unused IPv4 connections does not match!");
     if(this->debug)
     {
-      printf("used %d unused %d\n", used, unused);
+      pepper_printf("used %d unused %d\n", used, unused);
       conn = this->firstusedconn;
       while(conn)
       {
-        printf("%.2x:%.2x:%.2x:%.2x:%.2x:%.2x\n",
+        pepper_printf("%.2x:%.2x:%.2x:%.2x:%.2x:%.2x\n",
                conn->hismac[0], conn->hismac[1], conn->hismac[2],
                conn->hismac[3], conn->hismac[4], conn->hismac[5]);
         conn = conn->next;
@@ -1313,11 +1313,11 @@ static int dhcp_validatev6(struct dhcp_t *this)
             "The number of free and unused IPv6 connections does not match!");
     if(this->debug)
     {
-      printf("used %d unused %d\n", used, unused);
+      pepper_printf("used %d unused %d\n", used, unused);
       conn = this->firstusedconnv6;
       while(conn)
       {
-        printf("%.2x:%.2x:%.2x:%.2x:%.2x:%.2x\n",
+        pepper_printf("%.2x:%.2x:%.2x:%.2x:%.2x:%.2x\n",
                conn->hismac[0], conn->hismac[1], conn->hismac[2],
                conn->hismac[3], conn->hismac[4], conn->hismac[5]);
         conn = conn->next;
@@ -1407,9 +1407,9 @@ static int dhcp_initconnv6(struct dhcp_t *this)
 
 int dhcp_newconn6(struct dhcp_t* this, struct dhcp_conn_t** conn, uint8_t* hwaddr)
 {
-  if(this->debug || 1)
+  if(this->debug)
   {
-    printf("IPv6 newconn: %.2x:%.2x:%.2x:%.2x:%.2x:%.2x\n", hwaddr[0], hwaddr[1], hwaddr[2], hwaddr[3], hwaddr[4], hwaddr[5]);
+    pepper_printf("IPv6 newconn: %.2x:%.2x:%.2x:%.2x:%.2x:%.2x\n", hwaddr[0], hwaddr[1], hwaddr[2], hwaddr[3], hwaddr[4], hwaddr[5]);
   }
 
   if(!this->firstfreeconnv6)
@@ -1469,8 +1469,8 @@ int dhcp_newconn6(struct dhcp_t* this, struct dhcp_conn_t** conn, uint8_t* hwadd
 int dhcp_newconn(struct dhcp_t *this, struct dhcp_conn_t **conn,
                  uint8_t *hwaddr)
 {
-  if(this->debug || 1)
-    printf("DHCP newconn: %.2x:%.2x:%.2x:%.2x:%.2x:%.2x\n",
+  if(this->debug)
+    pepper_printf("DHCP newconn: %.2x:%.2x:%.2x:%.2x:%.2x:%.2x\n",
            hwaddr[0], hwaddr[1], hwaddr[2],
            hwaddr[3], hwaddr[4], hwaddr[5]);
 
@@ -1540,8 +1540,8 @@ int dhcp_freeconnv6(struct dhcp_conn_t *conn)
   if(this->cb_disconnect)
     this->cb_disconnectv6(conn);
 
-  if(this->debug || 1)
-    printf("IPv6 freeconn: %.2x:%.2x:%.2x:%.2x:%.2x:%.2x\n",
+  if(this->debug)
+    pepper_printf("IPv6 freeconn: %.2x:%.2x:%.2x:%.2x:%.2x:%.2x\n",
            conn->hismac[0], conn->hismac[1], conn->hismac[2],
            conn->hismac[3], conn->hismac[4], conn->hismac[5]);
 
@@ -1602,8 +1602,8 @@ int dhcp_freeconn(struct dhcp_conn_t *conn)
   if(this->cb_disconnect)
     this->cb_disconnect(conn);
 
-  if(this->debug || 1)
-    printf("DHCP freeconn: %.2x:%.2x:%.2x:%.2x:%.2x:%.2x\n",
+  if(this->debug)
+    pepper_printf("DHCP freeconn: %.2x:%.2x:%.2x:%.2x:%.2x:%.2x\n",
            conn->hismac[0], conn->hismac[1], conn->hismac[2],
            conn->hismac[3], conn->hismac[4], conn->hismac[5]);
 
@@ -1671,7 +1671,7 @@ static int dhcp_checkconn(struct dhcp_t *this)
   {
     if(timercmp(&now, &conn->lasttime, >))
     {
-      if(this->debug) printf("DHCP timeout: Removing connection\n");
+      if(this->debug) pepper_printf("DHCP timeout: Removing connection\n");
       dhcp_freeconn(conn);
       return 0; /* Returning after first deletion */
     }
@@ -1698,7 +1698,7 @@ static int dhcp_checkconnv6(struct dhcp_t *this)
   {
     if(timercmp(&now, &conn->lasttime, >))
     {
-      if(this->debug) printf("IPv6 timeout: Removing connection\n");
+      if(this->debug) pepper_printf("IPv6 timeout: Removing connection\n");
       dhcp_freeconnv6(conn);
       return 0; /* Returning after first deletion */
     }
@@ -2138,7 +2138,7 @@ static int dhcp_doDNATv6(struct dhcp_conn_t* conn, struct dhcp_ipv6packet_t* pac
                        (udph->dst == htons(DHCP_DNS))))
     return 0;
 
-  printf("dnat: src %s | dst: %s len=%d\n", inet_ntop(AF_INET6, &pack->ip6h.src_addr, buf, sizeof(buf)), inet_ntop(AF_INET6, &pack->ip6h.dst_addr, buf2, sizeof(buf2)), ntohs(pack->ip6h.payload_length));
+  pepper_printf("dnat: src %s | dst: %s len=%d\n", inet_ntop(AF_INET6, &pack->ip6h.src_addr, buf, sizeof(buf)), inet_ntop(AF_INET6, &pack->ip6h.dst_addr, buf2, sizeof(buf2)), ntohs(pack->ip6h.payload_length));
 
   /* was it an ICMPv6 request for us ?
    * if packet is a NS for us, the NA have been already sent
@@ -2151,7 +2151,7 @@ static int dhcp_doDNATv6(struct dhcp_conn_t* conn, struct dhcp_ipv6packet_t* pac
   /* was it a request for local redirection server */
   if(IN6_ARE_ADDR_EQUAL((struct in6_addr*)&pack->ip6h.dst_addr, &this->ouripv6) && pack->ip6h.next_header == DHCP_IPV6_TCP && tcph->dst == htons(this->uamport))
   {
-    printf("IPv6 request for local redirection server!\n");
+    pepper_printf("IPv6 request for local redirection server!\n");
     return 0;
   }
 
@@ -2159,7 +2159,7 @@ static int dhcp_doDNATv6(struct dhcp_conn_t* conn, struct dhcp_ipv6packet_t* pac
   /* default us! */
   if(IN6_ARE_ADDR_EQUAL((struct in6_addr*)&pack->ip6h.dst_addr, &this->ouripv6))
   {
-    printf("HTTP / HTTPS for us\n");
+    pepper_printf("HTTP / HTTPS for us\n");
     return 0;
   }
 
@@ -2186,7 +2186,7 @@ static int dhcp_doDNATv6(struct dhcp_conn_t* conn, struct dhcp_ipv6packet_t* pac
 
     if(pos == -1) /* save for undoing */
     {
-      printf("save dnat for dst: %s port: %d\n", inet_ntop(AF_INET6, &pack->ip6h.dst_addr, buf, sizeof(buf)), tcph->src);
+      pepper_printf("save dnat for dst: %s port: %d\n", inet_ntop(AF_INET6, &pack->ip6h.dst_addr, buf, sizeof(buf)), tcph->src);
       memcpy(&conn->dnatipv6[conn->nextdnatv6], pack->ip6h.dst_addr, sizeof(struct in6_addr));
       conn->dnatportv6[conn->nextdnatv6] = tcph->src;
       conn->nextdnatv6 = (conn->nextdnatv6 + 1) % DHCP_DNATV6_MAX;
@@ -2325,7 +2325,7 @@ static int dhcp_undoDNATv6(struct dhcp_conn_t *conn, struct dhcp_ipv6packet_t *p
       if(tcph->dst == conn->dnatportv6[n])
       {
         char buf[64];
-        printf("modify packet src: %s: port: %d\n", inet_ntop(AF_INET6, &conn->dnatipv6[n], buf, sizeof(buf)), DHCP_HTTP);
+        pepper_printf("modify packet src: %s: port: %d\n", inet_ntop(AF_INET6, &conn->dnatipv6[n], buf, sizeof(buf)), DHCP_HTTP);
         memcpy(&pack->ip6h.src_addr, &conn->dnatipv6[n], sizeof(struct in6_addr));
         tcph->src = htons(DHCP_HTTP);
         dhcp_tcp_checkv6(pack, len);
@@ -2370,10 +2370,10 @@ static int dhcp_undoDNAT(struct dhcp_conn_t *conn,
 
   in1.s_addr = pack->iph.saddr;
   in2.s_addr = pack->iph.daddr;
-  printf("dhcp_undoDNAT\nsource:%s\n", inet_ntop(AF_INET, &in1, buf, sizeof(buf)));
-  printf("dest:%s\n", inet_ntop(AF_INET, &in2, buf, sizeof(buf)));
-  printf("portsrc:%d\n", ntohs(tcph->src));
-  printf("portdest:%d\n", ntohs(tcph->dst));
+  pepper_printf("dhcp_undoDNAT\nsource:%s\n", inet_ntop(AF_INET, &in1, buf, sizeof(buf)));
+  pepper_printf("dest:%s\n", inet_ntop(AF_INET, &in2, buf, sizeof(buf)));
+  pepper_printf("portsrc:%d\n", ntohs(tcph->src));
+  pepper_printf("portdest:%d\n", ntohs(tcph->dst));
   /* Was it a DNS reply? */
   if(((this->anydns) ||
        (pack->iph.saddr == conn->dns1.s_addr) ||
@@ -2463,10 +2463,10 @@ static int dhcp_checkDNS(struct dhcp_conn_t *conn,
   int query_len = 0;
   int n = 0;
 
-  printf("DNS ID: \n");
+  pepper_printf("DNS ID: \n");
 
-  printf("DNS ID:    %d\n", ntohs(dnsp->id));
-  printf("DNS flags: %d\n", ntohs(dnsp->flags));
+  pepper_printf("DNS ID:    %d\n", ntohs(dnsp->id));
+  pepper_printf("DNS flags: %d\n", ntohs(dnsp->flags));
 
   if((ntohs(dnsp->flags)   == 0x0100) &&
       (ntohs(dnsp->qdcount) == 0x0001) &&
@@ -2474,7 +2474,7 @@ static int dhcp_checkDNS(struct dhcp_conn_t *conn,
       (ntohs(dnsp->nscount) == 0x0000) &&
       (ntohs(dnsp->arcount) == 0x0000))
   {
-    printf("It was a query %s: \n", dnsp->records);
+    pepper_printf("It was a query %s: \n", dnsp->records);
     p1 = dnsp->records + 1 + dnsp->records[0];
     p2 = dnsp->records;
     do
@@ -2508,7 +2508,7 @@ static int dhcp_checkDNS(struct dhcp_conn_t *conn,
                 "\3key\12pepperspot\3org",
                 sizeof("\3key\12pepperspot\3org")))
     {
-      printf("It was a matching query %s: \n", dnsp->records);
+      pepper_printf("It was a matching query %s: \n", dnsp->records);
       memcpy(&answer, pack, len); /* TODO */
 
       /* DNS Header */
@@ -3045,13 +3045,13 @@ static int dhcp_getreq(struct dhcp_t *this,
   {
     if(!conn->hisip.s_addr)
     {
-      if(this->debug) printf("hisip not set\n");
+      if(this->debug) pepper_printf("hisip not set\n");
       return dhcp_sendNAK(conn, pack, len);
     }
 
     if(!memcmp(&conn->hisip.s_addr, &pack->dhcp.ciaddr, 4))
     {
-      if(this->debug) printf("hisip match ciaddr\n");
+      if(this->debug) pepper_printf("hisip match ciaddr\n");
       return dhcp_sendACK(conn, pack, len);
     }
 
@@ -3062,7 +3062,7 @@ static int dhcp_getreq(struct dhcp_t *this,
         return dhcp_sendACK(conn, pack, len);
     }
 
-    if(this->debug) printf("Sending NAK to client\n");
+    if(this->debug) pepper_printf("Sending NAK to client\n");
     return dhcp_sendNAK(conn, pack, len);
   }
 
@@ -3135,7 +3135,7 @@ static int dhcp_receive_ipv6(struct dhcp_t* this, struct dhcp_ipv6packet_t* pack
   /* Check to see if we know MAC address. */
   if(!dhcp_hashgetv6(this, &conn, pack->ethh.src))
   {
-    if(this->debug) printf("IPv6 Address found\n");
+    if(this->debug) pepper_printf("IPv6 Address found\n");
 
     memcpy(&ouripv6, &conn->ouripv6, sizeof(struct in6_addr));
 
@@ -3153,14 +3153,14 @@ static int dhcp_receive_ipv6(struct dhcp_t* this, struct dhcp_ipv6packet_t* pack
   }
   else
   {
-    /*if(this->debug)*/
-    printf("Address not found\n");
+    if(this->debug)
+        pepper_printf("Address not found\n");
     memcpy(&ouripv6, &this->ouripv6, sizeof(struct in6_addr));
 
     if(IN6_IS_ADDR_LINKLOCAL((struct in6_addr*)&pack->ip6h.src_addr) || IN6_IS_ADDR_UNSPECIFIED((struct in6_addr*)&pack->ip6h.src_addr))
     {
       /* we don't care about link-local address */
-      printf("dont'care about link-local\n");
+      pepper_printf("dont'care about link-local\n");
       return 0;
     }
 
@@ -3185,14 +3185,14 @@ static int dhcp_receive_ipv6(struct dhcp_t* this, struct dhcp_ipv6packet_t* pack
     /* [SV]: inform application about the IPv6 address */
     if(this->cb_requestv6(conn, &conn->hisipv6))
     {
-      printf("cb_requestv6 error!\n");
+      pepper_printf("cb_requestv6 error!\n");
       return -1;
     }
   }
 
   gettimeofday(&conn->lasttime, NULL);
 
-  printf("IPv6 conn->authstate: %d\n", conn->authstate);
+  pepper_printf("IPv6 conn->authstate: %d\n", conn->authstate);
 
   /* check if there are NS for us.
    * We do it there because in all state PepperSpot have
@@ -3209,15 +3209,15 @@ static int dhcp_receive_ipv6(struct dhcp_t* this, struct dhcp_ipv6packet_t* pack
       struct dhcp_icmpv6packet_t* icmpv6 = (struct dhcp_icmpv6packet_t*)pack->payload;
       memcpy(&src, pack->ip6h.src_addr, 16);
 
-      printf("icmpv6 for us!\n");
+      pepper_printf("icmpv6 for us!\n");
       /* send a NA */
       if(icmpv6->type == 135 /* NS */)
       {
         char buf[INET6_ADDRSTRLEN];
-        printf("NS received\nouripv6:%s\n", inet_ntop(AF_INET6, this->ouripv6.s6_addr, buf, sizeof(buf)));
+        pepper_printf("NS received\nouripv6:%s\n", inet_ntop(AF_INET6, this->ouripv6.s6_addr, buf, sizeof(buf)));
         if(ndisc_send_na(this->ipv6_ifindex, &this->ouripv6, &src, &this->ouripv6, 0x40000000 | 0x20000000) /* OVERRIDE +  SOLICITATION */ == -1)
         {
-          printf("NA failed\n");
+          pepper_printf("NA failed\n");
         }
       }
     }
@@ -3249,7 +3249,7 @@ static int dhcp_receive_ipv6(struct dhcp_t* this, struct dhcp_ipv6packet_t* pack
       break;
     case DHCP_AUTH_DNAT:
       /* Destination NAT if request to unknown web server */
-      printf("auth_dnat ipv6\n");
+      pepper_printf("auth_dnat ipv6\n");
       if(dhcp_doDNATv6(conn, pack, len))
         return 0; /* Drop is not http or dns */
       break;
@@ -3282,8 +3282,7 @@ static int dhcp_receive_ip(struct dhcp_t *this, struct dhcp_ippacket_t *pack,
   unsigned char const bmac[DHCP_ETH_ALEN] = {0xff, 0xff, 0xff, 0xff, 0xff, 0xff};
   struct in_addr addr;
 
-  if(this->debug) printf("DHCP packet received\n");
-  printf("dhcp_receive_ip\n");
+  if(this->debug) pepper_printf("DHCP packet received\n");
 
   /* Check that MAC address is our MAC or Broadcast */
   if((memcmp(pack->ethh.dst, this->hwaddr, DHCP_ETH_ALEN)) && (memcmp(pack->ethh.dst, bmac, DHCP_ETH_ALEN)))
@@ -3292,12 +3291,12 @@ static int dhcp_receive_ip(struct dhcp_t *this, struct dhcp_ippacket_t *pack,
   /* Check to see if we know MAC address. */
   if(!dhcp_hashget(this, &conn, pack->ethh.src))
   {
-    if(this->debug) printf("Address found\n");
+    if(this->debug) pepper_printf("Address found\n");
     ourip.s_addr = conn->ourip.s_addr;
   }
   else
   {
-    if(this->debug) printf("Address not found\n");
+    if(this->debug) pepper_printf("Address not found\n");
     ourip.s_addr = this->ourip.s_addr;
 
     /* Do we allow dynamic allocation of IP addresses? */
@@ -3390,8 +3389,7 @@ int dhcp_decaps(struct dhcp_t *this)  /* DHCP Indication */
   struct dhcp_ippacket_t packet;
   int length = 0;
 
-  /*if(this->debug)*/
-  printf("DHCP packet received\n");
+  if(this->debug) pepper_printf("DHCP packet received\n");
 
   if((length = recv(this->fd, &packet, sizeof(packet), 0)) < 0)
   {
@@ -3427,7 +3425,7 @@ int dhcp_ipv6_req(struct dhcp_conn_t* conn, void* pack, unsigned len)
   int length = len + DHCP_ETH_HLEN;
   struct dhcp_ipv6packet_t packet;
 
-  printf("Attempt to send IPv6 packet!!\n");
+  pepper_printf("Attempt to send IPv6 packet!!\n");
 
   /* Ethernet header */
   memcpy(packet.ethh.dst, conn->hismac, DHCP_ETH_ALEN);
@@ -3464,7 +3462,7 @@ int dhcp_data_req(struct dhcp_conn_t *conn, void *pack, unsigned len)
 
   struct dhcp_ippacket_t packet;
 
-  if(this->debug) printf("dhcp_data_req\n");
+  if(this->debug) pepper_printf("dhcp_data_req\n");
 
   /* Ethernet header */
   memcpy(packet.ethh.dst, conn->hismac, DHCP_ETH_ALEN);
@@ -3569,22 +3567,21 @@ static int dhcp_receive_arp(struct dhcp_t *this,
   /* Check that this is ARP request */
   if(pack->arp.op != htons(DHCP_ARP_REQUEST))
   {
-    /*if(this->debug)*/
-    printf("Received other ARP than request!\n");
+    if(this->debug) pepper_printf("Received other ARP than request!\n");
     return 0;
   }
 
   /* Check that MAC address is our MAC or Broadcast */
   if((memcmp(pack->ethh.dst, this->hwaddr, DHCP_ETH_ALEN)) && (memcmp(pack->ethh.dst, bmac, DHCP_ETH_ALEN)))
   {
-    if(this->debug) printf("Received ARP request for other destination!\n");
+    if(this->debug) pepper_printf("Received ARP request for other destination!\n");
     return 0;
   }
 
   /* Check to see if we know MAC address. */
   if(dhcp_hashget(this, &conn, pack->ethh.src))
   {
-    if(this->debug) printf("Address not found\n");
+    if(this->debug) pepper_printf("Address not found\n");
 
     /* Do we allow dynamic allocation of IP addresses? */
     if(!this->allowdyn)  /* TODO: Experimental */
@@ -3599,13 +3596,13 @@ static int dhcp_receive_arp(struct dhcp_t *this,
 
   if(!conn->hisip.s_addr)
   {
-    if(this->debug) printf("ARP request did not come from known client!\n");
+    if(this->debug) pepper_printf("ARP request did not come from known client!\n");
     return 0; /* Only reply if he was allocated an address */
   }
 
   if(memcmp(&conn->ourip.s_addr, pack->arp.tpa, 4))
   {
-    if(this->debug) printf("Did not ask for router address: %.8x - %.2x%.2x%.2x%.2x\n", conn->ourip.s_addr,
+    if(this->debug) pepper_printf("Did not ask for router address: %.8x - %.2x%.2x%.2x%.2x\n", conn->ourip.s_addr,
                               pack->arp.tpa[0],
                               pack->arp.tpa[1],
                               pack->arp.tpa[2],
@@ -3623,7 +3620,7 @@ int dhcp_arp_ind(struct dhcp_t *this)  /* ARP Indication */
   struct dhcp_arp_fullpacket_t packet;
   int length = 0;
 
-  if(this->debug) printf("ARP Packet Received!\n");
+  if(this->debug) pepper_printf("ARP Packet Received!\n");
 
   if((length = recv(this->arp_fd, &packet, sizeof(packet), 0)) < 0)
   {
@@ -3706,7 +3703,7 @@ int dhcp_eapol_ind(struct dhcp_t *this)  /* EAPOL Indication */
   unsigned char const bmac[DHCP_ETH_ALEN] = {0xff, 0xff, 0xff, 0xff, 0xff, 0xff};
   unsigned char const amac[DHCP_ETH_ALEN] = {0x01, 0x80, 0xc2, 0x00, 0x00, 0x03};
 
-  if(this->debug) printf("EAPOL packet received\n");
+  if(this->debug) pepper_printf("EAPOL packet received\n");
 
   if((length = recv(this->eapol_fd, &packet, sizeof(packet), 0)) < 0)
   {
@@ -3719,18 +3716,18 @@ int dhcp_eapol_ind(struct dhcp_t *this)  /* EAPOL Indication */
   /* Check to see if we know MAC address. */
   if(!dhcp_hashget(this, &conn, packet.ethh.src))
   {
-    if(this->debug) printf("Address found\n");
+    if(this->debug) pepper_printf("Address found\n");
   }
   else
   {
-    if(this->debug) printf("Address not found\n");
+    if(this->debug) pepper_printf("Address not found\n");
   }
 
   /* Check that MAC address is our MAC, Broadcast or authentication MAC */
   if((memcmp(packet.ethh.dst, this->hwaddr, DHCP_ETH_ALEN)) && (memcmp(packet.ethh.dst, bmac, DHCP_ETH_ALEN)) && (memcmp(packet.ethh.dst, amac, DHCP_ETH_ALEN)))
     return 0;
 
-  if(this->debug) printf("IEEE 802.1x Packet: %.2x, %.2x %d\n",
+  if(this->debug) pepper_printf("IEEE 802.1x Packet: %.2x, %.2x %d\n",
                             packet.dot1x.ver, packet.dot1x.type,
                             ntohs(packet.dot1x.len));
 

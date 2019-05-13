@@ -115,6 +115,7 @@ struct ippool_t
   struct ippoolm_t *laststat;    /**< Pointer to last free static member */
   struct ippoolm_t *firstipv6;   /**< Pointer to the first IPv6 member */
   struct ippoolm_t *lastipv6;    /**< Pointer to the first IPv6 member */
+  int debug;
 };
 
 /**
