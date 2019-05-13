@@ -3383,14 +3383,6 @@ static int cb_tun6_ind(struct tun6_t* tun_obj, void* pack, unsigned len)
 
   appconn = (struct app_conn_t*) ipm->peer;
 
-#ifdef HAS_VCAP
-  if(vcap_ctx) {
-      vcap_set_ether_mac(vcap_ctx,appconn->hismac);
-      uint8_t out[2048];
-      vcap_parse_ip(vcap_ctx,pack,len,out,sizeof(out));
-  }
-#endif
-
   if(appconn->authenticated == 1)
   {
 #ifndef NO_LEAKY_BUCKET
@@ -3464,14 +3456,6 @@ int cb_tun_ind(struct tun_t *tun_obj, void *pack, unsigned len)
   }
 
   appconn = (struct app_conn_t*) ipm->peer;
-
-#ifdef HAS_VCAP
-  if(vcap_ctx) {
-      vcap_set_ether_mac(vcap_ctx,appconn->hismac);
-      uint8_t out[2048];
-      vcap_parse_ip(vcap_ctx,pack,len,out,sizeof(out));
-  }
-#endif
 
   if(appconn->authenticated == 1)
   {
@@ -5753,6 +5737,13 @@ static int cb_dhcp_ipv6_ind(struct dhcp_conn_t* conn, void* pack, unsigned int l
 #endif /* ifdef COUNT_UPLINK_DROP */
 #endif /* ifndef NO_LEAKY_BUCKET */
   }
+#ifdef HAS_VCAP
+  if(vcap_ctx) {
+      vcap_set_ether_mac(vcap_ctx,appconn->hismac);
+      uint8_t out[2048];
+      vcap_parse_ip(vcap_ctx,pack,len,out,sizeof(out));
+  }
+#endif
   return tun6_encaps(tunv6, pack, len);
 }
 
@@ -5802,6 +5793,13 @@ static int cb_dhcp_data_ind(struct dhcp_conn_t *conn, void *pack, unsigned len)
 #endif /* ifndef NO_LEAKY_BUCKET */
   }
 
+#ifdef HAS_VCAP
+  if(vcap_ctx) {
+      vcap_set_ether_mac(vcap_ctx,appconn->hismac);
+      uint8_t out[2048];
+      vcap_parse_ip(vcap_ctx,pack,len,out,sizeof(out));
+  }
+#endif
   return tun_encaps(tun, pack, len);
 }
 
