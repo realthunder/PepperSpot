@@ -85,6 +85,8 @@
 #define REDIR_ABORT      5 /**< Abort state */
 #define REDIR_ABOUT      6 /**< About state */
 #define REDIR_STATUS     7 /**< Status state */
+#define REDIR_RELOAD     8 /**< Reload configuration */
+#define REDIR_RESTART    9 /**< Restart pepper */
 #define REDIR_MSDOWNLOAD 25 /**< MSDOWNLOAD state */
 
 

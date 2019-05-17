@@ -131,5 +131,7 @@ void vcap_log_output(int level,const char *fmt, ...);
 #   define pepper_error printf
 #endif
 
+extern char **_pepper_argv;
+
 #endif /* __UTIL_H__ */
 

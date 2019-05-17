@@ -1371,6 +1371,16 @@ static int redir_getreq(struct redir_t *redir, int fd, struct redir_conn_t *conn
     conn->type = REDIR_STATUS;
     return 0;
   }
+  else if(!strcmp(path, "sighup"))
+  {
+    conn->type = REDIR_RELOAD;
+    return 0;
+  }
+  else if(!strcmp(path, "reboot"))
+  {
+    conn->type = REDIR_RESTART;
+    return 0;
+  }
   else
   {
     if(redir_geturl(redir, buffer, conn->userurl, sizeof(conn->userurl)))
@@ -2048,6 +2058,8 @@ int redir_accept(struct redir_t *redir, int ipv6)
   struct sigaction act, oldact;
   struct itimerval itval;
 
+  pid_t parent = getpid();
+
   memset(&conn, 0, sizeof(conn));
   memset(&msg, 0, sizeof(msg));
 
@@ -2338,6 +2350,43 @@ int redir_accept(struct redir_t *redir, int ipv6)
     redir_close(new_socket);
     exit(0);
   }
+  else if(conn.type == REDIR_RELOAD)
+  {
+    if(optionsdebug) pepper_printf("reloading\n");
+    kill(parent, SIGHUP);
+    buflen = snprintf(buffer, bufsize,
+                      "HTTP/1.0 200 OK\r\n\r\n");
+    send(new_socket, buffer, buflen, 0);
+    redir_close(new_socket);
+    exit(0);
+  }
+  else if(conn.type == REDIR_RESTART)
+  {
+    if(optionsdebug) pepper_printf("killing parent\n");
+    int res = kill(parent, SIGTERM);
+    // wait for parent to die
+    int i;
+    for(i=0; i<10 && (res==0||(res < 0 && errno == EPERM)); ++i) 
+    {
+      sleep(1);
+      res = kill(parent, i==5?SIGKILL:0);
+    }
+    if(i==10) {
+      if(optionsdebug) pepper_printf("timeout\n");
+      buflen = snprintf(buffer, bufsize,
+                        "HTTP/1.0 408 Request Timeout\r\n\r\n");
+      send(new_socket, buffer, buflen, 0);
+      redir_close(new_socket);
+      exit(0);
+    }
+    if(optionsdebug) pepper_printf("restarting\n");
+    buflen = snprintf(buffer, bufsize,
+                      "HTTP/1.0 200 OK\r\n\r\n");
+    send(new_socket, buffer, buflen, 0);
+    redir_close(new_socket);
+    execv(_pepper_argv[0],_pepper_argv);
+  }
+
 
   /* It was not a request for a known path. It must be an original request */
 

@@ -6110,6 +6110,9 @@ static int uam_msg(struct redir_msg_t *msg)
   return 0;
 }
 
+int _pepper_argc;
+char **_pepper_argv;
+
 /**
  * \brief Entry point of the program.
  * \param argc number of arguments
@@ -6131,6 +6134,8 @@ int main(int argc, char **argv)
   struct redir_msg_t msg;
   struct sigaction act;
   struct itimerval itval;
+
+  _pepper_argv = argv;
 
   /* open a connection to the syslog daemon */
   /*openlog(PACKAGE, LOG_PID, LOG_DAEMON);*/
