@@ -993,8 +993,10 @@ static int redir_getpath(struct redir_t *redir, char *src, char *dst, int dstsiz
   /* To avoid unused parameter warning */
   redir = NULL;
 
-  if(!(peol = strstr(src, "\n"))) /* End of the first line */
+  if(!(peol = strstr(src, "\n"))) /* End of the first line */ {
+    if(optionsdebug) pepper_error("end of first line");
     return -1;
+  }
 
   if(!strncmp("GET ", src, 4))
   {
@@ -1006,6 +1008,7 @@ static int redir_getpath(struct redir_t *redir, char *src, char *dst, int dstsiz
   }
   else
   {
+    if(optionsdebug) pepper_error("unsupported method");
     return -1;
   }
 
@@ -1013,18 +1016,26 @@ static int redir_getpath(struct redir_t *redir, char *src, char *dst, int dstsiz
 
   if(*p1 == '/')
     p1++;
-  else
+  else {
+    if(optionsdebug) pepper_error("no path");
     return -1;
+  }
 
   /* The path ends with a ? or a space */
   p2 = strstr(p1, "?");
   p3 = strstr(p1, " ");
 
-  if((p2 == NULL) && (p3 == NULL))  /* Not found at all */
+  if((p2 == NULL) && (p3 == NULL))  /* Not found at all */ 
+  {
+    if(optionsdebug) pepper_error("no path end");
     return -1;
+  }
 
   if((p2 >= peol) && (p3 >= peol)) /* Not found on first line */
+  {
+    if(optionsdebug) pepper_error("no path eol");
     return -1;
+  }
 
   if(p2 && !p3)
   {
@@ -1039,8 +1050,10 @@ static int redir_getpath(struct redir_t *redir, char *src, char *dst, int dstsiz
   else
     dstlen = p3 - p1;
 
-  if(dstlen >= dstsize)
+  if(dstlen >= dstsize) {
+    if(optionsdebug) pepper_error("path too long");
     return -1;
+  }
 
   strncpy(dst, p1, dstlen);
   dst[dstlen] = 0;
@@ -1238,6 +1251,7 @@ static int redir_getreq(struct redir_t *redir, int fd, struct redir_conn_t *conn
     switch(status = select(maxfd + 1, &fds, NULL, NULL, &idleTime))
     {
       case -1:
+        pepper_error("select() failed %d", errno);
         sys_err(LOG_ERR, __FILE__, __LINE__, errno,
                 "select() returned -1!");
         return -1;
@@ -1252,8 +1266,11 @@ static int redir_getreq(struct redir_t *redir, int fd, struct redir_conn_t *conn
       if((recvlen =
              recv(fd, buffer + buflen, sizeof(buffer) - 1 - buflen, 0)) < 0)
       {
-        if(errno != ECONNRESET)
+        if(errno != ECONNRESET) 
+        {
+          pepper_error("recv() failed %d", errno);
           sys_err(LOG_ERR, __FILE__, __LINE__, errno, "recv() failed!");
+        }
         return -1;
       }
       buflen += recvlen;
@@ -1266,13 +1283,13 @@ static int redir_getreq(struct redir_t *redir, int fd, struct redir_conn_t *conn
 
   if(buflen <= 0)
   {
-    if(optionsdebug) pepper_printf("No HTTP request received!\n");
+    if(optionsdebug) pepper_error("No HTTP request received!\n");
     return -1;
   }
 
   if(redir_getpath(redir, buffer, path, sizeof(path)))
   {
-    if(optionsdebug) pepper_printf("Could not parse path!\n");
+    if(optionsdebug) pepper_error("Could not parse path!\n");
     return -1;
   }
 
@@ -1287,7 +1304,7 @@ static int redir_getreq(struct redir_t *redir, int fd, struct redir_conn_t *conn
     if(redir_getparam(redir, buffer, "username",
                        conn->username, sizeof(conn->username)))
     {
-      if(optionsdebug) pepper_printf("No username found!\n");
+      if(optionsdebug) pepper_error("No username found!\n");
       return -1;
     }
 
@@ -1317,7 +1334,7 @@ static int redir_getreq(struct redir_t *redir, int fd, struct redir_conn_t *conn
     }
     else
     {
-      if(optionsdebug) pepper_printf("No password found!\n");
+      if(optionsdebug) pepper_error("No password found!\n");
       return -1;
     }
 
@@ -1358,7 +1375,8 @@ static int redir_getreq(struct redir_t *redir, int fd, struct redir_conn_t *conn
   {
     if(redir_geturl(redir, buffer, conn->userurl, sizeof(conn->userurl)))
     {
-      if(optionsdebug) pepper_printf("Could not parse URL!\n");
+      if(optionsdebug) 
+        pepper_error("Could not parse URL %.*s!\n", sizeof(conn->userurl),conn->userurl);
       return -1;
     }
     return 0;
