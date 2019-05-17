@@ -76,6 +76,8 @@
 
 #define REDIR_URL_LEN 250 /**< Maximum URL length */
 
+#define REDIR_FROM_LEN 32 /**< From field length */
+
 #define REDIR_LOGIN      1 /**< Login state */
 #define REDIR_PRELOGIN   2 /**< Pre-login state */
 #define REDIR_LOGOUT     3 /**< Logout state */
@@ -125,6 +127,7 @@ struct redir_conn_t
   struct in6_addr hisipv6; /**< Client IPv6 address */
   int ipv6; /**< If connection is IPv6 */
   char sessionid[REDIR_SESSIONID_LEN]; /**< Accounting session ID */
+  char from[REDIR_FROM_LEN];
   int response; /**< 0: No adius response yet; 1:Reject; 2:Accept; 3:Timeout */
   long int sessiontimeout; /**< Session timeout */
   long int idletimeout; /**< Idle timeout */

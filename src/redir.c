@@ -624,11 +624,18 @@ static int redir_reply(struct redir_t *redir, int fd,
 
   if(resp)
   {
+    if(strncmp(conn->from,"wechat",sizeof(conn->from))==0) {
+      if(res == REDIR_SUCCESS)
+        snprintf(buffer, sizeof(buffer), "HTTP/1.0 200 OK\r\nContent-");
+      else
+        snprintf(buffer, sizeof(buffer), "HTTP/1.0 400 Bad Request\r\nContent-");
+    }else
+      snprintf(buffer, sizeof(buffer), "HTTP/1.0 302 Moved Temporarily\r\n");
+
     /* [SV] */
     if(conn->ipv6)
     {
-      snprintf(buffer, sizeof(buffer),
-               "HTTP/1.0 302 Moved Temporarily\r\n"
+      redir_stradd(buffer,sizeof(buffer),
                "Location: %s?res=%s&uamip=[%s]&uamport=%d",
                redir->url6, resp, inet_ntop(AF_INET6, &conn->ouripv6, buf, sizeof(buf)), redir->port);
       /* pepper_printf("HTTP/1.0 302 Moved Temporarily\r\n"
@@ -637,8 +644,7 @@ static int redir_reply(struct redir_t *redir, int fd,
     }
     else
     {
-      snprintf(buffer, sizeof(buffer),
-               "HTTP/1.0 302 Moved Temporarily\r\n"
+      redir_stradd(buffer, sizeof(buffer),
                "Location: %s?res=%s&uamip=%s&uamport=%d",
                redir->url, resp, inet_ntop(AF_INET, &redir->addr, buf, sizeof(buf)), redir->port);
     }
@@ -1284,6 +1290,9 @@ static int redir_getreq(struct redir_t *redir, int fd, struct redir_conn_t *conn
       if(optionsdebug) pepper_printf("No username found!\n");
       return -1;
     }
+
+    conn->from[0] = 0;
+    redir_getparam(redir,buffer,"from",conn->from,sizeof(conn->from));
 
     /* SV */
     /* pepper_printf("username = %s\n", conn->username); */
