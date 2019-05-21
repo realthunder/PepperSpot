@@ -2287,31 +2287,54 @@ static int getconn(struct app_conn_t **conn, struct sockaddr_storage nasip, uint
  * \return 0 if success, -1 otherwise
  */
 static int getconn_username(struct app_conn_t **conn, char *username,
-                            int usernamelen)
+                int usernamelen, char *calling_station, int calling_station_len)
 {
   struct app_conn_t *appconn = NULL;
-  username[usernamelen] = 0;
-  pepper_printf("username: %s\n", username);
+  if(username) username[usernamelen] = 0;
+  if(calling_station) calling_station[calling_station_len] = 0;
+  if(options.debug) 
+  {
+    if(username) pepper_printf("username: %s\n", username);
+    if(calling_station) pepper_printf("user: %s\n", calling_station);
+  }
 
   appconn = g_firstusedconn;
-  while(appconn)
+  for(;appconn;appconn=appconn->next)
   {
     if(!appconn->inuse)
     {
       sys_err(LOG_ERR, __FILE__, __LINE__, 0,
               "Connection with inuse == 0!");
     }
-    appconn->user[appconn->userlen] = 0;
-    pepper_printf("user: %s\n", appconn->user);
-
-    if((appconn->authenticated) && (appconn->userlen == usernamelen) &&
-        !memcmp(appconn->user, username, usernamelen))
-    {
+    if((appconn->authenticated)) {
+      if(username) 
+      {
+        appconn->user[appconn->userlen] = 0;
+        if(options.debug)
+          pepper_printf("user: %s\n", appconn->user);
+        if(appconn->userlen != usernamelen || memcmp(appconn->user, username, usernamelen))
+          continue;
+      }
+      if(calling_station) 
+      {
+        if(calling_station_len!=MACSTRLEN)
+          continue;
+        struct dhcp_conn_t* dhcpconn = (struct dhcp_conn_t*) appconn->dnlink;
+        char mac[MACSTRLEN + 1];
+        snprintf(mac, MACSTRLEN + 1, "%.2X-%.2X-%.2X-%.2X-%.2X-%.2X",
+            dhcpconn->hismac[0], dhcpconn->hismac[1],
+            dhcpconn->hismac[2], dhcpconn->hismac[3],
+            dhcpconn->hismac[4], dhcpconn->hismac[5]);
+        if(options.debug)
+          pepper_printf("mac: %s\n", mac);
+        if(memcmp(mac,calling_station,MACSTRLEN))
+          continue;
+      }
       *conn = appconn;
-      pepper_printf("Found\n");
+      if(options.debug)
+        pepper_printf("Found\n");
       return 0;
     }
-    appconn = appconn->next;
   }
   return -1; /* Not found */
 }
@@ -5108,6 +5131,7 @@ int cb_radius_coa_ind(struct radius_t *radius_obj, struct radius_packet_t *pack,
 {
   struct app_conn_t *appconn = NULL;
   struct radius_attr_t *userattr = NULL;
+  struct radius_attr_t *calling_station = NULL;
   struct radius_packet_t radius_pack;
   int found = 0;
 
@@ -5120,14 +5144,19 @@ int cb_radius_coa_ind(struct radius_t *radius_obj, struct radius_packet_t *pack,
             "Radius packet not supported: %d,\n", pack->code);
   }
 
-  /* Get username */
-  if(radius_getattr(pack, &userattr, RADIUS_ATTR_USER_NAME, 0, 0, 0))
+  radius_getattr(pack, &calling_station, RADIUS_ATTR_CALLING_STATION_ID, 0, 0, 0);
+  radius_getattr(pack, &userattr, RADIUS_ATTR_USER_NAME, 0, 0, 0);
+
+  if(!calling_station && !userattr)
   {
     sys_err(LOG_INFO, __FILE__, __LINE__, 0,
-            "Username must be included in disconnect request");
+            "Either Username or CallingStationID must be included in disconnect request");
+    return -1;
   }
 
-  while(!getconn_username(&appconn, (char*) userattr->v.t, userattr->l - 2))
+  while(!getconn_username(&appconn, 
+        userattr?(char*)userattr->v.t:0, userattr?(userattr->l-2):0,
+        calling_station?(char*)calling_station->v.t:0, calling_station?(calling_station->l-2):0))
   {
     found = 1;
     if(appconn->authenticated == 1)
